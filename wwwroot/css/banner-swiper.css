@@ -1,0 +1,10 @@
+﻿.swiper {
+    width:100%;
+    height:50%;
+    display:block;
+}
+
+.swiper .swiper-wrapper .swiper-slide{
+    height:30.0rem;
+    display:inline-block;
+}
