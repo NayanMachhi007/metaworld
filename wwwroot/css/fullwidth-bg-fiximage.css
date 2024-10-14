@@ -1,0 +1,39 @@
+﻿.fullwidth-bg-fiximage{
+    padding:10rem 0;
+}
+
+.fullwidth-bg-fiximage .fullwidth-bg-fixed{
+    background-attachment:fixed;
+    background-image:url('../assest/fullwidth-fixed-bg/fixbg.jpg');
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:40rem;
+    opacity:0.9;
+}
+
+.fullwidth-bg-fiximage .fullwidth-bg-fixed .fullwidth-des{
+    color:var(--white);
+    padding:10rem 0 0 0;
+}
+
+.fullwidth-bg-fiximage .fullwidth-bg-fixed .fullwidth-des .fullwidth-title{
+    padding:1rem 0;   
+}
+
+.fullwidth-bg-fiximage .fullwidth-bg-fixed .fullwidth-des .fullwidth-title h3
+{
+    color: var(--white);
+    font-weight:500;
+    font-size:4.4rem;
+}
+
+.fullwidth-bg-fiximage .fullwidth-bg-fixed .fullwidth-des .fullwidth-para{
+    padding:1rem 40rem;
+    text-align:center;
+}
+
+.fullwidth-bg-fiximage .fullwidth-bg-fixed .fullwidth-des .fullwidth-para p{
+    color:var(--white);
+    font-weight:400;
+}

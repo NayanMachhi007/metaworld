@@ -1,0 +1,45 @@
+﻿.fullwidth-signpost-image {
+    background: var(--blue-zodiac);
+    color:var(--white);
+   
+}
+
+.fullwidth-signpost-image .fullwidth-image-bg{
+    background-image:url('../assest/fullwidth-signpost-image/fullwidth-bg-image.png');
+    background-position:center;
+    background-size:cover;
+    width:100%;
+    height:100%;
+}
+
+.fullwidth-signpost-image .fullwidth-bg .fullwidth-content-wrapper{
+    padding:14rem 0 0 12rem;
+}
+
+.fullwidth-signpost-image .fullwidth-bg .fullwidth-content-wrapper .fullwidth-title{
+    padding:2rem 0;   
+}
+
+.fullwidth-signpost-image .fullwidth-bg .fullwidth-content-wrapper .fullwidth-title h2{
+    color:var(--white);
+}
+
+.fullwidth-signpost-image .fullwidth-bg .fullwidth-content-wrapper .fullwidth-btn-wrapper{
+    padding:4rem 0;
+}
+
+.fullwidth-signpost-image .fullwidth-bg .fullwidth-content-wrapper .fullwidth-btn-wrapper .fullwidth-primary{
+    margin:0 2rem 0 0;
+}
+
+.fullwidth-signpost-image .fullwidth-bg .fullwidth-content-wrapper .fullwidth-btn-wrapper .fullwidth-primary input{
+    width:100%;
+    padding:1.4rem 8rem;
+    border-radius:1rem;
+    border:none;
+    display:inline-block;
+}
+
+.fullwidth-signpost-image .fullwidth-image-bg .fullwidth-image{
+    padding:0rem 2rem;
+}

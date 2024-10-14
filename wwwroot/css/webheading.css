@@ -1,7 +1,10 @@
 ﻿
 .primary-heading {
     color: #252525;
-    font-size:4.2rem;    
+    font-size: 4.2rem;
+    font-weight: bold;
+    color: var(--white);
+    line-height: 5rem;
 }
 
 .secondary-heading {
@@ -11,9 +14,13 @@
 
 .heading-title {
     color: #252525;
-    font-size: 3.3rem;
+    font-size:1.8rem;
+    font-weight:700;
 }
+
+
 
 .webpage-para{
     font-size:1.8rem;
+    font-weight:300;
 }

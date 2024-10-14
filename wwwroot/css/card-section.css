@@ -1,0 +1,56 @@
+﻿.card-section .card-wrapper {
+    background: var(--concrete);
+}
+
+.card-section .card-wrapper .card-wrapper-main{
+    padding: 8rem 11rem 8rem 10rem;
+}
+
+.card-section .card-wrapper .card-wrapper-main .card-title-section{
+    position:relative;
+}
+
+.card-section .card-wrapper .card-wrapper-main .card-title-section:after{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:0.1rem;
+    background:var(--black);
+    opacity:0.6;
+    right:0;
+}
+
+.card-section .card-wrapper .card-wrapper-main .no-border:after{
+    content:"";
+    width:0;
+    position:absolute;
+}
+
+.card-section .card-wrapper .card-wrapper-main .card-title-section .card-icon i {
+    color: var(--white);
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.card-section .card-wrapper .card-wrapper-main .card-title-section .card-icon i:before{
+     border-radius: 10px;
+    position: absolute;
+    padding: 1rem;
+    background: var(--alizarin-crimson);
+    left: -56px;
+    bottom: -29px;
+}
+
+.card-section .card-wrapper .card-wrapper-main .card-title-section .card-title .card-title-h5{
+    padding:0 8rem 1rem 1rem;
+    display:inline-block;
+}
+
+.card-section .card-wrapper .card-wrapper-main .card-title-section .card-title .card-desc{
+    padding: 0 7rem 1rem 1rem;
+    display: inline-block;
+}
+
+
+

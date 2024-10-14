@@ -1,0 +1,17 @@
+﻿.icon-scroller{
+    padding:6rem 0;
+}
+
+.swiper-scroller .swiper-wrapper .icon-scroller-slide{
+    height:10rem;
+}
+
+.swiper-scroller .swiper-wrapper .icon-scroller-slide .icon-wrapper .icon-image{
+    padding:1rem 1rem;
+}
+
+.swiper-scroller .swiper-wrapper .icon-scroller-slide .icon-wrapper .icon-image img{
+    object-fit:contain;
+    width:100%;
+    max-width:14rem;
+}

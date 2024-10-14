@@ -1,0 +1,38 @@
+﻿.tab-feature-content{
+    position:relative;
+    overflow:hidden;
+    height:60rem;   
+    padding:0; 
+}
+
+.tab-feature-content .tab-button .tabbtn-wrapper{
+    padding:1rem;
+}
+
+.tab-feature-content .tab-button .tabbtn-wrapper .tab-common{
+    padding:1rem 2rem;
+    border:none; 
+    font-size:1rem;
+    font-weight:500;
+    margin:0 0.5rem;
+    border-radius:0.4rem;
+}
+
+.tab-feature-content .tab-button .tabbtn-wrapper .tab-common:focus{
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.tab-feature-content .content {
+    overflow:hidden;
+    transform: translateX(120%);
+    position:absolute;
+    transition:0.5s;
+    left:0;
+    padding:1rem 4rem;
+}
+
+#tab-content-1{
+    transform:translateX(0);
+}
+
+
