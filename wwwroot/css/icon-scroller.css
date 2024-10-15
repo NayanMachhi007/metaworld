@@ -14,4 +14,11 @@
     object-fit:contain;
     width:100%;
     max-width:14rem;
+    filter: grayscale(100%);
+    cursor:pointer;
+    transition:all ease-in-out 0.5s;
+}
+
+.swiper-scroller .swiper-wrapper .icon-scroller-slide .icon-wrapper .icon-image img:hover{
+    filter:none;
 }

@@ -1,0 +1,44 @@
+﻿.footer .footer-bg {
+    background: url('../assest/footer/footer-bg.jpg');
+    height: 50rem;
+    width: 100%;
+    padding: 10rem 2rem;
+}
+
+.footer .footer-bg .footer-logo-des .logo{
+    width:14.8rem;
+    height:11rem;
+}
+
+.footer .footer-bg .footer-logo-des .logo img{
+   filter:invert(1);
+}
+
+.footer .footer-bg .footer-logo-des .footer-des{
+    padding:4rem 3rem 4rem 0;
+}
+
+.footer .footer-bg .footer-logo-des .footer-des p{
+    color:var(--white);
+    font-size:1.5rem;
+    font-weight:400;
+}
+
+.footer .footer-bg .footer-logo-des .footer-social-icons ul li i{
+    font-size:1.6rem;
+    color:#3224E9;
+    background:var(--white);
+    border-radius:50%;
+    padding:1rem;
+    cursor:pointer;
+}
+
+.footer .footer-bg .footer-logo-des .footer-social-icons ul li:hover i{
+    background:var(--maroon-flush);
+    color:var(--white);
+}
+
+.footer .footer-bg .footer-logo-des .footer-social-icons ul li{
+    padding:0 2rem 0 0;
+    transition:all ease-in-out 0.5s;
+}

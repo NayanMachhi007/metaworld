@@ -61,3 +61,38 @@
     width: 1rem;
     background: var(--maroon-flush);
 }
+
+.heading-title-devider {
+    width: 4rem;
+    height: 0.3rem;
+    background: var(--maroon-flush);
+    display: inline-block;
+    border-radius: 5rem;
+    position: relative;
+}
+
+.heading-title-devider::before{
+    content: "";
+    position: absolute;
+    left:-2rem;
+    height: 0.3rem;
+    width: 1rem;
+    background: var(--maroon-flush);
+}
+
+.heading-title-devider::after{
+    content: "";
+    position: absolute;
+    height: 0.3rem;
+    width: 1rem;
+    right:-2rem;
+    background: var(--maroon-flush);
+}
+
+.bg-concrete {
+    background: var(--concrete);
+}
+
+.bg-white{
+    background:var(--white);
+}

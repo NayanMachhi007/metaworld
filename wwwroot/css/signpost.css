@@ -1,0 +1,96 @@
+﻿.signpost-title {
+    text-align:center;
+    padding:5rem 40rem;
+}
+
+
+.signpost-title .signpost-title-wrapper h4{
+    padding:1rem 0;
+}
+
+.signpost-title  .signpost-para p{
+    font-weight:500;
+    opacity:0.7;
+}
+
+
+.signpost-component .signpost-bg .signpost-bg-white{
+    background:none;
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper{
+    margin:0 1rem;
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-image{
+    overflow:hidden;
+    transform:scale(1);
+    cursor:pointer;
+
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-image:hover img{
+    transform:scale(1.5);
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-image img {
+    height: 30rem;
+    transition:all ease-out 0.5s;    
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper {
+    padding: 1rem 2rem;
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .signpost-date{
+    padding:1rem 0;
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .signpost-date p{
+    font-size:1.4rem;
+    font-weight:500;
+    opacity:0.7;
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .signpost-para{
+    padding:0rem 2rem 1rem 0;
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .signpost-para p{
+    font-size:1.5rem;
+    font-weight:600;
+    opacity:0.7;
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .signpost-width {
+    width: 100%;
+    height: 0.2rem;
+    background: var(--concrete);
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .singpost-post{
+    padding:2rem 0 0 0;
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .singpost-post .signpost-author-wrapper .singpost-author-image{
+    padding:0 1.1rem 0 0;
+    }
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .singpost-post .singpost-share{
+    padding:1rem 0;
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .singpost-post .singpost-share i{
+    font-size:1.6rem;
+    opacity:0.5;
+}
+
+.signpost-component .signpost-bg .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .signpost-title-main {
+    padding: 1rem 5rem 2rem 0;
+}
+
+.signpost-component .signpost-bg-white .signpost-wrapper .signpost-title-wrapper .singpost-post .signpost-author .signpost-author-wrapper .singpost-author-image img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}

@@ -29,6 +29,14 @@
       "PackagePath": "staticwebassets\\assest\\feature-image\\feature-image-secondary.jpg"
     },
     {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\footer\\footer-bg.jpg",
+      "PackagePath": "staticwebassets\\assest\\footer\\footer-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\fullwidth-fixed-bg\\fixbg.jpg",
+      "PackagePath": "staticwebassets\\assest\\fullwidth-fixed-bg\\fixbg.jpg"
+    },
+    {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\fullwidth-signpost-image\\fullwidth-bg-image.png",
       "PackagePath": "staticwebassets\\assest\\fullwidth-signpost-image\\fullwidth-bg-image.png"
     },
@@ -65,6 +73,10 @@
       "PackagePath": "staticwebassets\\assest\\icon-scroller\\client-6.png"
     },
     {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\meta-ads-logo-remove.png",
+      "PackagePath": "staticwebassets\\assest\\logo\\meta-ads-logo-remove.png"
+    },
+    {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\banner-swiper.css",
       "PackagePath": "staticwebassets\\css\\banner-swiper.css"
     },
@@ -77,8 +89,20 @@
       "PackagePath": "staticwebassets\\css\\default-class.css"
     },
     {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\feature-content-keyfacts.css",
+      "PackagePath": "staticwebassets\\css\\feature-content-keyfacts.css"
+    },
+    {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\feature-content.css",
       "PackagePath": "staticwebassets\\css\\feature-content.css"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\footer.css",
+      "PackagePath": "staticwebassets\\css\\footer.css"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\fullwidth-bg-fiximage.css",
+      "PackagePath": "staticwebassets\\css\\fullwidth-bg-fiximage.css"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\fullwidth-signpost-image.css",
@@ -101,6 +125,10 @@
       "PackagePath": "staticwebassets\\css\\root.css"
     },
     {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\signpost.css",
+      "PackagePath": "staticwebassets\\css\\signpost.css"
+    },
+    {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\tab-feature-content.css",
       "PackagePath": "staticwebassets\\css\\tab-feature-content.css"
     },
@@ -115,6 +143,10 @@
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\js\\counter.js",
+      "PackagePath": "staticwebassets\\js\\counter.js"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\js\\customswiper.js",

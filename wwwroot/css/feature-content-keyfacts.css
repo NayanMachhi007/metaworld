@@ -1,1 +1,26 @@
-﻿
+﻿.feature-content-keyfacts .feature-content-wrapper .feature-contentkeyfact{
+    padding:4rem 0 0rem 0;
+}
+
+.feaure-keyfirst .feature-keyfact-wrapper .keyfact-para p{
+    font-weight:500;
+    opacity:0.6;
+    text-transform:uppercase;
+}
+
+.feaure-keyfirst .feature-keyfact-wrapper .keyfact-title {
+    padding: 0 8rem 0 0rem;
+    text-align: left;
+}
+
+.feaure-keyfirst .feature-keyfact-wrapper .keyfact-title h4 {
+    font-size: 3.8rem;
+    color: var(--claret);
+    font-weight: 700;
+}
+
+.feaure-keyfirst .feature-keyfact-wrapper .keyfact-title sup{
+    font-size:2.2rem;
+    color:var(--maroon-flush);
+    font-weight:800;
+}

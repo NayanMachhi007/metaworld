@@ -27,6 +27,14 @@ html {
     padding-left: 0 !important;
 }
 
+ul{
+    padding-left:0 !important;
+}
+
+li{
+    list-style:none;
+}
+
 img{
     width:100%;
     height:100%;

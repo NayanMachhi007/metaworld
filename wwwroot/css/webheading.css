@@ -18,7 +18,10 @@
     font-weight:700;
 }
 
-
+.heading-subheading {
+    color: #252525;
+    font-size:2rem;
+}
 
 .webpage-para{
     font-size:1.8rem;
