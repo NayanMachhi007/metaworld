@@ -16,7 +16,36 @@
 </head>
 <body>
 
-            @RenderBody()
+    <header class="visitor-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="nav-logo">
+                        <a asp-action="index" controller="Home">
+                            <img src="~/assest/logo/meta-ads-logo-remove.png" alt="logo" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="navlink">
+                        <ul class="d-flex justify-content-end align-items-center">
+                            <li>                                
+                                <a class="fa-solid fa-user-plus navbtn" asp-action="registration" asp-controller="Home">Sign Up</a>
+                            </li>
+                            <li>                                
+                                <a class="fa-solid fa-right-to-bracket navbtn" asp-action="login" asp-controller="Home">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+
+    @RenderBody()
 
     <footer class="footer">
         <div class="footer-bg">
@@ -38,22 +67,99 @@
                                     <li><i class="fa-brands fa-facebook"></i></li>
                                     <li><i class="fa-brands fa-instagram"></i></li>
                                     <li><i class="fa-brands fa-linkedin"></i></li>
-                                    <li><i class="fa-brands fa-pinterest"></i></li>                                   
+                                    <li><i class="fa-brands fa-pinterest"></i></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-4">
+                        <div class="footer-link">
+                            <div class="footer-title">
+                                <h6>
+                                    Services
+                                </h6>
+                            </div>
+                        </div>
 
+                        <div class="footer-link-wrapper">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Search Engine Marketing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Search Engine Optimisation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Pay Per Click
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Social Media
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Technical SEO Audit
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Content Marketing
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-4">
+                        <div class="footer-link">
+                            <div class="footer-title">
+                                <h6>
+                                    Contacts
+                                </h6>
+                            </div>
+                        </div>
 
+                        <div class="footer-link-wrapper">
+                            <ul>
+                                <li>
+                                    <p>Adress: 27 Division St, New York, NY 10002, United States of America</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Website: seofy.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:seofy.com">
+                                        Email: seofy@mail.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+8 (123) 985 789">
+                                        Phone: +8 (123) 985 789
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:seofy@mail.com">
+                                        Fax: +8 (123) 985 788
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="~/js/webregister.js"></script>
+    <script src="~/js/location.js"></script>
     <script src="~/js/counter.js"></script>
     <script src="~/js/customtab.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -1,0 +1,26 @@
+﻿.visitor-navigation .nav-logo{   
+   width:10rem;
+   padding:1rem;
+   cursor:pointer;  
+}
+
+.visitor-navigation .navlink ul li {
+    padding: 2rem 1rem;
+}
+
+.visitor-navigation .navlink ul li a{
+    color:var(--white);
+    Background:var(--maroon-flush);
+    font-size:1.2rem;
+    display:inline-block;
+    padding:1rem 3rem;
+    border-radius:0.5rem;
+}
+
+.visitor-navigation .navlink ul li .fa-user-plus::before{
+    padding:1rem  1rem 1rem 0rem !important;   
+}
+
+.visitor-navigation .navlink ul li .fa-right-to-bracket::before{
+    padding:1rem  1rem 1rem 0rem !important;   
+}

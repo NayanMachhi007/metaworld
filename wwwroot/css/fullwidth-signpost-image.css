@@ -16,6 +16,14 @@
     padding:14rem 0 0 12rem;
 }
 
+.fullwidth-signpost-image .fullwidth-bg .fullwidth-content-wrapper  .heading span{
+    background:var(--white);
+}
+
+.fullwidth-signpost-image .fullwidth-bg .fullwidth-content-wrapper  .heading span::after{
+    background:var(--white);
+}
+
 .fullwidth-signpost-image .fullwidth-bg .fullwidth-content-wrapper .fullwidth-title{
     padding:2rem 0;   
 }

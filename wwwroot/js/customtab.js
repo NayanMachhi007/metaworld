@@ -19,7 +19,7 @@ function taboneclick() {
     content4.style.transform = "translatex(100%)";
     content5.style.transform = "translatex(100%)";
 
-    btn1.style.background = "#db1e3c";
+    btn1.style.background = "#003049";
     btn2.style.background = "#F4F6FD";
     btn3.style.background = "#F4F6FD";
     btn4.style.background = "#F4F6FD";
@@ -48,7 +48,7 @@ function tabtwoclick() {
     content4.style.transform = "translatex(100%)";
     content5.style.transform = "translatex(100%)";
 
-    btn2.style.background = "#db1e3c";
+    btn2.style.background = "#003049";
     btn3.style.background = "#F4F6FD";
     btn1.style.background = "#F4F6FD";
     btn4.style.background = "#F4F6FD";
@@ -75,7 +75,7 @@ function tabthreeclick() {
     content4.style.transform = "translatex(100%)";
     content5.style.transform = "translatex(100%)";
 
-    btn3.style.background = "#db1e3c";
+    btn3.style.background = "#003049";
     btn2.style.background = "#F4F6FD";
     btn1.style.background = "#F4F6FD";
     btn4.style.background = "#F4F6FD";
@@ -102,7 +102,7 @@ function tabfourclick() {
     content4.style.transform = "translatex(0)";
     content5.style.transform = "translatex(100%)";
 
-    btn4.style.background = "#db1e3c";
+    btn4.style.background = "#003049";
     btn3.style.background = "#F4F6FD";
     btn2.style.background = "#F4F6FD";
     btn1.style.background = "#F4F6FD";
@@ -130,7 +130,7 @@ function tabfiveclick() {
     content4.style.transform = "translatex(100%)";
     content5.style.transform = "translatex(0)";
 
-    btn5.style.background = "#db1e3c";
+    btn5.style.background = "#003049";
     btn3.style.background = "#F4F6FD";
     btn2.style.background = "#F4F6FD";
     btn1.style.background = "#F4F6FD";

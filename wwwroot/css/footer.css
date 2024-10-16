@@ -24,6 +24,29 @@
     font-weight:400;
 }
 
+.footer .footer-bg .footer-link{
+    padding:6rem 0;
+}
+
+.footer .footer-bg .footer-link .footer-title h6{
+    font-size:2rem;
+    color:var(--white);
+}
+
+.footer .footer-bg .footer-link-wrapper ul li a{
+    color:var(--white);
+    transition:all ease-in-out 0.5s;
+}
+
+.footer .footer-bg .footer-link-wrapper ul li a:hover{
+    color:var(--maroon-flush)
+}
+
+.footer .footer-bg .footer-link-wrapper ul li p{
+    font-size:1.6rem;
+    color:var(--white);
+}
+
 .footer .footer-bg .footer-logo-des .footer-social-icons ul li i{
     font-size:1.6rem;
     color:#3224E9;
@@ -42,3 +65,5 @@
     padding:0 2rem 0 0;
     transition:all ease-in-out 0.5s;
 }
+
+

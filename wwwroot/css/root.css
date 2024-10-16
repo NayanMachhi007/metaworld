@@ -1,4 +1,22 @@
 ﻿:root {
+    --alizarin-crimson: #003049;
+    --flush-orange: #ff7d00;
+    --cardinal: #AD1E39;
+    --selago: #F4F6FD;
+    --concrete: #F2F2F2;
+    --claret: #771027;
+    --persian-blue: #3224E9;
+    --white: #ffffff;
+    --black: #252525;
+    --maroon-flush: #1d3557;
+    --blue-zodiac: #132250;
+    --claret: #771027;
+}
+
+
+
+/*Before We Used*/
+/*:root {
     --alizarin-crimson: #db1e3c;
     --flush-orange: #ff7d00;
     --cardinal: #AD1E39;
@@ -11,4 +29,4 @@
     --maroon-flush: #C7243F;
     --blue-zodiac: #132250;
     --claret: #771027;
-}
+}*/

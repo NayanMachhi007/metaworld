@@ -18,15 +18,14 @@ namespace Meta_Ads_World.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult registration()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult login()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }

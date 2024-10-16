@@ -1,0 +1,167 @@
+﻿@{
+    Layout = "~/views/visitorlayout/visitor_layout.cshtml";
+}
+
+
+<section class="webregister login">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="webregister-wrapper">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="register-des">
+                                <div class="register-image">
+                                    <img src="~/assest/registration/social-hello-remvoe-bg.gif" alt="Alternate Text" />
+                                </div>
+
+                                <div class="register-title">
+                                    <h3 class="secondary-heading">Welcome</h3>
+                                </div>
+                                <div class="register-para">
+                                    <p class="webpage-para">
+                                        You are 30 seconds away from earining your own money
+                                    </p>
+                                </div>
+
+                                <div class="register-login">
+                                    <a class="btn-global" asp-action="registration" asp-controller="Home">Register</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 offset-1">
+                            <div class="webregister-main weblogin-main">
+                                <div class="webregister-wrapper-des">                                   
+
+                                    <div class="webregister-main-wrapper webregister-login-wrapper">
+                                        <div class="webregister-table" id="registeruser">
+                                            <div class="webregister-title">
+                                                <h4 class="secondary-heading px-3">Login</h4>
+                                            </div>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Email / Phone Number" />
+                                                        </td>                                                       
+                                                    </tr>
+
+
+                                                    <tr class="webregister-form-right">
+                                                        <td>
+                                                            <input type="password" placeholder="Password" />
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            
+                                                    <tr>
+                                                        <td class="px-3">
+                                                            <button type="submit">Login</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                        <div class="webregister-table" id="registerbrand">
+                                            <div class="webregister-title">
+                                                <h4 class="secondary-heading">Apply For Brand Registration</h4>
+                                            </div>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="First Name" />
+                                                        </td>
+                                                        <td>
+                                                            <div class="location-div">
+                                                                <select class="country" aria-label="Select Country">
+                                                                    <option value="" disabled selected>Select Country</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                    <tr class="webregister-form-right">
+                                                        <td>
+                                                            <input type="text" placeholder="Last Name" />
+                                                        </td>
+                                                        <td>
+                                                            <div class="location-div">
+                                                                <select class="state" aria-label="Select State">
+                                                                    <option value="" disabled selected>Select State</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Email Address" />
+                                                        </td>
+                                                        <td>
+                                                            <div class="location-div">
+                                                                <select class="city" aria-label="Select City">
+                                                                    <option value="" disabled selected>Select City</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="number" placeholder="Contact Number" />
+                                                        </td>
+                                                        <td>
+                                                            <select>
+                                                                <option>How to know our plateform</option>
+                                                                <option>Social Media</option>
+                                                                <option>Instagram</option>
+                                                                <option>Refreaal</option>
+                                                                <option>Searching on Browser</option>
+                                                                <option>Whatsapp</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Referral Code" />
+                                                        </td>
+                                                        <td>
+                                                            <input class="regbtnpass" type="password" placeholder="Password" />
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <span class="btn-gender">Male</span>
+                                                            <span class="btn-gender">Female</span>
+                                                            <span class="btn-gender">Other</span>
+                                                        </td>
+                                                        <td>
+                                                            <input class="regbtnpass" type="password" placeholder="Confirm Password" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button type="submit">Register</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

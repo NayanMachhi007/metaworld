@@ -19,10 +19,17 @@
             max-height: 30rem;
             right: -5rem;
             bottom: -20%;
+            width: 24rem;
+            bottom: -7rem;
         }
-    .feature-content .feature-content-wrapper {
-        padding:4rem 0 0 10rem;
-    }
+
+            .feature-content .feature-content-image-wrapper .feature-image-secondary img{
+                object-fit:contain;
+            }
+
+            .feature-content .feature-content-wrapper {
+                padding: 4rem 0 0 10rem;
+            }
  
   .feature-content .feature-content-wrapper .feature-content-title{
       padding:2rem 0;

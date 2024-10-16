@@ -49,6 +49,54 @@
       "PackagePath": "staticwebassets\\assest\\fullwidth-signpost-image\\fullwidth-image.jpg"
     },
     {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\banner-one.jpeg",
+      "PackagePath": "staticwebassets\\assest\\homepage\\banner-one.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\banner-three.png",
+      "PackagePath": "staticwebassets\\assest\\homepage\\banner-three.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\banner-two.jpg",
+      "PackagePath": "staticwebassets\\assest\\homepage\\banner-two.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\facebook-featurecontent.jpg",
+      "PackagePath": "staticwebassets\\assest\\homepage\\facebook-featurecontent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\instagram-featurecontent.jpg",
+      "PackagePath": "staticwebassets\\assest\\homepage\\instagram-featurecontent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\linkdien-feturecontent.jpg",
+      "PackagePath": "staticwebassets\\assest\\homepage\\linkdien-feturecontent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\online-earining-gif.gif",
+      "PackagePath": "staticwebassets\\assest\\homepage\\online-earining-gif.gif"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\techimage-1.png",
+      "PackagePath": "staticwebassets\\assest\\homepage\\techimage-1.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\ticktok-featurecontent.jpg",
+      "PackagePath": "staticwebassets\\assest\\homepage\\ticktok-featurecontent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\twitter-featurecontent.jpg",
+      "PackagePath": "staticwebassets\\assest\\homepage\\twitter-featurecontent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\whatsapp-featurecontent.jpg",
+      "PackagePath": "staticwebassets\\assest\\homepage\\whatsapp-featurecontent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\homepage\\youtube-featurecontent.jpg",
+      "PackagePath": "staticwebassets\\assest\\homepage\\youtube-featurecontent.jpg"
+    },
+    {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\icon-scroller\\client-1.png",
       "PackagePath": "staticwebassets\\assest\\icon-scroller\\client-1.png"
     },
@@ -75,6 +123,22 @@
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\meta-ads-logo-remove.png",
       "PackagePath": "staticwebassets\\assest\\logo\\meta-ads-logo-remove.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\registration\\registration.gif",
+      "PackagePath": "staticwebassets\\assest\\registration\\registration.gif"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\registration\\social-hello-remvoe-bg.gif",
+      "PackagePath": "staticwebassets\\assest\\registration\\social-hello-remvoe-bg.gif"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\registration\\social-hello.gif",
+      "PackagePath": "staticwebassets\\assest\\registration\\social-hello.gif"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\registration\\social-thumb.gif",
+      "PackagePath": "staticwebassets\\assest\\registration\\social-thumb.gif"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\banner-swiper.css",
@@ -121,6 +185,14 @@
       "PackagePath": "staticwebassets\\css\\import.css"
     },
     {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\navigation.css",
+      "PackagePath": "staticwebassets\\css\\navigation.css"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\registration.css",
+      "PackagePath": "staticwebassets\\css\\registration.css"
+    },
+    {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\root.css",
       "PackagePath": "staticwebassets\\css\\root.css"
     },
@@ -155,6 +227,14 @@
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\js\\customtab.js",
       "PackagePath": "staticwebassets\\js\\customtab.js"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\js\\location.js",
+      "PackagePath": "staticwebassets\\js\\location.js"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\js\\webregister.js",
+      "PackagePath": "staticwebassets\\js\\webregister.js"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\lib\\bootstrap\\LICENSE",
