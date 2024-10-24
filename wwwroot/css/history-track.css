@@ -1,0 +1,22 @@
+﻿.history-track .history-wrapper .history-input input {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 0;
+    background: var(--maroon-flush);
+    border-radius: 1rem;
+    color: var(--white);
+}
+
+.history-track .history-wrapper .history-input input::placeholder{
+    color:var(--white);
+    font-size:1rem;
+}
+
+
+.history-track .history-wrapper .history-btn a {
+    color: var(--white);
+    padding: 1rem 1rem;
+    background: var(--maroon-flush);
+    border-radius: 1rem;
+    cursor:pointer;
+}

@@ -1,0 +1,153 @@
+﻿@model Meta_Ads_World.Models.UserModelList
+
+@{
+    Layout = "~/views/shared/visitorlogin_layout.cshtml";
+}
+
+<section class="fullwidth-signpost-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="fullwidth-bg">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="fullwidth-content-wrapper">
+                                <div class="heading">
+                                    <span class="heading-devider"></span>
+                                </div>
+                                <div class="fullwidth-title">
+                                    <h2 class="secondary-heading">
+                                        Meta Ads World User Account Settings
+                                    </h2>
+                                </div>
+                                <div class="fullwidth-des">
+                                    <p class="webpage-para">
+                                        Our digital marketing strategists will put together an actionable plan to strengthen your presence among customers.
+                                    </p>
+                                </div>
+
+                                <div class="fullwidth-btn-wrapper d-flex">
+
+                                    <div class="fullwidth-secondary">
+                                        <a href="#" class="btn-global">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fullwidth-image-bg">
+                                <div class="fullwidth-image">
+                                    <img src="/assest/simple-banner/history.png" alt="featureimage">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="account-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="heading-account">
+                            <h2 class="heading-subheading">User Account Edit </h2>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="account-invite">
+                            <a href="#"><i class="fa-solid fa-user-plus"></i>Invite user</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="user-image">
+                            <img src="~/assest/dummy/dummy100X100.png" alt="Alternate Text" />
+                        </div>
+                        <div class="user-label">
+                            <label>Nayan Machhi</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="account-wrapper">
+                            <form asp-action="usersettings" asp-controller="visitor">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="account-details-wrapper">
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <input type="hidden" asp-for="userid"/>
+                                                </div>
+                                            </div>
+                                           
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        Email Address
+                                                    </label>
+                                                    <input type="email"  asp-for="uemail"/>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        Confirm Email Address
+                                                    </label>
+                                                    <input type="email" asp-for="uconfirmemail" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        Password
+                                                    </label>
+                                                    <input type="text" asp-for="upassword" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        Confirm Password
+                                                    </label>
+                                                    <input type="text" asp-for="uconfirmpassword" />
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <button type="submit" class="btn-global">Submit </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="useraccount-graph">
+                            <div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+

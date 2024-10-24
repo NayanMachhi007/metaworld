@@ -28,125 +28,47 @@
     padding:2rem 0 0 0;
 }
 
-.webregister  .webregister-wrapper .register-des .register-login a{
-    padding:1rem 4rem;
-    border:0;
-    font-size:1.3rem;
-    background:var(--white);
-    color:var(--maroon-flush);
-    display:inline-block;
-}
-
-    .webregister .webregister-wrapper .webregister-main {
-        background: var(--concrete);
-        padding: 1rem 0 7rem 4rem;
-        border-radius: 5rem 0 0 5rem;
-    }
-
-.webregister .webregister-wrapper .weblogin-main{
-    margin: 8rem 0 0 0;
-}
-
-
-.webregister .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-tab-btn {
-    padding: 0 2rem;
-}
-
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-tab-btn .weregisterbtn{
-    background:var(--maroon-flush);
-    padding:0.3rem 0.4rem;
-    border-radius:1rem;
-}
-
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-tab-btn .weregisterbtn button{
-    border:0;
-    padding:0.5rem 2rem;
-    border-radius:1rem;
-    margin:0 0.1rem;
-    font-weight:500;
-    font-size:1.2rem;
+.webregister .registration-wrapper{
+    padding:4rem 2rem;
     background:var(--concrete);
+    margin:6rem 0  0 0;
+    border-radius:1rem;
+}
+
+.webregister .registration-wrapper .register-title h3{
+    font-size:2.4rem;
     color:var(--maroon-flush);
 }
 
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-title{
+.webregister .registration-wrapper .reg-des .reg-title {
+    padding: 0.5rem 0 0 0;
+}
+
+.webregister .registration-wrapper .reg-des .reg-title label{
+    font-weight:500;
+    color:var(--maroon-flush);
+    font-size:1.4rem;
+}
+
+.webregister .registration-wrapper .reg-des{
+    padding:1rem 0 0 0;
+}
+
+.webregister .registration-wrapper .reg-des input{
+    width:100%;
+    border:0;
     padding:1rem 0;
 }
 
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-title h4{
-    font-size:2rem;
-    color:var(--maroon-flush);
-    font-weight:700;
-}
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper{
-    position:relative;
-    padding:0rem 0 34rem 4rem;
-    overflow:hidden;
-
-}
-
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-login-wrapper{
-    position:relative;
-    padding:1rem 0 18rem 4rem;
-    overflow:hidden;
-
-}
-
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper .webregister-table{
-    transform: translateX(150%);
-    position:absolute;
-    transition:0.5s;
-    left:0;
-    padding:1rem 4rem;
-}
-
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper #registeruser{
-    transform:translateX(0);
-}
-
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper .webregister-table table tbody tr td .location-div select{
-    padding:0.5rem 2rem;
-    margin:0 2rem;
-}
-
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper .webregister-table  table tbody tr td select{
-    padding:0.5rem 2rem;
-    margin:0 2rem;
-    color:var(--maroon-flush);
-    font-weight:bold;
-}
-
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper .webregister-table table tbody tr td input{
-    padding:0.5rem 2rem;
-    margin:0 2rem;
-}
-
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper .webregister-table table tbody tr td .regbtnpass{
-    margin:0.5rem 2rem;
-}
-
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper .webregister-table table tbody tr td input{
-    padding:0.5rem 4rem;
+.webregister .registration-wrapper .reg-des  .location-div select{
     width:100%;
-    margin:0.2rem 1rem;
+    padding:1rem 0;
 }
 
-.webregister  .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper .webregister-table table tbody tr td button{
-    padding:1rem 3rem;
-    background:var(--maroon-flush);
-    color:var(--white);
-    border-radius:1rem;
-    margin:1rem 0 0 0;
-}
 
-.webregister .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper .webregister-table table tbody tr td input::placeholder{
-    color:var(--maroon-flush);
-    font-weight:bold;
-}
-
-.webregister .webregister-wrapper .webregister-main .webregister-wrapper-des .webregister-main-wrapper .webregister-table table tbody tr td .location-div select{
-     color:var(--maroon-flush);
-    font-weight:bold;
+.webregister .registration-wrapper .reg-des  select {
+    width: 100%;
+    padding: 1rem 0;
 }
 
 

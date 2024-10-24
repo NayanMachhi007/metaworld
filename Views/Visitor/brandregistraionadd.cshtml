@@ -1,0 +1,162 @@
+﻿@model Meta_Ads_World.Models.BrandRegistrationModelList
+
+@{
+    Layout = "~/views/visitorlayout/visitor_layout.cshtml";
+}
+
+<section class="webregister">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="webregister-wrapper">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="register-des">
+                                <div class="register-image">
+                                    <img src="~/assest/registration/social-hello-remvoe-bg.gif" alt="Alternate Text" />
+                                </div>
+
+                                <div class="register-title">
+                                    <h3 class="secondary-heading">Welcome</h3>
+                                </div>
+                                <div class="register-para">
+                                    <p class="webpage-para">
+                                        You are 30 seconds away from earining your own money
+                                    </p>
+                                </div>
+
+                                <div class="register-login">
+                                    <a class="btn-global" asp-action="login" asp-controller="visitor">Login</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-8 offset-1">
+                            <div class="registration-wrapper">
+                                <div class="register-title">
+                                    <h3>User Registraion</h3>
+                                </div>
+                                <form asp-action="brandregistraionadd" asp-controller="visitor">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand User Name</label>
+                                                    </div>
+                                                    <input type="text" asp-for="bname" />
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand Email</label>
+                                                    </div>
+                                                    <input type="email" asp-for="bemail" />
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand Contact Number</label>
+                                                    </div>
+                                                    <input type="number" asp-for="bcontactno" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand Password</label>
+                                                    </div>
+                                                    <input type="password" asp-for="bpassword" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand Confirm Password</label>
+                                                    </div>
+                                                    <input type="password" asp-for="bconfirmpassword" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6">
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Select County --</label>
+                                                    </div>
+                                                    <div class="location-div">
+                                                        <select class="brandcountry" aria-label="Select Country" asp-for="bcountry">
+                                                            <option value="" disabled selected>Select Country</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Select State --</label>
+                                                    </div>
+                                                    <div class="location-div">
+                                                        <select class="brandstate" aria-label="Select State" asp-for="bstate">
+                                                            <option value="" disabled selected>Select State</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Select City --</label>
+                                                    </div>
+                                                    <div class="location-div">
+                                                        <select class="brandcity" aria-label="Select City" asp-for="bcity">
+                                                            <option value="" disabled selected>Select City</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>                                            
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="hidden" role="switch" id="flexSwitchCheckChecked" checked asp-for="bstatus" value="True">                                                        
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <button class="btn-global" type="submit">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

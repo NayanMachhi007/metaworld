@@ -96,3 +96,21 @@
 .bg-white{
     background:var(--white);
 }
+
+.roate-animation {
+    width:50rem;
+    height:50rem;
+    border-radius:50%;
+    animation: animName 5s linear infinite;
+}
+
+
+@keyframes animName {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,62 @@
+﻿.account-details{
+    padding:3rem 1rem;
+    background:var(--concrete);
+}
+
+.account-details .account-wrapper{
+    padding:3rem 2rem 3rem 0;
+}
+
+.account-details .user-image {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    padding: 2rem 0 0 0;
+}
+
+.account-details .user-label label{
+    color:var(--maroon-flush);
+    padding:1rem 0;
+    font-size:1.4rem;
+    font-weight:700;
+}
+
+
+.account-details .heading-account h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color:var(--maroon-flush);
+}
+
+
+.account-details .account-invite a {
+    padding:1rem 2rem;
+    color:var(--maroon-flush);
+    font-weight:500;
+}
+
+.account-details .account-invite a i {
+    font-size: 2rem;
+    color: var(--maroon-flush);
+    padding:0 1rem;
+}
+.account-details .account-details-wrapper .account-input label{
+    color:var(--maroon-flush);
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+.account-details .account-details-wrapper .account-input input {
+    width: 100%;
+    padding:0.5rem 2rem;
+    border:0;
+    margin:0 0 1rem 0;
+}
+
+.account-details .account-details-wrapper .account-input .location-div select{
+    width:100%;
+    color:var(--maroon-flush);
+    padding:0.5rem 2rem;
+    border:0;
+    margin:0 0 1rem 0;
+}

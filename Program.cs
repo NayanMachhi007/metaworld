@@ -1,7 +1,15 @@
+using Meta_Ads_World.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<DataContext>(Options =>
+{
+    Options.UseSqlServer(builder.Configuration.GetConnectionString("con"));
+});
 
 var app = builder.Build();
 

@@ -1,0 +1,231 @@
+﻿@model Meta_Ads_World.Models.UserModelList;
+
+@{
+    Layout = "~/views/shared/visitorlogin_layout.cshtml";
+}
+
+<section class="fullwidth-signpost-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="fullwidth-bg">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="fullwidth-content-wrapper">
+                                <div class="heading">
+                                    <span class="heading-devider"></span>
+                                </div>
+                                <div class="fullwidth-title">
+                                    <h2 class="secondary-heading">
+                                        Meta Ads World User Account Details
+                                    </h2>
+                                </div>
+                                <div class="fullwidth-des">
+                                    <p class="webpage-para">
+                                        Our digital marketing strategists will put together an actionable plan to strengthen your presence among customers.
+                                    </p>
+                                </div>
+
+                                <div class="fullwidth-btn-wrapper d-flex">
+
+                                    <div class="fullwidth-secondary">
+                                        <a href="#" class="btn-global">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fullwidth-image-bg">
+                                <div class="fullwidth-image">
+                                    <img src="/assest/simple-banner/history.png" alt="featureimage">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="account-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="heading-account">
+                            <h2 class="heading-subheading">Account Details</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="account-invite">
+                            <a href="#"><i class="fa-solid fa-user-plus"></i>Invite user</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="user-image">
+                            <img src="~/assest/dummy/dummy100X100.png" alt="Alternate Text" />
+                        </div>
+                        <div class="user-label">
+                            <label>Nayan Machhi</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <form asp-action="useraccountdetails" asp-controller="visitor">
+                            <div class="account-wrapper">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="account-details-wrapper">
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        First Name
+                                                    </label>
+                                                    <input type="text" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        Last Name
+                                                    </label>
+                                                    <input type="text"  />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        Email Address
+                                                    </label>
+                                                    <input type="text" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        Contact No
+                                                    </label>
+                                                    <input type="text" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        Refreall Code
+                                                    </label>
+                                                    <input type="text"  />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="account-details-wrapper">
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        Country
+                                                    </label>
+                                                    <div class="location-div">
+                                                        <select class="country" aria-label="Select Country" >
+                                                            <option value="" disabled selected>Select Country</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        State
+                                                    </label>
+                                                    <div class="location-div">
+                                                        <select class="state" aria-label="Select State" >
+                                                            <option value="" disabled selected>Select State</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <label>
+                                                        City
+                                                    </label>
+                                                    <div class="location-div">
+                                                        <select class="city" aria-label="Select City" >
+                                                            <option value="" disabled selected>Select City</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="account-input">
+                                                    <input type="hidden"  />
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="useraccount-graph">
+                            <div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feautre-image-account">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="featureimage">
+                    <img src="~/assest/account-details/money-feature-image.jpg" alt="Alternate Text" />
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="account-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Refreall Code</th>
+                                <th>Refreall Id</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

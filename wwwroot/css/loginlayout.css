@@ -1,0 +1,80 @@
+﻿.visitor-login .nav-logo{
+     padding: 2rem;
+    width: 12rem;
+    height: 10rem;
+}
+
+
+.visitor-login .visitor-navlink ul li a{
+    padding:4rem 1rem 2rem 1rem;
+    display:inline-block;
+    color:var(--maroon-flush);
+    font-size:1.6rem;
+    font-weight:600;
+    position:relative;
+}
+
+.visitor-login .visitor-navlink ul li a::after{
+    content:"";
+    position:absolute;
+    bottom:1rem;
+    height:0.2rem;
+    width:0rem;
+    background:var(--maroon-flush);
+    left:1.2rem;
+
+    opacity:0;
+    transition:all ease-in-out 0.5s;
+}
+
+.visitor-login .visitor-navlink ul li a:hover::after{
+    opacity:1;
+    width:4rem;
+}
+
+.visitor-login .visitor-link{
+    position: relative;
+}
+
+.visitor-login .visitor-link .linktoggle{
+    padding:1rem;
+    display:inline-block;
+    background:var(--maroon-flush);
+    margin:3.5rem 0 0 2rem;
+    cursor:pointer;
+}
+
+.visitor-login .visitor-link .linktoggle i{
+    color:var(--white);
+    font-size:1.8rem;
+    font-weight:600;
+}
+
+.visitor-login .visitor-link .visitor-link-des{
+    position:absolute;
+    top:10rem;
+    left:-2rem;
+    background:var(--maroon-flush);
+    padding:1rem 6rem;
+    transition:all ease-in-out 0.5s;
+    color:var(--white);
+    opacity:0;
+}
+
+.dblock{
+    display:block !important;
+    opacity:1 !important;
+}
+
+.visitor-login .visitor-link .visitor-link-des ul li a {
+    padding: 1rem 0;
+    display: inline-block;
+    transition: all ease-in-out 0.5s;
+    color: var(--white);
+    font-size:1.4rem;
+}
+
+.visitor-login .visitor-link .visitor-link-des ul li a:hover{
+    color:var(--white);
+
+}

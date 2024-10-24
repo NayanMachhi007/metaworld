@@ -1,5 +1,6 @@
 ﻿@import "root.css";
 @import "global.css";
+@import "demo.css";
 @import "webfonts.css";
 @import "webheading.css";
 @import "banner-swiper.css";
@@ -15,3 +16,12 @@
 @import "footer.css";
 @import "registration.css";
 @import "navigation.css";
+@import "loginlayout.css";
+@import "feature-image-account.css";
+@import "history-track.css";
+@import "table.css";
+@import "brandsocialinsta.css";
+@import "accountdetails.css";
+@import "adminstyle.css";
+@import "adminlayout.css";
+@import "admin.css";

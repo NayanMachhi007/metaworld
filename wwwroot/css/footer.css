@@ -36,10 +36,11 @@
 .footer .footer-bg .footer-link-wrapper ul li a{
     color:var(--white);
     transition:all ease-in-out 0.5s;
+    font-size:1.5rem;
 }
 
 .footer .footer-bg .footer-link-wrapper ul li a:hover{
-    color:var(--maroon-flush)
+    color:var(--maroon-flush);
 }
 
 .footer .footer-bg .footer-link-wrapper ul li p{

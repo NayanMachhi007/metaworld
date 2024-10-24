@@ -1,0 +1,71 @@
+﻿@model Meta_Ads_World.Models.UserModelList
+
+@{
+    Layout = "~/Views/Shared/_admin_layout.cshtml";
+}
+
+<section class="table-main">
+    <div class="search">
+        <input type="search" placeholder="Search" />
+
+        <button class="btn-global">Submit</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-title">
+                    <h3 class="heading-subheading">User List</h3>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>First Name</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var iteam in Model.UserList)
+                            {
+                                <tr>
+                                    <td>@iteam.userid</td>
+                                    <td>@iteam.ufname</td>
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.status" onchange="btnstatus(@iteam.userid,this.checked)">
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        function btnstatus(id,statusdata) {
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("UserGetStatus", "Admin")",
+                data: {
+                    getid: id,
+                    getstatus: statusdata,                   
+                },
+                success: function (data) {
+                    console.log(data, "Sucess");
+                },
+                error: function (data) {
+                    console.log("Error", data);
+                }
+
+            });
+        }
+    </script>
+}
