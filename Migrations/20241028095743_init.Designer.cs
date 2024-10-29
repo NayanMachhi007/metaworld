@@ -4,6 +4,7 @@ using Meta_Ads_World.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Meta_Ads_World.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20241028095743_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -88,31 +91,6 @@ namespace Meta_Ads_World.Migrations
                     b.HasKey("id");
 
                     b.ToTable("BrandRegistrationMst");
-                });
-
-            modelBuilder.Entity("Meta_Ads_World.Data.InstaPostBudgetMst", b =>
-                {
-                    b.Property<int>("instapostbudgetid")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("instapostbudgetid"));
-
-                    b.Property<int>("instacommentbudget")
-                        .HasColumnType("int");
-
-                    b.Property<int>("instalikebudget")
-                        .HasColumnType("int");
-
-                    b.Property<int>("instasavebudget")
-                        .HasColumnType("int");
-
-                    b.Property<int>("instasharebudget")
-                        .HasColumnType("int");
-
-                    b.HasKey("instapostbudgetid");
-
-                    b.ToTable("InstaPostBudgetMst");
                 });
 
             modelBuilder.Entity("Meta_Ads_World.Data.InstaPostMst", b =>

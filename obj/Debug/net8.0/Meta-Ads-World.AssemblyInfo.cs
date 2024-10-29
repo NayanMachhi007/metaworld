@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Meta-Ads-World")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61c85e9997f02b32bc4cbe2fa7073b914053ef43")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6155c44329da6527b5a2b178ff2a260d78d41b80")]
 [assembly: System.Reflection.AssemblyProductAttribute("Meta-Ads-World")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Meta-Ads-World")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

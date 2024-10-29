@@ -114,3 +114,19 @@
         transform: rotate(360deg);
     }
 }
+
+.likeactive {
+    background: var(--cardinal);
+}
+
+.activedata{
+    display:block  !important;    
+}
+
+.modalfx{
+    position:absolute !important;
+}
+
+.table > :not(caption) > * > * {
+    padding: .55rem 0.25rem !important;
+}

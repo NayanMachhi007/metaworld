@@ -12,7 +12,7 @@
         public string ucountry { get; set; }
         public string ustate { get; set; }
         public string ucity { get; set; }
-        public Boolean status { get; set; } = true;
+        public Boolean status { get; set; }
         public int urefreallid { get; set; }
         public string urefreallcode { get; set; }
     }

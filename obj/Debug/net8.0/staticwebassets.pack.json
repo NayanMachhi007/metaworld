@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\assest\\feature-image\\feature-image-secondary.jpg"
     },
     {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\feature-image\\insta-feature-image.png",
+      "PackagePath": "staticwebassets\\assest\\feature-image\\insta-feature-image.png"
+    },
+    {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\footer\\footer-bg.jpg",
       "PackagePath": "staticwebassets\\assest\\footer\\footer-bg.jpg"
     },
@@ -731,6 +735,14 @@
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\banner-swiper.css",
       "PackagePath": "staticwebassets\\css\\banner-swiper.css"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\brandmain.css",
+      "PackagePath": "staticwebassets\\css\\brandmain.css"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\brandsocialinsta.css",
+      "PackagePath": "staticwebassets\\css\\brandsocialinsta.css"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\card-section.css",

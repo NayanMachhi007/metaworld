@@ -1,0 +1,151 @@
+﻿@model Meta_Ads_World.Models.InstaPostBudgetModelList
+
+@{
+    Layout = "~/Views/Shared/_admin_layout.cshtml";
+}
+
+<section class="brand-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="brand-title">
+                    <h1 class="heading-subheading">Instagram Post Budget</h1>
+                </div>
+                <div class="brand-wrapper">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <form asp-action="instapostbudgetadd">
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label d-flex">
+                                        <p>Instagram Like Budget</p>
+
+                                        <div class="totalbudget ">
+                                            <span class="px-5">Total Budget :</span>   <label type="text" id="total">  </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="number" onchange="findtotal()" class="form-control amount"  asp-for="instalikebudget" onChange={value_handler} name='like'>
+                                    </div>
+                                </div>
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>Instagram Comment Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control amount" onchange="findtotal()"  asp-for="instacommentbudget" onChange={value_handler} name='comment'>
+                                    </div>
+                                </div>
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>Instagram Share Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control amount" onchange="findtotal()" asp-for="instasharebudget">
+                                    </div>
+                                </div>
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>Instagram Save Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control amount" onchange="findtotal()"  asp-for="instasavebudget">
+                                    </div>
+                                </div>
+
+                                <div class="brand-btn">
+                                    <button class="brand-insta-tbn" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="col-6">
+                            <div class="brand-animation">
+                                <div action="image-main">
+                                    <img src="~/assest/feature-image/insta-feature-image.png" alt="instagram feature image" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<section class="table-main">
+    <div class="search">
+        <input type="search" placeholder="Search" />
+
+        <button class="btn-global">Submit</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-title">
+                    <h3 class="heading-subheading">Instagram Post Budget List</h3>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Like</th>
+                                <th>Comment</th>
+                                <th>Share</th>
+                                <th>Save</th>
+                                <th>Action</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach(var iteam in Model.instaPostBudgetModelLists)
+                            {
+                                <tr>
+                                    <td>@iteam.instapostbudgetid</td>
+                                    <td>@iteam.instalikebudget</td>
+                                    <td>@iteam.instacommentbudget</td>
+                                    <td>@iteam.instasharebudget</td>
+                                    <td>@iteam.instasavebudget</td>
+                                    <td><a asp-route-id="@iteam.instapostbudgetid" asp-action="instapostbudgetedit"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section Scripts{
+    <script>
+        function findtotal() {
+            var arr = document.getElementsByClassName('amount');
+            console.log(arr);
+
+            var tot = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (parseFloat(arr[i].value))
+                    tot += parseFloat(arr[i].value);
+            }
+            document.getElementById('total').innerHTML = tot;
+        }
+    </script>
+}

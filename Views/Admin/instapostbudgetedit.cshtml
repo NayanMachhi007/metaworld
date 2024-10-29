@@ -1,0 +1,85 @@
+﻿@model Meta_Ads_World.Models.InstaPostBudgetModelList
+
+@{
+    Layout = "~/Views/Shared/_admin_layout.cshtml";
+}
+
+<section class="brand-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="brand-title">
+                    <h1 class="heading-subheading">Instagram Post Budget</h1>
+                </div>
+                <div class="brand-wrapper">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <form asp-action="instapostbudgetedit">
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>Instagram Like Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="hidden" class="form-control" id="inputGroupFile02" asp-for="instapostbudgetid">
+
+                                        <input type="number" class="form-control" id="inputGroupFile02" asp-for="instalikebudget">
+                                    </div>
+                                </div>
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>Instagram Comment Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="inputGroupFile02" asp-for="instacommentbudget">
+                                    </div>
+                                </div>
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>Instagram Share Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="inputGroupFile02" asp-for="instasharebudget">
+                                    </div>
+                                </div>
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>Instagram Save Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="inputGroupFile02" asp-for="instasavebudget">
+                                    </div>
+                                </div>
+
+                                <div class="brand-btn">
+                                    <button class="brand-insta-tbn" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="col-6">
+                            <div class="brand-animation">
+                                <div action="image-main">
+                                    <img src="~/assest/feature-image/insta-feature-image.png" alt="instagram feature image" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>

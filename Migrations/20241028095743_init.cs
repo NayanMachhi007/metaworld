@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -46,6 +47,30 @@ namespace Meta_Ads_World.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "InstaPostMsts",
+                columns: table => new
+                {
+                    instapostid = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    instaposttotallike = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    instapostcomment = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    instapostshare = table.Column<bool>(type: "bit", nullable: false),
+                    instapostsave = table.Column<bool>(type: "bit", nullable: false),
+                    instapoststartingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    instapostendingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    instapostlikestatus = table.Column<bool>(type: "bit", nullable: false),
+                    instapostcommentstatus = table.Column<bool>(type: "bit", nullable: false),
+                    instagrampostsharestatus = table.Column<bool>(type: "bit", nullable: false),
+                    instapostsavestatus = table.Column<bool>(type: "bit", nullable: false),
+                    instaposturl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    posttotalbudget = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_InstaPostMsts", x => x.instapostid);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "UserMsts",
                 columns: table => new
                 {
@@ -78,6 +103,9 @@ namespace Meta_Ads_World.Migrations
 
             migrationBuilder.DropTable(
                 name: "BrandRegistrationMst");
+
+            migrationBuilder.DropTable(
+                name: "InstaPostMsts");
 
             migrationBuilder.DropTable(
                 name: "UserMsts");

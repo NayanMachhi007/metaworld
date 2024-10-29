@@ -105,7 +105,7 @@ namespace Meta_Ads_World.Repository
         public void UserRegistrationSettings(UserModelList useredit)
         {
             UserMst user = _datacontext.UserMsts.Find(useredit.userid);
-            if (user != null) {               
+            if (user != null) {                               
                 user.uemail = useredit.uemail;
                 user.uconfirmemail = useredit.uconfirmemail;
                 user.upassword = useredit.upassword;

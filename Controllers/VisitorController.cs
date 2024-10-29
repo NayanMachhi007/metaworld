@@ -12,12 +12,14 @@ namespace Meta_Ads_World.Controllers
         private readonly DataContext _datacontext;
         private readonly UserRepository _userRepository;
         private readonly BrandRepository _brandrepository;
+        private readonly BrandSocialCategoryRepository _brandsocialcategoryrepository;
 
         public VisitorController(DataContext datacontext)
         {
             _datacontext = datacontext;
             _userRepository = new UserRepository(_datacontext);
-            _brandrepository=new BrandRepository(_datacontext);
+            _brandrepository = new BrandRepository(_datacontext);
+            _brandsocialcategoryrepository = new BrandSocialCategoryRepository(_datacontext);
         }
 
         public IActionResult Index()
@@ -31,7 +33,7 @@ namespace Meta_Ads_World.Controllers
         public IActionResult userregistrationadd(string id)
         {
             UserModelList user = new UserModelList();
-            var data = _datacontext.UserMsts.Where(x=>x.urefreallcode==id).FirstOrDefault();
+            var data = _datacontext.UserMsts.Where(x => x.urefreallcode == id).FirstOrDefault();
             if (data != null)
             {
                 user.urefreallid = data.userid;
@@ -61,9 +63,9 @@ namespace Meta_Ads_World.Controllers
             userdetails.UserList = _userRepository.UserRefreallList();
 
             userdetails.userid = data.userid;
-            userdetails.ufname=data.ufname;
+            userdetails.ufname = data.ufname;
             userdetails.ulname = data.ulname;
-            userdetails.uemail=data.uemail;
+            userdetails.uemail = data.uemail;
             userdetails.urefreallcode = data.urefreallcode;
 
             return View(userdetails);
@@ -98,7 +100,7 @@ namespace Meta_Ads_World.Controllers
         //Brand Registration
         public IActionResult brandregistraionadd()
         {
-           
+
             return View();
         }
 
@@ -107,20 +109,71 @@ namespace Meta_Ads_World.Controllers
         {
             _brandrepository.BrandRegistrationAdd(bradregisadd);
             return RedirectToAction("brandregistraionadd");
-        }
+        }    
 
-        [HttpGet]
-        public IActionResult brandsocialinstagram()
-        {
-            return View();
-        }
-        
         //User Account
         [HttpPost]
         public IActionResult usersettings(UserModelList useredit)
         {
             _userRepository.UserRegistrationSettings(useredit);
             return RedirectToAction("usersettings");
+        }
+
+        //Instagram Post
+        [HttpGet]
+        public IActionResult instagrampost()
+        {
+            InstaPostModelList insta = new InstaPostModelList();
+            insta.InstaPostList = _brandsocialcategoryrepository.InstaPostList();
+            return View(insta);
+        }
+
+        //Brand Instagram Post Get Method
+        [HttpGet]
+        public IActionResult brandinstapostadd()
+        {
+            
+            return View();
+        }
+
+
+        //Brand Instagram Post Post Method
+        [HttpPost]
+        public IActionResult brandinstapostadd(InstaPostModelList instaadd)
+        {
+            _brandsocialcategoryrepository.instagrampostadd(instaadd);
+            return RedirectToAction("brandinstapostadd");
+        }
+
+        [HttpGet]
+        public IActionResult brandfilter()
+        {
+            return View();
+        }
+
+
+
+        //Json Like 
+        public JsonResult instalike(int id,int like)
+        {
+            int temp = 1;
+            like += temp;
+            var data = _datacontext.InstaPostMsts.Where(x => x.instapostid == id).FirstOrDefault();
+            if (data != null) {
+                data.instaposttotallike = like.ToString();
+                _datacontext.InstaPostMsts.Update(data);
+                _datacontext.SaveChanges();
+            }
+
+            return Json(data);
+
+        }
+
+        //Json Comment
+        public JsonResult instacomment(int getid)
+        {
+            var data = _datacontext.InstaPostMsts.Where(x => x.instapostid == getid).ToList();
+            return Json(data);
         }
 
 

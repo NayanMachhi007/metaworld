@@ -1,2 +1,79 @@
-﻿body {
+﻿.brandsocialinsta{
+    padding:2rem;
+    background:var(--concrete);
 }
+.brandsocialinsta .insta-wrapper .insta-main-section{
+    padding:2rem 1rem;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper{
+    background:var(--white);
+    border-radius:1rem;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-title{
+    padding:1rem 2rem;
+}
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-title .insta-profile p{
+    font-size:1.4rem;
+    border:0.1rem solid var(--maroon-flush);
+    padding:0.5rem;
+    border-radius:50%;
+    color:var(--maroon-flush);
+}
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-title .user-title{
+    padding:0.5rem 1rem;
+    font-size:1.4rem;
+    font-weight:600;
+    color:var(--maroon-flush);
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-main .insta-commentposition{
+    position:relative;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-main .insta-image{
+    height:40rem;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-main .insta-commentposition .instacomment-text{
+    position:absolute;
+    top:0;
+    width:100%;
+    display:none;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-main .insta-commentposition .instacomment-text textarea{
+    width:100%;
+    height:40rem;
+    text-align:left;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-main .instaliketext{
+    padding:0 0 0.5rem 1.2rem;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-main .insta-save span {
+    padding: 1rem 0 0 0;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-main .insta-wrapper-main {
+    padding: 0 1rem;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-main .insta-wrapper-main .insta-subsection .instasocial{
+    padding:1rem 1rem 0 0.2rem;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-main .insta-wrapper-main .insta-subsection .instasocial button{
+    border:0;
+    font-size:1.5rem;
+}
+
+.brandsocialinsta .insta-wrapper .insta-main-section .instawrapper .insta-main .insta-wrapper-main .insta-subsection .instasocial span{
+    font-size:1.5rem;
+    color:var(--maroon-flush);
+}
+

@@ -1,0 +1,31 @@
+﻿.brand-main .brand-title{
+    padding:1rem 0;
+}
+
+.brand-main .brand-wrapper .brand-dropdown{
+    padding:1rem 0;
+}
+
+.brand-main .brand-wrapper .brand-dropdown select{
+    padding:0.5rem 0.5rem;
+    width:100%;
+    color:var(--maroon-flush);
+    font-weight:600;
+}
+
+
+.brand-main .brand-wrapper .brand-title-wrapper .brand-input{
+    padding:0rem 0 3rem 3.4rem;
+}
+
+.brand-main .brand-wrapper .brand-btn{
+    padding:1rem 0;
+}
+
+.brand-main .brand-wrapper .brand-btn button{
+    padding:0.5rem 2rem;
+    border:0;
+    color:white;
+    background:#7367F0;
+}
+
