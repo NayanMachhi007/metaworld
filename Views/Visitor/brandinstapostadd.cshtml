@@ -1,4 +1,5 @@
-﻿@model Meta_Ads_World.Models.InstaPostModelList
+﻿@model  Meta_Ads_World.Models.InstaPostModelList
+
 
 @{
     Layout = "~/Views/Shared/_brand_layout.cshtml";
@@ -31,17 +32,24 @@
                                 <div class="brand-title-wrapper">
                                     <div class="brand-title-label">
                                         <p>Do you want Increase the Instagram Like?</p>
+
+                                        <span>Instagram Per Post Like Budget :</span> <span id="instalike"> @Model.instalikebudget</span><span> Rs.</span>
+
+
+
                                     </div>
                                     <div class="brand-input form-check form-switch">
-
                                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" asp-for="instapostlikestatus">
-
                                     </div>
                                 </div>
 
                                 <div class="brand-title-wrapper">
                                     <div class="brand-title-label">
                                         <p>Do You want Increase the Instagram Comment?</p>
+
+                                        <span>Instagram Per Post Comment Budget :</span> <span id="instacomment">@Model.instacommentbudget </span><span>Rs.</span>
+
+
                                     </div>
                                     <div class="brand-input form-check form-switch">
 
@@ -55,6 +63,10 @@
                                 <div class="brand-title-wrapper">
                                     <div class="brand-title-label">
                                         <p>Do you want Increase Instagram Share?</p>
+
+                                        <span>Instagram Per Post Share Budget :</span> <span id="instashare">@Model.instasharebudget </span><span>Rs.</span>
+
+
                                     </div>
                                     <div class="brand-input form-check form-switch">
 
@@ -66,6 +78,9 @@
                                 <div class="brand-title-wrapper">
                                     <div class="brand-title-label">
                                         <p>Do you want increase The Instagram save?</p>
+
+                                        <span>Instagram Per Post Save Budget :</span> <span id="instasave">@Model.instasavebudget </span><span>Rs.</span>
+
                                     </div>
                                     <div class="brand-input form-check form-switch">
 
@@ -77,13 +92,11 @@
 
                                 <div class="brand-title-wrapper">
                                     <div class="brand-title-label">
-                                        <p>Brand Post Total Budget?</p>
+                                        <span>Total Budget :</span> <span id="total"></span> <span>Rs.</span>
+                                        <p>Brand Post Budget?</p>
                                     </div>
                                     <div>
-
-                                        <input type="text" asp-for="posttotalbudget">
-
-
+                                        <input type="text" asp-for="posttotalbudget">                                        
                                     </div>
                                 </div>
 
@@ -118,3 +131,17 @@
     </div>
 
 </section>
+
+
+@section Scripts{
+    <script>
+     let like = parseInt(document.getElementById("instalike").innerText);
+     let comment = parseInt(document.getElementById("instacomment").innerText);
+     let share =   parseInt(document.getElementById("instashare").innerText);
+     let save =    parseInt(document.getElementById("instasave").innerText);
+     let total = like + comment + share + save;  
+     
+     document.getElementById("total").innerText +=  total;
+
+    </script>
+}

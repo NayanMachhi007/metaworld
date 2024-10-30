@@ -109,7 +109,7 @@ namespace Meta_Ads_World.Controllers
         {
             _brandrepository.BrandRegistrationAdd(bradregisadd);
             return RedirectToAction("brandregistraionadd");
-        }    
+        }
 
         //User Account
         [HttpPost]
@@ -132,8 +132,14 @@ namespace Meta_Ads_World.Controllers
         [HttpGet]
         public IActionResult brandinstapostadd()
         {
-            
-            return View();
+            int id = 1;
+            InstaPostModelList insta = new InstaPostModelList();
+            var data = _datacontext.InstaPostBudgetMst.Where(x => x.instapostbudgetid == id).FirstOrDefault();
+            insta.instalikebudget = data.instalikebudget;
+            insta.instacommentbudget = data.instacommentbudget;
+            insta.instasharebudget = data.instasharebudget;
+            insta.instasavebudget = data.instasavebudget;
+            return View(insta);
         }
 
 
@@ -154,12 +160,13 @@ namespace Meta_Ads_World.Controllers
 
 
         //Json Like 
-        public JsonResult instalike(int id,int like)
+        public JsonResult instalike(int id, int like)
         {
             int temp = 1;
             like += temp;
             var data = _datacontext.InstaPostMsts.Where(x => x.instapostid == id).FirstOrDefault();
-            if (data != null) {
+            if (data != null)
+            {
                 data.instaposttotallike = like.ToString();
                 _datacontext.InstaPostMsts.Update(data);
                 _datacontext.SaveChanges();

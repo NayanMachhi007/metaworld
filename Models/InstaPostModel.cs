@@ -1,4 +1,6 @@
-﻿namespace Meta_Ads_World.Models
+﻿using Meta_Ads_World.Data;
+
+namespace Meta_Ads_World.Models
 {
     public class InstaPostModel
     {
@@ -16,10 +18,21 @@
         public string instaposturl { get; set; }
         public string posttotalbudget { get; set; }
 
+
+        //Insta Post Budget Model
+
+        public int instapostbudgetid { get; set; }
+        public int instalikebudget { get; set; }
+        public int instacommentbudget { get; set; }
+        public int instasharebudget { get; set; }
+        public int instasavebudget { get; set; }
+
+
     }
 
     public class InstaPostModelList : InstaPostModel
     {
         public List<InstaPostModelList> InstaPostList { get; set; }
+        public List<InstaPostBudgetMst> instabudget { get; set; }
     }
 }
