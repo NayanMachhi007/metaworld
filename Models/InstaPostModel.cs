@@ -1,4 +1,5 @@
 ﻿using Meta_Ads_World.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace Meta_Ads_World.Models
 {
@@ -16,6 +17,9 @@ namespace Meta_Ads_World.Models
         public Boolean instagrampostsharestatus { get; set; }
         public Boolean instapostsavestatus { get; set; }
         public string instaposturl { get; set; }
+
+
+        [Required(ErrorMessage ="Please Enter the details")]
         public string posttotalbudget { get; set; }
 
 
@@ -32,7 +36,7 @@ namespace Meta_Ads_World.Models
 
     public class InstaPostModelList : InstaPostModel
     {
-        public List<InstaPostModelList> InstaPostList { get; set; }
-        public List<InstaPostBudgetMst> instabudget { get; set; }
+        public List<InstaPostModelList>? InstaPostList { get; set; }
+        public List<InstaPostBudgetMst>? instabudget { get; set; }
     }
 }

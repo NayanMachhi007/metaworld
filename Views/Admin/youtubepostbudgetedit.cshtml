@@ -1,0 +1,85 @@
+﻿@model Meta_Ads_World.Models.YouTubePostBudgetModeliList
+
+@{
+    Layout = "~/Views/Shared/_admin_layout.cshtml";
+}
+
+<section class="brand-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="brand-title">
+                    <h1 class="heading-subheading">Instagram Post Budget</h1>
+                </div>
+                <div class="brand-wrapper">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <form asp-action="youtubepostbudgetedit">
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>Youtube Like Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="hidden" class="form-control" id="inputGroupFile02" asp-for="youtubepostbudgetid">
+
+                                        <input type="number" class="form-control" id="inputGroupFile02" asp-for="youtubelikebudget">
+                                    </div>
+                                </div>
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>YouTube Comment Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="inputGroupFile02" asp-for="youtubecommentbudget">
+                                    </div>
+                                </div>
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>YouTube Share Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="inputGroupFile02" asp-for="youtubesharebudget">
+                                    </div>
+                                </div>
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>YouTube Save Budget</p>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="inputGroupFile02" asp-for="youtubesavebudget">
+                                    </div>
+                                </div>
+
+                                <div class="brand-btn">
+                                    <button class="brand-insta-tbn" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="col-6">
+                            <div class="brand-animation">
+                                <div action="image-main">
+                                    <img src="~/assest/feature-image/insta-feature-image.png" alt="instagram feature image" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>

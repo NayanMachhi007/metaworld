@@ -116,7 +116,8 @@
 }
 
 .likeactive {
-    background: var(--cardinal);
+    color: var(--cardinal) !important;
+    font-weight:bold !important;
 }
 
 .activedata{

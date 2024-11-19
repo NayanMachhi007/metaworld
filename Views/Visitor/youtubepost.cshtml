@@ -1,4 +1,4 @@
-﻿@model Meta_Ads_World.Models.InstaPostModelList
+﻿@model Meta_Ads_World.Models.YoutTubePostModelList
 @{
     Layout = "~/views/shared/visitorlogin_layout.cshtml";
 }
@@ -11,7 +11,7 @@
             <div class="col-12">
                 <div class="insta-wrapper">
                     <div class="row">
-                        @foreach (var iteam in Model.InstaPostList)
+                        @foreach (var iteam in Model.YouTubeList)
                         {
                             <div class="col-4">
                                 <div class="insta-main-section">
@@ -28,7 +28,10 @@
                                         <div class="insta-main">
                                             <div class="insta-image insta-commentposition">
                                                 <div class="insta-image">
-                                                <img src="@iteam.instaposturl" alt="Dummy" />
+
+                                                    <a href="https://www.youtube.com/watch?v=@iteam.youtubeposturl" target="_blank">
+                                                        <img src="https://www.youtube.com/embed/@iteam.youtubeposturl" />
+                                                    </a>
                                                 </div>
                                                 <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
@@ -43,10 +46,10 @@
                                             <div class="insta-wrapper-main d-flex justify-content-between">
                                                 <div class="insta-subsection d-flex">
                                                     <div class="instasocial like">
-                                                        <span type="submit" class="instalike fa-regular fa-heart" onclick="likeclick(this,@iteam.instapostid,@iteam.instaposttotallike)" ></span>                                                        
+                                                        <button type="submit" class="instalike fa-regular fa-heart" onclick="likeclick(this,@iteam.youtubepostid,@iteam.youtubeposttotallike)"></button>
                                                     </div>
                                                     <div class="instasocial insta-comment">
-                                                        <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="insta-save fa-regular fa-message"  onclick="instacommentfun(this,@iteam.instapostid)"></button>
+                                                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="insta-save fa-regular fa-message" onclick="instacommentfun(this,@iteam.youtubepostid)"></button>
                                                     </div>
                                                     <div class="instasocial insta-share">
                                                         <span class="insta-share fa-regular fa-share-from-square"></span>
@@ -58,7 +61,7 @@
                                                 </div>
                                             </div>
                                             <div class="instaliketext">
-                                                <p id="instalike">@iteam.instaposttotallike Like</p>
+                                                <p id="instalike">@iteam.youtubeposttotallike Like</p>
                                             </div>
                                         </div>
                                     </div>
@@ -76,17 +79,17 @@
 
 @section Scripts {
     <script>
-        function likeclick(data,getid, getlike) {            
+        function likeclick(data, getid, getlike) {
             console.log(data.classList.toggle("likeactive"));
             $.ajax({
                 type: "Post",
-                url: "@Url.Action("instalike", "Visitor")",
+                url: "@Url.Action("youtubelike", "Visitor")",
                 data: {
                     id: getid,
                     like: getlike,
                 },
-                success: function (data) {          
-                    document.getElementById("instalike").innerHTML = data.instaposttotallike + " Like";
+                success: function (data) {
+                    document.getElementById("instalike").innerHTML = data.youtubeposttotallike + " Like";
                 },
                 error: function (data) {
                     console.log("Error", data);
@@ -97,21 +100,21 @@
     </script>
 
     <script>
-        function instacommentfun(data,id){              
-             $.ajax({
-                 type:"Post",
-                 url:"@Url.Action("instacomment","visitor")",
-                 data:{
-                     getid:id,
-                 },
-                 success:function(data){
-                     console.log(data[0].instapostcomment);
-                    document.getElementById("instacommenttext").innerHTML=data[0].instapostcomment;
-                 },
-                 error:function(data){
-                     console.log("error",data);
-                 }
-             });
+        function instacommentfun(data, id) {
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("youtubecomment", "visitor")",
+                data: {
+                    getid: id,
+                },
+                success: function (data) {
+                    console.log(data[0].instapostcomment);
+                    document.getElementById("instacommenttext").innerHTML = data[0].youtubepostcomment;
+                },
+                error: function (data) {
+                    console.log("error", data);
+                }
+            });
         }
     </script>
 }

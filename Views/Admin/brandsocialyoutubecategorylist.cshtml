@@ -1,0 +1,135 @@
+﻿@model Meta_Ads_World.Models.YoutTubePostModelList
+
+@{
+    Layout = "~/Views/Shared/_admin_layout.cshtml";
+}
+
+@if(Model != null)
+{
+    <section class="table-main">
+        <div class="search">
+            <input type="search" placeholder="Search" />
+
+            <button class="btn-global">Submit</button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-title">
+                        <h3 class="heading-subheading">Youtube Post List</h3>
+                    </div>
+
+                    <div class="table-line">
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Post Id</th>
+                                    <th>Like Status</th>
+                                    <th>Share Status</th>
+                                    <th>Save Status</th>
+                                    <th>Starting Date</th>
+                                    <th>Ending Date</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var iteam in Model.YouTubeList)
+                                {
+                                    <tr>
+                                        <td>@iteam.youtubepostid</td>
+                                        <td>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.youtubepostlikestatus" onchange="likeupdatestatus(@iteam.youtubepostid,this.checked)">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.youtubepostsharestatus" onchange="shareupdatestatus(@iteam.youtubepostid,this.checked)">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.youtubepostsavestatus" onchange="saveupdatestatus(@iteam.youtubepostid,this.checked)">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p>@iteam.youtubepoststartingdate</p>
+                                        </td>
+                                        <td>@iteam.youtubepostendingdate</td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+else
+{
+    <h2>Data Not There</h2>
+}
+
+@section Scripts{
+    <script>
+        function likeupdatestatus(getid, getstatus) {
+            console.log("Hello");
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("youtubelikestatus", "Admin")",
+                data: {
+                    id: getid,
+                    status: getstatus,
+                },
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (data) {
+
+                }
+            });
+        }
+
+        function shareupdatestatus(getid, getshare) {
+            console.log("Hello");
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("youtubesharestatus", "Admin")",
+                data: {
+                    id: getid,
+                    status: getshare,
+                },
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (data) {
+
+                }
+            });
+        }
+
+        function saveupdatestatus(getid, getsave) {
+            console.log("Hello");
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("youtubesavestatus", "Admin")",
+                data: {
+                    id: getid,
+                    status: getsave,
+                },
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (data) {
+
+                }
+            });
+        }
+    </script>
+}
+

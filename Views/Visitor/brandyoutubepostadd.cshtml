@@ -1,4 +1,4 @@
-﻿@model Meta_Ads_World.Models.InstaPostModelList
+﻿@model Meta_Ads_World.Models.YoutTubePostModelList
 
 
 @{
@@ -12,51 +12,51 @@
         <div class="row">
             <div class="col-12">
                 <div class="brand-title">
-                    <h1 class="heading-subheading">Instagram Post</h1>
+                    <h1 class="heading-subheading">Youtube Post</h1>
                 </div>
                 <div class="brand-wrapper">
                     <div class="row">
 
                         <div class="col-6">
-                            <form asp-action="brandinstapostadd">
+                            <form asp-action="brandyoutubepostadd">
 
                                 <div class="brand-title-wrapper">
                                     <div class="brand-title-label">
-                                        <p>Brand Post Upload</p>
+                                        <p>Brand Youtube Post Upload</p>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" id="inputGroupFile02" asp-for="instaposturl">
-                                        <label class="input-group-text" for="inputGroupFile02">Please Enter Instagram Post Link</label>
+                                        <input type="text" class="form-control" id="inputGroupFile02" asp-for="youtubeposturl">
+                                        <label class="input-group-text" for="inputGroupFile02">Please Enter Youtube Id </label>
                                     </div>
                                 </div>
 
                                 <div class="brand-title-wrapper">
                                     <div class="brand-title-label">
-                                        <p>Do you want Increase the Instagram Like?</p>
+                                        <p>Do you want Increase the YouTube Like?</p>
 
-                                        <span>Instagram Per Post Like Budget :</span> <span id="instalike"> @Model.instalikebudget</span><span> Rs.</span>
+                                        <span>Youtube Per Post Like Budget :</span> <span id="instalike"> @Model.youtubelikebudget</span><span> Rs.</span>
 
 
 
                                     </div>
                                     <div class="brand-input form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch" asp-for="instapostlikestatus" checked>
+                                        <input class="form-check-input" type="checkbox" role="switch" asp-for="youtubepostlikestatus" checked>
                                     </div>
                                 </div>
 
                                 <div class="brand-title-wrapper">
                                     <div class="brand-title-label">
-                                        <p>Do You want Increase the Instagram Comment?</p>
+                                        <p>Do You want Increase the YouTube Comment?</p>
 
-                                        <span>Instagram Per Post Comment Budget :</span> <span id="instacomment">@Model.instacommentbudget </span><span>Rs.</span>
+                                        <span>YouTube Per Post Comment Budget :</span> <span id="instacomment">@Model.youtubecommentbudget </span><span>Rs.</span>
 
 
                                     </div>
                                     <div class="brand-input form-check form-switch">
 
 
-                                        <input class="form-check-input" type="checkbox" role="switch" asp-for="instapostcommentstatus" onchange="commentfun(this,@Model.instacommentbudget)">
+                                        <input class="form-check-input" type="checkbox" role="switch" asp-for="youtubepostcommentstatus" onchange="commentfun(this,@Model.youtubecommentbudget)">
 
                                     </div>
                                 </div>
@@ -64,15 +64,15 @@
 
                                 <div class="brand-title-wrapper">
                                     <div class="brand-title-label">
-                                        <p>Do you want Increase Instagram Share?</p>
+                                        <p>Do you want Increase YouTube Share?</p>
 
-                                        <span>Instagram Per Post Share Budget :</span> <span id="instashare">@Model.instasharebudget </span><span>Rs.</span>
+                                        <span>YouTube Per Post Share Budget :</span> <span id="instashare">@Model.youtubesharebudget </span><span>Rs.</span>
 
 
                                     </div>
                                     <div class="brand-input form-check form-switch">
 
-                                        <input onchange="commentfun(this,@Model.instasharebudget)" class="form-check-input" type="checkbox" role="switch" asp-for="instagrampostsharestatus">
+                                        <input onchange="commentfun(this,@Model.youtubesharebudget)" class="form-check-input" type="checkbox" role="switch" asp-for="youtubepostsharestatus">
 
                                     </div>
                                 </div>
@@ -81,12 +81,12 @@
                                     <div class="brand-title-label">
                                         <p>Do you want increase The Instagram save?</p>
 
-                                        <span>Instagram Per Post Save Budget :</span> <span id="instasave">@Model.instasavebudget </span><span>Rs.</span>
+                                        <span>YouTube Per Post Save Budget :</span> <span id="instasave">@Model.youtubesavebudget </span><span>Rs.</span>
 
                                     </div>
                                     <div class="brand-input form-check form-switch">
 
-                                        <input onchange="commentfun(this,@Model.instasavebudget)" class="form-check-input" type="checkbox" role="switch" asp-for="instapostsavestatus">
+                                        <input onchange="commentfun(this,@Model.youtubesavebudget)" class="form-check-input" type="checkbox" role="switch" asp-for="youtubepostsavestatus">
 
                                     </div>
                                 </div>
@@ -96,22 +96,23 @@
                                     <span>Total Budget :</span> <span id="total"></span> <span>Rs.</span>
 
                                     <div class="brand-title-label">
-                                        <p>Brand Total Post Budget?</p>
+                                        <p>Please Enter The Value For Users?</p>
                                     </div>
                                     <div>
-                                        <input type="text" asp-for="posttotalbudget" onchange="totbudget()">
-                                        <span asp-validation-for="posttotalbudget" style="color:red"></span>
+                                        <input type="text" asp-for="youtubeposttotalbudget" onchange="totbudget()">
+                                        <span asp-validation-for="youtubeposttotalbudget" style="color:blue"></span>
 
                                         <div class="py-2">
                                             <span id="showbudget" style="color:blue">Your Budget: </span>
                                         </div>
+
                                     </div>
                                 </div>
 
 
                                 <div class="brand-title-wrapper">
-                                    <input class="form-check-input" value="0" type="hidden" role="switch" asp-for="instaposttotallike">
-                                    <input class="form-check-input" value="bydefaultcomment" type="hidden" role="switch" asp-for="instapostcomment">
+                                    <input class="form-check-input" value="0" type="hidden" role="switch" asp-for="youtubeposttotallike">
+                                    <input class="form-check-input" value="bydefaultcomment" type="hidden" role="switch" asp-for="youtubepostcomment">
 
                                 </div>
 
@@ -143,20 +144,10 @@
 
 @section Scripts {
     <script>
-        let like = parseInt(document.getElementById("instalike").innerText);
-        let comment = parseInt(document.getElementById("instacomment").innerText);
-        let share = parseInt(document.getElementById("instashare").innerText);
-        let save = parseInt(document.getElementById("instasave").innerText);
-        let instalike = document.getElementById("instapostlikestatus");
-        let likecheck = document.getElementById("instapostlikestatus");
-        let commentcheck = document.getElementById("instapostcommentstatus");
-        let sharecheck = document.getElementById("instagrampostsharestatus");
-        let savecheck = document.getElementById("instapostsavestatus");
+        let like = parseInt(document.getElementById("instalike").innerText);              
+        let likecheck = document.getElementById("youtubepostlikestatus");       
         let totalbudget = document.getElementById("total");
         let showbudget = document.getElementById("showbudget");
-        let totallikecomment = like + comment;
-        let totallikecomemntshare = like + comment + share;
-        let totallikecomemntsharesave = like + comment + share + save;
 
         if (likecheck.checked == true) {
             totalbudget.innerText = like;
@@ -167,25 +158,25 @@
 
     <script>
         let liketotal = parseInt(document.getElementById("instalike").innerText);
-      
 
-        function commentfun(data,valdata) {
-         
+
+        function commentfun(data, valdata) {
+
             if (data.checked) {
                 liketotal = liketotal + valdata;
-            }else{
+            } else {
                 liketotal = liketotal - valdata;
             }
             totalbudget.innerText = liketotal;
         }
 
 
-        function totbudget(){
-            let qun = parseInt(document.getElementById("posttotalbudget").value);
+        function totbudget() {
+            let qun = parseInt(document.getElementById("youtubeposttotalbudget").value);
 
             let totaltemp = qun * liketotal;
             showbudget.innerText += totaltemp + " Rs";
-                                 
+
         }
         // function sharefun() {
         //     let totallikecommentshare = like + comment + share;

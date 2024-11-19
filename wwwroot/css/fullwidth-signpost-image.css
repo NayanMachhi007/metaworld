@@ -40,9 +40,11 @@
     margin:0 2rem 0 0;
 }
 
+
+
 .fullwidth-signpost-image .fullwidth-bg .fullwidth-content-wrapper .fullwidth-btn-wrapper .fullwidth-primary input{
     width:100%;
-    padding:1.4rem 8rem;
+    padding:0.7rem 8rem;
     border-radius:1rem;
     border:none;
     display:inline-block;

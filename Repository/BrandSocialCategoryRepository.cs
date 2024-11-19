@@ -39,6 +39,38 @@ namespace Meta_Ads_World.Repository
             return list;
         }
 
+
+
+        //YouTubePost List
+        public List<YoutTubePostModelList> YoutubePostModelList()
+        {
+            List<YoutTubePostModelList> list = new List<YoutTubePostModelList>();
+            var data = _datacontext.YouTubePostMst.ToList();
+            foreach (var item in data)
+            {
+                YoutTubePostModelList youtube = new YoutTubePostModelList()
+                {
+                    youtubepostid = item.youtubepostid,
+                    youtubeposttotallike = item.youtubeposttotallike,
+                    youtubepostcomment = item.youtubepostcomment,
+                    youtubepostshare = item.youtubepostshare,
+                    youtubepostsave = item.youtubepostsave,
+                    youtubepoststartingdate = item.youtubepoststartingdate,
+                    youtubepostendingdate = item.youtubepostendingdate,
+                    youtubepostlikestatus = item.youtubepostlikestatus,
+                    youtubepostcommentstatus = item.youtubepostcommentstatus,
+                    youtubepostsharestatus = item.youtubepostsharestatus,
+                    youtubepostsavestatus = item.youtubepostsavestatus,
+                    youtubeposturl = item.youtubeposturl,
+                    youtubeposttotalbudget = item.youtubeposttotalbudget,
+                };
+                list.Add(youtube);
+            }
+            return list;
+        }
+
+        // Brand Social Instagram Post Add
+
         public void instagrampostadd(InstaPostModelList instaadd)
         {
             InstaPostMst insta = new InstaPostMst()
@@ -60,6 +92,30 @@ namespace Meta_Ads_World.Repository
             _datacontext.SaveChanges();
         }
 
+        // Brand Social Youtube Post Add
+        public void youtubepostadd(YoutTubePostModelList youtubeadd)
+        {
+            YouTubePostMst youtube = new YouTubePostMst()
+            {
+                youtubeposttotallike = youtubeadd.youtubeposttotallike,
+                youtubepostcomment = youtubeadd.youtubepostcomment,
+                youtubepostshare = youtubeadd.youtubepostshare,
+                youtubepostsave = youtubeadd.youtubepostsave,
+                youtubepoststartingdate = youtubeadd.youtubepoststartingdate,
+                youtubepostendingdate = youtubeadd.youtubepostendingdate,
+                youtubepostlikestatus = youtubeadd.youtubepostlikestatus,
+                youtubepostcommentstatus = youtubeadd.youtubepostcommentstatus,
+                youtubepostsharestatus = youtubeadd.youtubepostsharestatus,
+                youtubepostsavestatus = youtubeadd.youtubepostsavestatus,
+                youtubeposturl = youtubeadd.youtubeposturl,
+                youtubeposttotalbudget = youtubeadd.youtubeposttotalbudget,
+            };
+            _datacontext.YouTubePostMst.Add(youtube);
+            _datacontext.SaveChanges();
+        }
+
+        //Instagram Post Budget Add
+
         public void instagrampostbudgetadd(InstaPostBudgetModelList instabudgetadd)
         {
             InstaPostBudgetMst instabudget = new InstaPostBudgetMst()
@@ -70,6 +126,21 @@ namespace Meta_Ads_World.Repository
                 instasavebudget = instabudgetadd.instasavebudget,
             };
             _datacontext.InstaPostBudgetMst.Add(instabudget);
+            _datacontext.SaveChanges();
+        }
+
+        //Youtube Post Budget Add
+
+        public void youtubepostbudgetadd(YouTubePostBudgetModeliList youtubebudgetadd)
+        {
+            YouTubePostBudgetMst youtubebudget = new YouTubePostBudgetMst()
+            {
+                youtubelikebudget = youtubebudgetadd.youtubelikebudget,
+                youtubecommentbudget = youtubebudgetadd.youtubecommentbudget,
+                youtubesharebudget = youtubebudgetadd.youtubesharebudget,
+                youtubesavebudget = youtubebudgetadd.youtubesavebudget,
+            };
+            _datacontext.youTubePostBudgetMsts.Add(youtubebudget);
             _datacontext.SaveChanges();
         }
 
@@ -93,6 +164,26 @@ namespace Meta_Ads_World.Repository
             return insta;
         }
 
+        //YouTube Budget List
+        public List<YouTubePostBudgetModeliList> youtubepostbudgetlist()
+        {
+            List<YouTubePostBudgetModeliList> youtube = new List<YouTubePostBudgetModeliList>();
+            var data = _datacontext.youTubePostBudgetMsts.ToList();
+            foreach (var iteam in data)
+            {
+                YouTubePostBudgetModeliList youtubelist = new YouTubePostBudgetModeliList()
+                {
+                    youtubepostbudgetid = iteam.youtubepostbudgetid,
+                    youtubelikebudget = iteam.youtubelikebudget,
+                    youtubecommentbudget = iteam.youtubecommentbudget,
+                    youtubesharebudget = iteam.youtubesharebudget,
+                    youtubesavebudget = iteam.youtubesavebudget,
+                };
+                youtube.Add(youtubelist);
+            }
+            return youtube;
+        }
+
         //Instagram Budget Details
 
         public InstaPostBudgetModelList instagrambudgetdetails(int id)
@@ -112,13 +203,42 @@ namespace Meta_Ads_World.Repository
         {
             InstaPostBudgetMst instaedit = new InstaPostBudgetMst()
             {
-                instapostbudgetid= insta.instapostbudgetid,
-                instalikebudget= insta.instalikebudget,
-                instacommentbudget= insta.instasharebudget,
-                instasharebudget= insta.instasharebudget,
-                instasavebudget= insta.instasavebudget,
+                instapostbudgetid = insta.instapostbudgetid,
+                instalikebudget = insta.instalikebudget,
+                instacommentbudget = insta.instasharebudget,
+                instasharebudget = insta.instasharebudget,
+                instasavebudget = insta.instasavebudget,
             };
             _datacontext.InstaPostBudgetMst.Update(instaedit);
+            _datacontext.SaveChanges();
+        }
+
+        //YouTube Budget Details
+
+        public YouTubePostBudgetModeliList youtubebudgetdetails(int id)
+        {
+            YouTubePostBudgetModeliList youtube = new YouTubePostBudgetModeliList();
+            var data = _datacontext.youTubePostBudgetMsts.Find(id);
+            youtube.youtubepostbudgetid = data.youtubepostbudgetid;
+            youtube.youtubelikebudget = data.youtubelikebudget;
+            youtube.youtubecommentbudget = data.youtubecommentbudget;
+            youtube.youtubesharebudget = data.youtubesharebudget;
+            youtube.youtubesavebudget = data.youtubesavebudget;
+            return youtube;
+        }
+
+        //YouTube Budget Edit
+        public void youtubebudgetedit(YouTubePostBudgetModeliList youtube)
+        {
+            YouTubePostBudgetMst youtubeedit = new YouTubePostBudgetMst()
+            {
+                youtubepostbudgetid = youtube.youtubepostbudgetid,
+                youtubelikebudget = youtube.youtubelikebudget,
+                youtubecommentbudget = youtube.youtubecommentbudget,
+                youtubesharebudget = youtube.youtubesharebudget,
+                youtubesavebudget = youtube.youtubesavebudget,
+            };
+            _datacontext.youTubePostBudgetMsts.Update(youtubeedit);
             _datacontext.SaveChanges();
         }
 

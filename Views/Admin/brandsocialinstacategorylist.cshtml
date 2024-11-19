@@ -40,17 +40,17 @@
                                     <td>@iteam.instapostid</td>
                                     <td>
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.instapostlikestatus">
+                                            <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.instapostlikestatus" onchange="likeupdatestatus(@iteam.instapostid,this.checked)">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.instagrampostsharestatus">
+                                            <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.instagrampostsharestatus" onchange="shareupdatestatus(@iteam.instapostid,this.checked)">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.instapostsavestatus">
+                                            <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.instapostsavestatus" onchange="saveupdatestatus(@iteam.instapostid,this.checked)">
                                         </div>
                                     </td>
                                     <td>
@@ -67,3 +67,67 @@
         </div>
     </div>
 </section>
+
+
+@section Scripts {
+    <script>
+        function likeupdatestatus(getid,getstatus) {
+            console.log("Hello");
+            $.ajax({
+                type:"Post",
+                url: "@Url.Action("instalikestatus", "Admin")",
+                data:{
+                    id:getid, 
+                    status:getstatus,
+                },
+                success:function(data){
+                    console.log(data);
+                },
+                error:function(data){
+
+                }
+            });
+        }
+
+        function shareupdatestatus(getid, getshare) {
+            console.log("Hello");
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("instasharestatus", "Admin")",
+                data: {
+                    id: getid,
+                    status: getshare,
+                },
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (data) {
+
+                }
+            });
+        }
+
+        function saveupdatestatus(getid, getsave) {
+            console.log("Hello");
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("instasavestatus", "Admin")",
+                data: {
+                    id: getid,
+                    status: getsave,
+                },
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (data) {
+
+                }
+            });
+        }
+
+      
+        
+
+        
+    </script>
+}

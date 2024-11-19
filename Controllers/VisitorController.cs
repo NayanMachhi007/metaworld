@@ -128,10 +128,21 @@ namespace Meta_Ads_World.Controllers
             return View(insta);
         }
 
+
+        //Youtube Post
+        [HttpGet]
+        public IActionResult youtubepost()
+        {
+            YoutTubePostModelList youtube = new YoutTubePostModelList();
+            youtube.YouTubeList = _brandsocialcategoryrepository.YoutubePostModelList();
+            return View(youtube);
+        }
+
         //Brand Instagram Post Get Method
         [HttpGet]
         public IActionResult brandinstapostadd()
         {
+
             int id = 1;
             InstaPostModelList insta = new InstaPostModelList();
             var data = _datacontext.InstaPostBudgetMst.Where(x => x.instapostbudgetid == id).FirstOrDefault();
@@ -147,15 +158,59 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public IActionResult brandinstapostadd(InstaPostModelList instaadd)
         {
-            _brandsocialcategoryrepository.instagrampostadd(instaadd);
-            return RedirectToAction("brandinstapostadd");
+            if (ModelState.IsValid)
+            {
+                _brandsocialcategoryrepository.instagrampostadd(instaadd);
+                return RedirectToAction("brandinstapostadd");
+            }
+            int id = 1;
+            InstaPostModelList insta = new InstaPostModelList();
+            var data = _datacontext.InstaPostBudgetMst.Where(x => x.instapostbudgetid == id).FirstOrDefault();
+            insta.instalikebudget = data.instalikebudget;
+            insta.instacommentbudget = data.instacommentbudget;
+            insta.instasharebudget = data.instasharebudget;
+            insta.instasavebudget = data.instasavebudget;
+            return View(insta);
+
         }
 
+        //Brand Youtube Post Get Method
         [HttpGet]
-        public IActionResult brandfilter()
+        public IActionResult brandyoutubepostadd()
         {
-            return View();
+
+            int id = 1;
+            YoutTubePostModelList youtube = new YoutTubePostModelList();
+            var data = _datacontext.youTubePostBudgetMsts.Where(x => x.youtubepostbudgetid == id).FirstOrDefault();
+            youtube.youtubelikebudget = data.youtubelikebudget;
+            youtube.youtubecommentbudget = data.youtubecommentbudget;
+            youtube.youtubesharebudget = data.youtubesharebudget;
+            youtube.youtubesavebudget = data.youtubesavebudget;
+            return View(youtube);
         }
+
+
+        //Brand Youtube Post Post Method
+        [HttpPost]
+        public IActionResult brandyoutubepostadd(YoutTubePostModelList youtubeadd)
+        {
+            if (ModelState.IsValid)
+            {
+                _brandsocialcategoryrepository.youtubepostadd(youtubeadd);
+                return RedirectToAction("brandyoutubepostadd");
+            }
+            int id = 1;
+            YoutTubePostModelList youtube = new YoutTubePostModelList();
+            var data = _datacontext.youTubePostBudgetMsts.Where(x => x.youtubepostbudgetid == id).FirstOrDefault();
+            youtube.youtubelikebudget = data.youtubelikebudget;
+            youtube.youtubecommentbudget = data.youtubecommentbudget;
+            youtube.youtubesharebudget = data.youtubesharebudget;
+            youtube.youtubesavebudget = data.youtubesavebudget;
+            return View(youtube);
+
+        }
+
+
 
 
 
@@ -176,6 +231,8 @@ namespace Meta_Ads_World.Controllers
 
         }
 
+
+
         //Json Comment
         public JsonResult instacomment(int getid)
         {
@@ -183,6 +240,30 @@ namespace Meta_Ads_World.Controllers
             return Json(data);
         }
 
+        //Json Youtube Like 
+        public JsonResult youtubelike(int id, int like)
+        {
+            int temp = 1;
+            like += temp;
+            var data = _datacontext.YouTubePostMst.Where(x => x.youtubepostid == id).FirstOrDefault();
+            if (data != null)
+            {
+                data.youtubeposttotallike = like.ToString();
+                _datacontext.YouTubePostMst.Update(data);
+                _datacontext.SaveChanges();
+            }
 
+            return Json(data);
+
+        }
+
+
+
+        //Json Comment
+        public JsonResult youtubecomment(int getid)
+        {
+            var data = _datacontext.YouTubePostMst.Where(x => x.youtubepostid == getid).ToList();
+            return Json(data);
+        }
     }
 }

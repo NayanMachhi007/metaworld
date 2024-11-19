@@ -14,5 +14,8 @@ namespace Meta_Ads_World.Data
         public DbSet<BrandCategoryMst> BrandCategoryMst { get; set; }
         public DbSet<InstaPostMst> InstaPostMsts { get; set; }
         public DbSet<InstaPostBudgetMst> InstaPostBudgetMst { get;set; }
+        public DbSet<YouTubePostMst> YouTubePostMst { get;set;}
+        public DbSet<YouTubePostBudgetMst> youTubePostBudgetMsts { get; set; }
+
     }
 }
