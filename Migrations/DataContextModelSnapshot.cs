@@ -54,10 +54,6 @@ namespace Meta_Ads_World.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("bconfirmpassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("bcontactno")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -180,14 +176,6 @@ namespace Meta_Ads_World.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ucity")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("uconfirmemail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("uconfirmpassword")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

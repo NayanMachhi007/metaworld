@@ -28,9 +28,7 @@ namespace Meta_Ads_World.Repository
                     ufname = iteam.ufname,
                     ulname = iteam.ulname,
                     uemail = iteam.uemail,
-                    uconfirmemail = iteam.uconfirmemail,
                     upassword = iteam.upassword,
-                    uconfirmpassword = iteam.uconfirmpassword,
                     ucountry = iteam.ucountry,
                     ustate = iteam.ustate,
                     ucity = iteam.ucity,
@@ -87,9 +85,7 @@ namespace Meta_Ads_World.Repository
                 ufname = useradd.ufname,
                 ulname = useradd.ulname,
                 uemail = useradd.uemail,
-                uconfirmemail = useradd.uconfirmemail,
                 upassword = useradd.upassword,
-                uconfirmpassword = useradd.uconfirmpassword,
                 ucountry = useradd.ucountry,
                 ustate = useradd.ustate,
                 ucity = useradd.ucity,
@@ -107,9 +103,7 @@ namespace Meta_Ads_World.Repository
             UserMst user = _datacontext.UserMsts.Find(useredit.userid);
             if (user != null) {                               
                 user.uemail = useredit.uemail;
-                user.uconfirmemail = useredit.uconfirmemail;
                 user.upassword = useredit.upassword;
-                user.uconfirmpassword = useredit.uconfirmpassword;
                 _datacontext.UserMsts.Update(user);
                 _datacontext.SaveChanges();            
             }

@@ -38,114 +38,110 @@
                                     <h3>User Registraion</h3>
                                 </div>
                                 <form asp-action="userregistrationadd" asp-controller="visitor">
-                                <div class="row">
-                                    <div class="col-6">                                        
-                                        <div class="col-11">
-                                            <div class="reg-des">
-                                                <div class="reg-title">
-                                                    <label>First Name</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>First Name</label>
+                                                    </div>
+                                                    <input type="text" asp-for="ufname" />
                                                 </div>
-                                                <input type="text" asp-for="ufname"/>
                                             </div>
-                                        </div>
-
-                                        <div class="col-11">
-                                            <div class="reg-des">
-                                                <div class="reg-title">
-                                                    <label>Last Name</label>
-                                                </div>
-                                                <input type="text" asp-for="ulname"/>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-11">
-                                            <div class="reg-des">
-                                                <div class="reg-title">
-                                                    <label>User Email</label>
-                                                </div>
-                                                <input type="email" asp-for="uemail"/>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-11">
-                                            <div class="reg-des">
-                                                <div class="reg-title">
-                                                    <label>Confirm Email</label>
-                                                </div>
-                                                <input type="email" asp-for="uconfirmemail"/>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-11">
-                                            <div class="reg-des">
-                                                <div class="reg-title">
-                                                    <label>Password</label>
-                                                </div>
-                                                <input type="password" asp-for="upassword"/>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-11">
-                                            <div class="reg-des">
-                                                <div class="reg-title">
-                                                    <label>Confirm Password</label>
-                                                </div>
-                                                <input type="password" asp-for="uconfirmpassword"/>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6">                                                                              
-
-                                        <div class="col-11">
-                                            <div class="reg-des">
-                                                <div class="reg-title">
-                                                    <label>Select County --</label>
-                                                </div>
-                                                <div class="location-div">
-                                                    <select class="brandcountry" aria-label="Select Country" asp-for="ucountry">
-                                                        <option value="" disabled selected>Select Country</option>
-                                                    </select>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-11">
-                                            <div class="reg-des">
-                                                <div class="reg-title">
-                                                    <label>Select State --</label>
-                                                </div>
-                                                <div class="location-div">
-                                                    <select class="brandstate" aria-label="Select State" asp-for="ustate">
-                                                        <option value="" disabled selected>Select State</option>
-                                                    </select>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-11">
-                                            <div class="reg-des">
-                                                <div class="reg-title">
-                                                    <label>Select City --</label>
-                                                </div>
-                                                <div class="location-div">
-                                                    <select class="brandcity" aria-label="Select City" asp-for="ucity">
-                                                        <option value="" disabled selected>Select City</option>
-                                                    </select>
-                                                </div>
-
-                                            </div>
-                                        </div>
 
                                             <div class="col-11">
                                                 <div class="reg-des">
-                                                   
+                                                    <div class="reg-title">
+                                                        <label>Last Name</label>
+                                                    </div>
+                                                    <input type="text" asp-for="ulname" />
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>User Email</label>
+                                                    </div>
+                                                    <input type="email" asp-for="uemail" />
+                                                    <span asp-validation-for="uemail" style="color:red"></span>
+
+                                                </div>
+                                            </div>
+
+
+                                           
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Password</label>
+                                                    </div>
+                                                    <input type="password" asp-for="upassword" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Confirm Password</label>
+                                                    </div>
+                                                    <input type="password" asp-for="uconfirmpassword"/>
+                                                    <span class="text-danger" asp-validation-for="uconfirmpassword"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6">
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Select County --</label>
+                                                    </div>
+                                                    <div class="location-div">
+                                                        <select class="brandcountry" aria-label="Select Country" asp-for="ucountry">
+                                                            <option value="" disabled selected>Select Country</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Select State --</label>
+                                                    </div>
+                                                    <div class="location-div">
+                                                        <select class="brandstate" aria-label="Select State" asp-for="ustate">
+                                                            <option value="" disabled selected>Select State</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Select City --</label>
+                                                    </div>
+                                                    <div class="location-div">
+                                                        <select class="brandcity" aria-label="Select City" asp-for="ucity">
+                                                            <option value="" disabled selected>Select City</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+
                                                     <input type="hidden" asp-for="urefreallid" />
                                                 </div>
                                             </div>
@@ -153,20 +149,20 @@
                                             <div class="col-11">
                                                 <div class="reg-des">
                                                     <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="hidden"  role="switch" id="flexSwitchCheckChecked" checked asp-for="status">
+                                                        <input class="form-check-input" type="hidden" role="switch" id="flexSwitchCheckChecked" checked asp-for="status">
                                                     </div>
                                                 </div>
                                             </div>
 
-                                        <div class="col-11">
-                                            <div class="reg-des">
-                                                <div class="reg-title">
-                                                    <button class="btn-global" type="submit">Submit</button>
-                                                </div>                                               
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <button class="btn-global" type="submit">Submit</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 </form>
                             </div>
                         </div>

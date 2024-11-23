@@ -2,8 +2,6 @@ using Meta_Ads_World.Data;
 using Meta_Ads_World.Models;
 using Meta_Ads_World.Repository;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
-using System.Diagnostics;
 
 namespace Meta_Ads_World.Controllers
 {
@@ -44,14 +42,61 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public IActionResult userregistrationadd(UserModelList useradd)
         {
-            _userRepository.UserRegistrationAdd(useradd);
-            return RedirectToAction("userregistrationadd");
+            if (ModelState.IsValid)
+            {
+                _userRepository.UserRegistrationAdd(useradd);
+                return RedirectToAction("userregistrationadd");
+            }
+            return View();
+
         }
 
-        public IActionResult login()
+        [HttpGet]
+        public IActionResult userlogin()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult userlogin(UserModel userlogin)
+        {
+            var email = userlogin.uemail;
+            var password = userlogin.upassword;
+            var data = _datacontext.UserMsts.Where(x => x.uemail == email && x.upassword == password).FirstOrDefault();
+            if (data != null)
+            {
+                return RedirectToAction("visitorlogin");
+            }
+            return RedirectToAction("userregistrationadd");
+        }
+
+
+        [HttpGet]
+        public IActionResult brandlogin()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult brandlogin(BrandRegistrationModel brandadd)
+        {
+            var email = brandadd.bemail;
+            var password = brandadd.bpassword;
+
+            var data = _datacontext.BrandRegistrationMst.Where(x=>x.bemail == email && x.bpassword == password).FirstOrDefault();
+            if (data != null)
+            {
+                return RedirectToAction("brandindex");
+            }
+            return RedirectToAction("brandregistrationadd");
+        }
+
+        public IActionResult brandindex()
+        {
+            return View();
+        }
+
 
         //User Account Details
         [HttpGet]
@@ -71,10 +116,16 @@ namespace Meta_Ads_World.Controllers
             return View(userdetails);
         }
 
+        [HttpGet]
         public IActionResult visitorlogin()
         {
-            return View();
+            UserModelList user = new UserModelList();
+            user.InstaPostList = _datacontext.InstaPostMsts.ToList();
+            user.YouTubePostList = _datacontext.YouTubePostMst.ToList();
+            return View(user);
         }
+
+     
 
         public IActionResult history()
         {
@@ -90,9 +141,7 @@ namespace Meta_Ads_World.Controllers
             var data = _datacontext.UserMsts.Find(id);
             user.userid = data.userid;
             user.uemail = data.uemail;
-            user.uconfirmemail = data.uconfirmemail;
             user.upassword = data.upassword;
-            user.uconfirmpassword = data.uconfirmpassword;
 
             return View(user);
         }
@@ -216,12 +265,22 @@ namespace Meta_Ads_World.Controllers
 
         //Json Like 
         public JsonResult instalike(int id, int like)
+
         {
             int temp = 1;
-            like += temp;
+
             var data = _datacontext.InstaPostMsts.Where(x => x.instapostid == id).FirstOrDefault();
             if (data != null)
             {
+                like += temp;
+                data.instaposttotallike = like.ToString();
+                _datacontext.InstaPostMsts.Update(data);
+                _datacontext.SaveChanges();
+            }
+
+            else
+            {
+                like = temp;
                 data.instaposttotallike = like.ToString();
                 _datacontext.InstaPostMsts.Update(data);
                 _datacontext.SaveChanges();

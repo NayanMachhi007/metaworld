@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9/LVUedCK7HNWWjuhA+I272MZ3a2lthj8qR0mxCg6hg=",
+  "Hash": "ZjRkmtUTWkLzRCZRcdcLCndJt8RjC8oESXl2XZvSvJ0=",
   "Source": "Meta-Ads-World",
   "BasePath": "_content/Meta-Ads-World",
   "Mode": "Default",
@@ -262,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assest\\feature-image\\feature-image-secondary.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\feature-image\\feature-image-youtube.jpg",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "assest/feature-image/feature-image-youtube.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assest\\feature-image\\feature-image-youtube.jpg"
     },
     {
       "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\feature-image\\insta-feature-image.png",

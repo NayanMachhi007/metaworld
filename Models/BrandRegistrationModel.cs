@@ -1,4 +1,5 @@
 ﻿using Meta_Ads_World.Data;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Meta_Ads_World.Models
@@ -13,6 +14,9 @@ namespace Meta_Ads_World.Models
         public string bstate { get; set; }
         public string bcity { get; set; }
         public string bpassword { get; set; }
+
+        [Compare("bpassword")]
+
         public string bconfirmpassword { get; set; }
         public Boolean bstatus { get; set; }
     }

@@ -29,7 +29,6 @@ namespace Meta_Ads_World.Repository
                     bstate = item.bstate,
                     bcity = item.bcity,
                     bpassword = item.bpassword,
-                    bconfirmpassword = item.bconfirmpassword,
                     bstatus = item.bstatus,
                 };
                 list.Add(brandlist);
@@ -48,7 +47,6 @@ namespace Meta_Ads_World.Repository
                 bstate = brand.bstate,
                 bcity = brand.bcity,
                 bpassword = brand.bpassword,
-                bconfirmpassword = brand.bconfirmpassword,
                 bstatus = brand.bstatus,
                
             };

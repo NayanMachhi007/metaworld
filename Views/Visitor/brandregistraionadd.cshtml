@@ -34,7 +34,7 @@
                         <div class="col-8 offset-1">
                             <div class="registration-wrapper">
                                 <div class="register-title">
-                                    <h3>User Registraion</h3>
+                                    <h3>Brand Registraion</h3>
                                 </div>
                                 <form asp-action="brandregistraionadd" asp-controller="visitor">
                                     <div class="row">
@@ -81,7 +81,9 @@
                                                     <div class="reg-title">
                                                         <label>Brand Confirm Password</label>
                                                     </div>
-                                                    <input type="password" asp-for="bconfirmpassword" />
+                                                    <input type="password" />
+
+                                                    <span class="text-bg-danger" asp-validation-for="bconfirmpassword"></span>
                                                 </div>
                                             </div>
                                         </div>

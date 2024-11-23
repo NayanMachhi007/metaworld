@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Meta_Ads_World.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241029024649_instagrambudget")]
-    partial class instagrambudget
+    [Migration("20241122094609_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,10 +54,6 @@ namespace Meta_Ads_World.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<string>("bcity")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("bconfirmpassword")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -186,14 +182,6 @@ namespace Meta_Ads_World.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("uconfirmemail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("uconfirmpassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ucountry")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -228,6 +216,84 @@ namespace Meta_Ads_World.Migrations
                     b.HasKey("userid");
 
                     b.ToTable("UserMsts");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.YouTubePostBudgetMst", b =>
+                {
+                    b.Property<int>("youtubepostbudgetid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("youtubepostbudgetid"));
+
+                    b.Property<int>("youtubecommentbudget")
+                        .HasColumnType("int");
+
+                    b.Property<int>("youtubelikebudget")
+                        .HasColumnType("int");
+
+                    b.Property<int>("youtubesavebudget")
+                        .HasColumnType("int");
+
+                    b.Property<int>("youtubesharebudget")
+                        .HasColumnType("int");
+
+                    b.HasKey("youtubepostbudgetid");
+
+                    b.ToTable("youTubePostBudgetMsts");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.YouTubePostMst", b =>
+                {
+                    b.Property<int>("youtubepostid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("youtubepostid"));
+
+                    b.Property<string>("youtubepostcomment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("youtubepostcommentstatus")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("youtubepostendingdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("youtubepostlikestatus")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("youtubepostsave")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("youtubepostsavestatus")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("youtubepostshare")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("youtubepostsharestatus")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("youtubepoststartingdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("youtubeposttotalbudget")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("youtubeposttotallike")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("youtubeposturl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("youtubepostid");
+
+                    b.ToTable("YouTubePostMst");
                 });
 #pragma warning restore 612, 618
         }

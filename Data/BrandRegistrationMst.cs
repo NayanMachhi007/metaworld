@@ -14,7 +14,6 @@ namespace Meta_Ads_World.Data
         public string bstate { get; set; }
         public string bcity { get; set; }
         public string bpassword { get; set; }
-        public string bconfirmpassword { get; set; }
         public Boolean bstatus { get; set; }               
     }
 }

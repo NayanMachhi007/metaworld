@@ -1,0 +1,80 @@
+﻿@model Meta_Ads_World.Models.UserModel
+
+@{
+    Layout = "~/views/visitorlayout/visitor_layout.cshtml";
+}
+
+
+<section class="webregister">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="webregister-wrapper">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="register-des">
+                                <div class="register-image">
+                                    <img src="~/assest/registration/social-hello-remvoe-bg.gif" alt="Alternate Text" />
+                                </div>
+
+                                <div class="register-title">
+                                    <h3 class="secondary-heading">Welcome</h3>
+                                </div>
+                                <div class="register-para">
+                                    <p class="webpage-para">
+                                        You are 30 seconds away from earining your own money
+                                    </p>
+                                </div>
+
+                                <div class="register-login">
+                                    <a class="btn-global" asp-action="userlogin" asp-controller="visitor">User Login</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-8 offset-1">
+                            <div class="registration-wrapper">
+                                <div class="register-title">
+                                    <h3>User Login</h3>
+                                </div>
+                                <form asp-action="userlogin" asp-controller="visitor">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Email Address</label>
+                                                    </div>
+                                                    <input type="text" asp-for="uemail" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Password</label>
+                                                    </div>
+                                                    <input type="password" asp-for="upassword" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <button class="btn-global" type="submit">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>                                           
+                                        </div>                                       
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
