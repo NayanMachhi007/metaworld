@@ -11,5 +11,6 @@ namespace Meta_Ads_World.Data
         public int youtubecommentbudget { get; set; }
         public int youtubesharebudget { get; set; }
         public int youtubesavebudget { get; set; }
+        public Boolean status { get; set; }
     }
 }

@@ -5,12 +5,18 @@
 
 .webregister  .webregister-wrapper .register-des{
     text-align:center;
-    padding :4rem 0;
+    padding: 4rem 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 .webregister  .webregister-wrapper .register-des .register-image{
    width:18rem;
-   margin:0 0 0 5rem;
 }
 
 .webregister  .webregister-wrapper .register-des .register-title h3{
@@ -48,6 +54,8 @@
     font-weight:500;
     color:var(--maroon-flush);
     font-size:1.4rem;
+    border:0;
+    padding:0.8rem 0;
 }
 
 .webregister .registration-wrapper .reg-des{

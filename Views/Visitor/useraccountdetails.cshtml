@@ -61,16 +61,18 @@
 
                     <div class="col-2">
                         <div class="account-invite">
-                            <a href="#"><i class="fa-solid fa-user-plus"></i>Invite user</a>
+                            <a href="#"><i class="fa-solid fa-user-plus" ></i>Invite user</a>
+                           
+
                         </div>
                     </div>
 
                     <div class="col-12">
                         <div class="user-image">
-                            <img src="~/assest/dummy/dummy100X100.png" alt="Alternate Text" />
+                            <img src="@Model.profilepicture" alt="Alternate Text" />
                         </div>
                         <div class="user-label">
-                            <label>Nayan Machhi</label>
+                            <label>@Model.ufname</label>
                         </div>
                     </div>
                 </div>
@@ -100,9 +102,9 @@
                                             <div class="col-11">
                                                 <div class="account-input">
                                                     <label>
-                                                        Last Name
+                                                        Contact No
                                                     </label>
-                                                    <input type="text" asp-for="ulname" />
+                                                    <input type="text" asp-for="contactno" />
                                                 </div>
                                             </div>
 
@@ -161,9 +163,8 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Refreall Code</th>
+                                <th>Name</th>
+                                <th>Email Address</th>
                                 <th>Refreall Id</th>
                             </tr>
                         </thead>
@@ -173,8 +174,7 @@
                             {
                                 <tr>
                                     <td>@iteam.userid</td>
-                                    <td>@iteam.ufname</td>
-                                    <td>@iteam.ulname</td>
+                                    <td>@iteam.ufname</td>                                  
                                     <td>@iteam.uemail</td>
                                     <td>@iteam.urefreallcode</td>
                                 </tr>
@@ -188,3 +188,4 @@
     </div>
 
 </section>
+

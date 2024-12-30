@@ -39,22 +39,13 @@
                                 </div>
                                 <form asp-action="userregistrationadd" asp-controller="visitor">
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <div class="col-11">
                                                 <div class="reg-des">
                                                     <div class="reg-title">
                                                         <label>First Name</label>
                                                     </div>
                                                     <input type="text" asp-for="ufname" />
-                                                </div>
-                                            </div>
-
-                                            <div class="col-11">
-                                                <div class="reg-des">
-                                                    <div class="reg-title">
-                                                        <label>Last Name</label>
-                                                    </div>
-                                                    <input type="text" asp-for="ulname" />
                                                 </div>
                                             </div>
 
@@ -70,8 +61,14 @@
                                                 </div>
                                             </div>
 
-
-                                           
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Contact No</label>
+                                                    </div>
+                                                    <input type="number" asp-for="contactno" />
+                                                </div>
+                                            </div>
 
                                             <div class="col-11">
                                                 <div class="reg-des">
@@ -87,57 +84,31 @@
                                                     <div class="reg-title">
                                                         <label>Confirm Password</label>
                                                     </div>
-                                                    <input type="password" asp-for="uconfirmpassword"/>
+                                                    <input type="password" asp-for="uconfirmpassword" />
                                                     <span class="text-danger" asp-validation-for="uconfirmpassword"></span>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div class="col-6">
 
                                             <div class="col-11">
                                                 <div class="reg-des">
                                                     <div class="reg-title">
-                                                        <label>Select County --</label>
+                                                        <label>Area Select</label>
                                                     </div>
-                                                    <div class="location-div">
-                                                        <select class="brandcountry" aria-label="Select Country" asp-for="ucountry">
-                                                            <option value="" disabled selected>Select Country</option>
-                                                        </select>
-                                                    </div>
-
+                                                    <input type="search" list="datalistOptions" oninput="findstatate(this.value)" class="form-control" placeholder="Please Enter Area" asp-for="areadcode" />
+                                                    <datalist id="datalistOptions">
+                                                    </datalist>
                                                 </div>
                                             </div>
 
 
                                             <div class="col-11">
                                                 <div class="reg-des">
-                                                    <div class="reg-title">
-                                                        <label>Select State --</label>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="hidden" role="switch" value="true" id="flexSwitchCheckChecked" checked asp-for="status">
                                                     </div>
-                                                    <div class="location-div">
-                                                        <select class="brandstate" aria-label="Select State" asp-for="ustate">
-                                                            <option value="" disabled selected>Select State</option>
-                                                        </select>
-                                                    </div>
-
                                                 </div>
                                             </div>
 
-
-                                            <div class="col-11">
-                                                <div class="reg-des">
-                                                    <div class="reg-title">
-                                                        <label>Select City --</label>
-                                                    </div>
-                                                    <div class="location-div">
-                                                        <select class="brandcity" aria-label="Select City" asp-for="ucity">
-                                                            <option value="" disabled selected>Select City</option>
-                                                        </select>
-                                                    </div>
-
-                                                </div>
-                                            </div>
 
                                             <div class="col-11">
                                                 <div class="reg-des">
@@ -146,12 +117,26 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-11">
+                                            <div class="col-10">
+
                                                 <div class="reg-des">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="hidden" role="switch" id="flexSwitchCheckChecked" checked asp-for="status">
+                                                    <div class="reg-title">
+                                                        <label>Profile Picture</label>
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <input type="text" class="form-control" id="inputGroupFile02" asp-for="profilepicture">
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <label class="input-group-text" for="inputGroupFile02">Please Enter Profile Post Link</label>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="input-group mb-3">
+                                                </div>
+
+
                                             </div>
 
                                             <div class="col-11">
@@ -161,8 +146,11 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
+
                                     </div>
+
                                 </form>
                             </div>
                         </div>
@@ -173,4 +161,55 @@
 
     </div>
 </section>
+
+
+
+@section Scripts {
+    <script>
+        function findstatate(getstring) {
+
+
+            let state = document.getElementById("areadcode").value;
+
+
+            console.log(state);
+            $.ajax({
+                type: "Get",
+                url: "@Url.Action("statename", "Visitor")",
+                data: {
+                    statestring: getstring,
+                },
+                success: function (data) {
+                    let datafill;
+                    let datastate = document.getElementById("datalistOptions");
+                    console.log(data);
+                    if (state.length >= 3) {
+                        for (let i = 0; i < data.length; i++) {
+                            console.log(data[i].areaname);
+                            datafill += `<option>${data[i].areaname}</option>`;
+                            
+                        }
+                        datastate.innerHTML = datafill;
+                    }
+
+
+                    // for (let i = 0; i < data.length; i++) {
+                    //     console.log(data[i].statename);
+
+                    //     // state.value = data[i].statename;
+
+                    //     datafill += '<option>${data[i].statename}</option>';
+
+                    // }
+                    // datastate.innerHTML = datafill;
+
+                },
+                error: function (data) {
+                    console.logt("Error", data);
+                }
+
+            });
+        }
+    </script>
+}
 

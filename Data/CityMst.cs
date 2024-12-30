@@ -8,8 +8,7 @@ namespace Meta_Ads_World.Data
         [Key]
         public int cityid { get; set; }
         public string cityname { get; set; }
-        public int stateid { get; set; }
-
-
+        public int stateid { get; set; }       
+        public List<StateMst> StateMst { get; set; }
     }
 }

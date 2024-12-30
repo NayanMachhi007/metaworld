@@ -7,6 +7,7 @@
         public int instacommentbudget { get; set; }
         public int instasharebudget { get; set; }
         public int instasavebudget { get; set; }
+        public Boolean status { get; set; }
     }
 
     public class InstaPostBudgetModelList : InstaPostBudgetModel

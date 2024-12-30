@@ -39,7 +39,8 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-10-11T06:11:48.377Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -51,7 +52,8 @@
               "RelativeToolTip": "Meta-Ads-World\\wwwroot\\css\\banner-swiper.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-11T06:29:57.074Z"
+              "WhenOpened": "2024-10-11T06:29:57.074Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -76,7 +78,8 @@
               "RelativeToolTip": "Meta-Ads-World\\Views\\VisitorLayout\\Visitor_Layout.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-11T06:30:39.547Z"
+              "WhenOpened": "2024-10-11T06:30:39.547Z",
+              "EditorCaption": ""
             }
           ]
         }

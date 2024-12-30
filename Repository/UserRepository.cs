@@ -26,12 +26,11 @@ namespace Meta_Ads_World.Repository
                 {
                     userid = iteam.userid,
                     ufname = iteam.ufname,
-                    ulname = iteam.ulname,
                     uemail = iteam.uemail,
                     upassword = iteam.upassword,
-                    ucountry = iteam.ucountry,
-                    ustate = iteam.ustate,
-                    ucity = iteam.ucity,
+                    areadcode = iteam.areadcode,
+                    contactno=iteam.contactno,
+                    profilepicture=iteam.profilepicture,
                     urefreallid = iteam.urefreallid,
                     urefreallcode = iteam.urefreallcode,
                     status=iteam.status,
@@ -46,21 +45,20 @@ namespace Meta_Ads_World.Repository
         {
             int id = 1;
             List<UserModelList> user = new List<UserModelList>();
-            var data = _datacontext.UserMsts.Where(x=>x.userid ==id).ToList();
+            var data = _datacontext.UserMsts.Where(x=>x.urefreallid ==id).ToList();
             foreach (var iteam in data)
             {
                 UserModelList list = new UserModelList()
                 {
                     userid=iteam.userid,
                     ufname=iteam.ufname,
-                    ulname=iteam.ulname,
                     uemail=iteam.uemail,
-                    urefreallcode=iteam.urefreallcode
+                    urefreallcode=iteam.urefreallcode,
+                    profilepicture=iteam.profilepicture
                 };
                 user.Add(list);
             }
-            return user;
-            
+            return user;            
         }
 
         //User Registration Add
@@ -82,13 +80,12 @@ namespace Meta_Ads_World.Repository
             UserMst useraddregister = new UserMst()
             {
                 userid = useradd.userid,
-                ufname = useradd.ufname,
-                ulname = useradd.ulname,
+                ufname = useradd.ufname,               
                 uemail = useradd.uemail,
                 upassword = useradd.upassword,
-                ucountry = useradd.ucountry,
-                ustate = useradd.ustate,
-                ucity = useradd.ucity,
+                areadcode = useradd.areadcode,
+                contactno=useradd.contactno,
+                profilepicture=useradd.profilepicture,
                 urefreallid = useradd.urefreallid,
                 urefreallcode = randomber,
                 status=useradd.status,

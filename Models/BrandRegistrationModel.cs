@@ -10,13 +10,10 @@ namespace Meta_Ads_World.Models
         public string bname { get; set; }
         public string bemail { get; set; }
         public string bcontactno { get; set; }
-        public string bcountry { get; set; }
-        public string bstate { get; set; }
-        public string bcity { get; set; }
+        public string areacode { get; set; }
         public string bpassword { get; set; }
 
         [Compare("bpassword")]
-
         public string bconfirmpassword { get; set; }
         public Boolean bstatus { get; set; }
     }

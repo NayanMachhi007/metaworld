@@ -61,6 +61,18 @@
                                     </div>
                                 </div>
 
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label">
+                                        <p>Youtube Status</p>
+                                    </div>
+
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" asp-for="status">
+                                    </div>
+                                </div>
+
+                                
+
                                 <div class="brand-btn">
                                     <button class="brand-insta-tbn" type="submit">Submit</button>
                                 </div>
@@ -108,6 +120,7 @@
                                 <th>Comment</th>
                                 <th>Share</th>
                                 <th>Save</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -121,6 +134,11 @@
                                     <td>@iteam.youtubecommentbudget</td>
                                     <td>@iteam.youtubesharebudget</td>
                                     <td>@iteam.youtubesavebudget</td>
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" checked="@iteam.status" onchange="statusupdate(@iteam.youtubepostbudgetid,this.checked)">
+                                        </div>
+                                    </td>
                                     <td><a asp-action="youtubepostbudgetedit" asp-controller="Admin" asp-route-id="@iteam.youtubepostbudgetid">Edit</a></td>
                                 </tr>
                             }
@@ -146,5 +164,24 @@
             }
             document.getElementById('total').innerHTML = tot;
         }
+
+
+          function statusupdate(getid,getstatus) {
+             $.ajax({
+                 type: "Post",
+                 url: "@Url.Action("YoutubeBudgetStatus", "Admin")",
+                 data: {
+                     id: getid,
+                     status:getstatus,
+                 },
+                 success: function (data) {
+                    console.log(data);
+                 },
+                 error: function (data) {
+                     console.logt("Error", data);
+                 }
+
+             });
+         }
     </script>
 }

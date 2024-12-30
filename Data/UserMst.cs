@@ -8,12 +8,11 @@ namespace Meta_Ads_World.Data
         [Key]
         public int userid { get; set; }
         public string ufname { get; set; }
-        public string ulname { get; set; }
         public string uemail { get; set; }
         public string upassword { get; set; }
-        public string ucountry { get; set; }
-        public string ustate { get; set; }
-        public string ucity { get; set; }
+        public string areadcode { get; set; }
+        public string contactno { get; set; }
+        public string profilepicture { get; set; }
         public Boolean status { get; set; }
         public int urefreallid { get; set; }
         public string urefreallcode { get; set; }

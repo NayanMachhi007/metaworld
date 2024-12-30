@@ -8,8 +8,8 @@ namespace Meta_Ads_World.Models
         public int instapostid { get; set; }
         public string instaposttotallike { get; set; }
         public string instapostcomment { get; set; }
-        public Boolean instapostshare{ get; set; }
-        public Boolean instapostsave{ get; set; }
+        public Boolean instapostshare { get; set; }
+        public Boolean instapostsave { get; set; }
         public DateTime instapoststartingdate { get; set; } = DateTime.Now;
         public DateTime instapostendingdate { get; set; } = DateTime.Now;
         public Boolean instapostlikestatus { get; set; }
@@ -19,7 +19,7 @@ namespace Meta_Ads_World.Models
         public string instaposturl { get; set; }
 
 
-        [Required(ErrorMessage ="Please Enter the details")]
+        [Required(ErrorMessage = "Please Enter the details")]
         public string posttotalbudget { get; set; }
 
 
@@ -30,6 +30,8 @@ namespace Meta_Ads_World.Models
         public int instacommentbudget { get; set; }
         public int instasharebudget { get; set; }
         public int instasavebudget { get; set; }
+
+        public Boolean status { get; set; }
 
 
     }

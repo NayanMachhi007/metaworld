@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Meta-Ads-World.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Meta-Ads-World.bundle.scp.css"
+      "PackagePath": "staticwebassets\\Meta-Ads-World.b5gwqhussc.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\account-details\\dark-blues.jpg",
@@ -801,6 +801,10 @@
       "PackagePath": "staticwebassets\\css\\import.css"
     },
     {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\layout.css",
+      "PackagePath": "staticwebassets\\css\\layout.css"
+    },
+    {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\loginlayout.css",
       "PackagePath": "staticwebassets\\css\\loginlayout.css"
     },
@@ -1359,6 +1363,70 @@
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\products\\play-station.png",
       "PackagePath": "staticwebassets\\img\\products\\play-station.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector1.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector10.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector11.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector12.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector13.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector14.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector15.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector16.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector2.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector3.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector4.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector5.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector6.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector7.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector8.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\img\\vectors\\vector9.jpg",
+      "PackagePath": "staticwebassets\\img\\vectors\\vector9.jpg"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\js\\app-access-permission.js",
@@ -4871,6 +4939,10 @@
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\vendor\\libs\\typeahead-js\\typeahead.js",
       "PackagePath": "staticwebassets\\vendor\\libs\\typeahead-js\\typeahead.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Meta-Ads-World.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Meta-Ads-World.Microsoft.AspNetCore.StaticWebAssets.props",

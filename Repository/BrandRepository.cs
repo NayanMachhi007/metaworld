@@ -25,9 +25,7 @@ namespace Meta_Ads_World.Repository
                     bname = item.bname,
                     bemail = item.bemail,
                     bcontactno = item.bcontactno,
-                    bcountry = item.bcountry,
-                    bstate = item.bstate,
-                    bcity = item.bcity,
+                    areacode = item.areacode,
                     bpassword = item.bpassword,
                     bstatus = item.bstatus,
                 };
@@ -43,12 +41,10 @@ namespace Meta_Ads_World.Repository
                 bname = brand.bname,
                 bemail = brand.bemail,
                 bcontactno = brand.bcontactno,
-                bcountry = brand.bcountry,
-                bstate = brand.bstate,
-                bcity = brand.bcity,
+                areacode = brand.areacode,
                 bpassword = brand.bpassword,
                 bstatus = brand.bstatus,
-               
+
             };
             _datacontext.Add(brandregi);
             _datacontext.SaveChanges();

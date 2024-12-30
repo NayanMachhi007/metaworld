@@ -1,0 +1,100 @@
+﻿@model Meta_Ads_World.Models.AreaModelList
+
+@{
+    Layout = "~/Views/Shared/_admin_layout.cshtml";
+}
+
+<section class="brand-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="brand-title">
+                    <h1 class="heading-subheading">Area Add</h1>
+                </div>
+                <div class="brand-wrapper">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <form asp-action="areaadd">
+
+                                <div class="brand-title-wrapper">
+                                    <div class="brand-title-label d-flex">
+                                        <p>Area Name</p>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <select asp-for="cityid">
+                                            @foreach (var data in Model.citylist)
+                                            {
+                                                <option value="@data.cityid">@data.cityname</option>
+                                            }
+
+                                        </select>
+
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" asp-for="areaname">
+                                    </div>
+                                </div>
+
+
+                                <div class="brand-btn">
+                                    <button class="brand-insta-tbn" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<section class="table-main">
+    <div class="search">
+        <input type="search" placeholder="Search" />
+
+        <button class="btn-global">Submit</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-title">
+                    <h3 class="heading-subheading">Area List</h3>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Area Id</th>
+                                <th>Area Name</th>
+                                <th>City Id</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var iteam in Model.arealist)
+                            {
+                                <tr>
+                                    <td>@iteam.areaid</td>
+                                    <td>@iteam.areaname</td>
+                                    <td>@iteam.cityid</td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

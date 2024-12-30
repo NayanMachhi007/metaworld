@@ -13,9 +13,13 @@ namespace Meta_Ads_World.Data
         public DbSet<BrandRegistrationMst> BrandRegistrationMst { get; set; }
         public DbSet<BrandCategoryMst> BrandCategoryMst { get; set; }
         public DbSet<InstaPostMst> InstaPostMsts { get; set; }
-        public DbSet<InstaPostBudgetMst> InstaPostBudgetMst { get;set; }
-        public DbSet<YouTubePostMst> YouTubePostMst { get;set;}
+        public DbSet<InstaPostBudgetMst> InstaPostBudgetMst { get; set; }
+        public DbSet<YouTubePostMst> YouTubePostMst { get; set; }
         public DbSet<YouTubePostBudgetMst> youTubePostBudgetMsts { get; set; }
+        public DbSet<StateMst> StateMsts { get; set; }
 
+        public DbSet<CityMst> CityMsts { get; set; }
+
+        public DbSet<AreaMst> AreaMsts { get; set; }
     }
 }

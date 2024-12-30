@@ -1,0 +1,167 @@
+﻿@model Meta_Ads_World.Models.BrandRegistrationModelList
+
+@{
+    Layout = "~/views/visitorlayout/visitor_layout.cshtml";
+}
+
+<section class="webregister">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="webregister-wrapper">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="register-des">
+                                <div class="register-image">
+                                    <img src="~/assest/registration/social-hello-remvoe-bg.gif" alt="Alternate Text" />
+                                </div>
+
+                                <div class="register-title">
+                                    <h3 class="secondary-heading">Welcome</h3>
+                                </div>
+                                <div class="register-para">
+                                    <p class="webpage-para">
+                                        You are 30 seconds away from earining your own money
+                                    </p>
+                                </div>
+
+                                <div class="register-login">
+                                    <a class="btn-global" asp-action="login" asp-controller="visitor">Login</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-8 offset-1">
+                            <div class="registration-wrapper">
+                                <div class="register-title">
+                                    <h3>Brand Registraion</h3>
+                                </div>
+                                <form asp-action="brandregistraionadd" asp-controller="visitor">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand User Name</label>
+                                                    </div>
+                                                    <input type="text" asp-for="bname" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand Email</label>
+                                                    </div>
+                                                    <input type="email" asp-for="bemail" />
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand Contact Number</label>
+                                                    </div>
+                                                    <input type="number" asp-for="bcontactno" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand Area</label>
+                                                    </div>
+                                                    <input type="text" list="datalistOptions" oninput="findarea(this.value)" class="form-control" placeholder="Please Enter Area" asp-for="areacode" />
+                                                    <datalist id="datalistOptions">
+                                                    </datalist>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand Password</label>
+                                                    </div>
+                                                    <input type="password" asp-for="bpassword" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <label>Brand Confirm Password</label>
+                                                    </div>
+                                                    <input type="password" />
+
+                                                    <span class="text-bg-danger" asp-validation-for="bconfirmpassword"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="hidden" role="switch" id="flexSwitchCheckChecked" checked asp-for="bstatus" value="True">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-11">
+                                                <div class="reg-des">
+                                                    <div class="reg-title">
+                                                        <button class="btn-global" type="submit">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+@section Scripts {
+        <script>
+        function findarea(getstring) {
+                    let state = document.getElementById("areacode").value;
+
+
+                console.log(state);
+                $.ajax({
+                    type: "Post",
+                    url: "@Url.Action("areaname", "Brand")",
+                    data: {
+                        statestring: getstring,
+                    },
+                    success: function (data) {
+                        let datafill;
+                        let datastate = document.getElementById("datalistOptions");
+                        console.log(data);
+                        if (state.length >= 3) {
+                            for (let i = 0; i < data.length; i++) {
+                                console.log(data[i].areaname);
+                                datafill += `<option>${data[i].areaname}</option>`;
+                            }
+                            datastate.innerHTML = datafill;
+                        }
+                    },
+                    error: function (data) {
+                        console.logt("Error", data);
+                    }
+
+                });
+            }
+        </script>
+}

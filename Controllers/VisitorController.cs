@@ -36,6 +36,8 @@ namespace Meta_Ads_World.Controllers
             {
                 user.urefreallid = data.userid;
             }
+            //user.citylist = _datacontext.CityMsts.ToList();
+            //user.arealist = _datacontext.AreaMsts.ToList();
             return View(user);
         }
 
@@ -69,29 +71,7 @@ namespace Meta_Ads_World.Controllers
             }
             return RedirectToAction("userregistrationadd");
         }
-
-
-        [HttpGet]
-        public IActionResult brandlogin()
-        {
-            return View();
-        }
-
-
-        [HttpPost]
-        public IActionResult brandlogin(BrandRegistrationModel brandadd)
-        {
-            var email = brandadd.bemail;
-            var password = brandadd.bpassword;
-
-            var data = _datacontext.BrandRegistrationMst.Where(x=>x.bemail == email && x.bpassword == password).FirstOrDefault();
-            if (data != null)
-            {
-                return RedirectToAction("brandindex");
-            }
-            return RedirectToAction("brandregistrationadd");
-        }
-
+      
         public IActionResult brandindex()
         {
             return View();
@@ -104,13 +84,14 @@ namespace Meta_Ads_World.Controllers
         {
             int id = 1;
             UserModelList userdetails = new UserModelList();
-            var data = _datacontext.UserMsts.Find(id);
             userdetails.UserList = _userRepository.UserRefreallList();
-
+            var data = _datacontext.UserMsts.Find(id);
             userdetails.userid = data.userid;
             userdetails.ufname = data.ufname;
-            userdetails.ulname = data.ulname;
+            userdetails.profilepicture = data.profilepicture;
+            userdetails.ufname = data.ufname;
             userdetails.uemail = data.uemail;
+            userdetails.contactno = data.contactno;
             userdetails.urefreallcode = data.urefreallcode;
 
             return View(userdetails);
@@ -125,7 +106,7 @@ namespace Meta_Ads_World.Controllers
             return View(user);
         }
 
-     
+
 
         public IActionResult history()
         {
@@ -138,27 +119,17 @@ namespace Meta_Ads_World.Controllers
         {
             int id = 1;
             UserModelList user = new UserModelList();
+            user.UserList = _userRepository.UserRefreallList();
             var data = _datacontext.UserMsts.Find(id);
             user.userid = data.userid;
             user.uemail = data.uemail;
             user.upassword = data.upassword;
+            user.ufname = data.ufname;
+            user.profilepicture = data.profilepicture;
 
             return View(user);
         }
 
-        //Brand Registration
-        public IActionResult brandregistraionadd()
-        {
-
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult brandregistraionadd(BrandRegistrationModelList bradregisadd)
-        {
-            _brandrepository.BrandRegistrationAdd(bradregisadd);
-            return RedirectToAction("brandregistraionadd");
-        }
 
         //User Account
         [HttpPost]
@@ -187,77 +158,6 @@ namespace Meta_Ads_World.Controllers
             return View(youtube);
         }
 
-        //Brand Instagram Post Get Method
-        [HttpGet]
-        public IActionResult brandinstapostadd()
-        {
-
-            int id = 1;
-            InstaPostModelList insta = new InstaPostModelList();
-            var data = _datacontext.InstaPostBudgetMst.Where(x => x.instapostbudgetid == id).FirstOrDefault();
-            insta.instalikebudget = data.instalikebudget;
-            insta.instacommentbudget = data.instacommentbudget;
-            insta.instasharebudget = data.instasharebudget;
-            insta.instasavebudget = data.instasavebudget;
-            return View(insta);
-        }
-
-
-        //Brand Instagram Post Post Method
-        [HttpPost]
-        public IActionResult brandinstapostadd(InstaPostModelList instaadd)
-        {
-            if (ModelState.IsValid)
-            {
-                _brandsocialcategoryrepository.instagrampostadd(instaadd);
-                return RedirectToAction("brandinstapostadd");
-            }
-            int id = 1;
-            InstaPostModelList insta = new InstaPostModelList();
-            var data = _datacontext.InstaPostBudgetMst.Where(x => x.instapostbudgetid == id).FirstOrDefault();
-            insta.instalikebudget = data.instalikebudget;
-            insta.instacommentbudget = data.instacommentbudget;
-            insta.instasharebudget = data.instasharebudget;
-            insta.instasavebudget = data.instasavebudget;
-            return View(insta);
-
-        }
-
-        //Brand Youtube Post Get Method
-        [HttpGet]
-        public IActionResult brandyoutubepostadd()
-        {
-
-            int id = 1;
-            YoutTubePostModelList youtube = new YoutTubePostModelList();
-            var data = _datacontext.youTubePostBudgetMsts.Where(x => x.youtubepostbudgetid == id).FirstOrDefault();
-            youtube.youtubelikebudget = data.youtubelikebudget;
-            youtube.youtubecommentbudget = data.youtubecommentbudget;
-            youtube.youtubesharebudget = data.youtubesharebudget;
-            youtube.youtubesavebudget = data.youtubesavebudget;
-            return View(youtube);
-        }
-
-
-        //Brand Youtube Post Post Method
-        [HttpPost]
-        public IActionResult brandyoutubepostadd(YoutTubePostModelList youtubeadd)
-        {
-            if (ModelState.IsValid)
-            {
-                _brandsocialcategoryrepository.youtubepostadd(youtubeadd);
-                return RedirectToAction("brandyoutubepostadd");
-            }
-            int id = 1;
-            YoutTubePostModelList youtube = new YoutTubePostModelList();
-            var data = _datacontext.youTubePostBudgetMsts.Where(x => x.youtubepostbudgetid == id).FirstOrDefault();
-            youtube.youtubelikebudget = data.youtubelikebudget;
-            youtube.youtubecommentbudget = data.youtubecommentbudget;
-            youtube.youtubesharebudget = data.youtubesharebudget;
-            youtube.youtubesavebudget = data.youtubesavebudget;
-            return View(youtube);
-
-        }
 
 
 
@@ -324,5 +224,10 @@ namespace Meta_Ads_World.Controllers
             var data = _datacontext.YouTubePostMst.Where(x => x.youtubepostid == getid).ToList();
             return Json(data);
         }
+
+
+
+
+
     }
 }

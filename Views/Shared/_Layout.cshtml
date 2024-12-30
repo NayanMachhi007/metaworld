@@ -5,40 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Meta_Ads_World</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/layout.css" />
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Meta_Ads_World.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Meta_Ads_World</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <header class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionRelative css-1nhe7rh">
+
+        <div class="MuiStack-root css-54y0us">
+
+
+
+            <a href="index.html">
+                <img alt="JumpTask logo" width="70" decoding="async"
+                     data-nimg="1" style="color:transparent"
+                     src="~/assest/logo/meta-ads-logo-remove.png" alt="Logo" />
+            </a>
+
+            <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-zq73zh"
+                    tabindex="0" type="button">
+                Sign In
+            </button>
+
+        </div>
+    </header>
+
+    @RenderBody()
+
+
+    <footer class="css-184zxd9">
+
+        <div class="MuiGrid-root MuiGrid-container css-19i9em">
+
+            <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-3 css-1com2n9">
+
+                <div class="MuiStack-root css-yd8sa2">
+
+
+                    <div class="MuiTypography-root MuiTypography-body1 css-1multdr">Get the app</div>
+
+                    <div class="MuiStack-root css-yhwlx1">
+                        <a target="_blank" class="css-t02jc9"
+                           href="https://play.google.com/store/apps/details?id=io.jumptask.app">
+                            <img alt="Menu Item" loading="lazy" width="1" height="1" decoding="async" data-nimg="1"
+                                 style="color:transparent;width:100%;height:auto"
+                                 src="https://webassets-wordpress-prod.jumptask.io/uploads/2023/09/PlayStore.svg" />
+                        </a>
+                        <div class="MuiBox-root css-0">
+                            <img alt="Menu Item" loading="lazy" width="1" height="1"
+                                 decoding="async" data-nimg="1" style="color:transparent;width:100%;height:auto"
+                                 src="https://webassets-wordpress-prod.jumptask.io/uploads/2023/09/AppStore.svg" />
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Meta_Ads_World - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-9 css-594mp3">
+                <div class="MuiGrid-root MuiGrid-container css-yckgw">
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-3.5 MuiGrid-grid-md-2 css-1dy088w">
+
+                        <div class="MuiTypography-root MuiTypography-body1 css-9p2eu7">JUMPTASK</div>
+
+                        <div class="MuiStack-root css-1v8my8o">
+                            <a class="css-t02jc9"
+                               href="how-earn-jumptoken/index.html">How to earn</a><a class="css-t02jc9"
+                                                                                      href="jumptask-microtasks/index.html">Explore microtasks</a>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-3.5 MuiGrid-grid-md-2 css-1dy088w">
+                        <div class="MuiTypography-root MuiTypography-body1 css-9p2eu7">$JMPT</div>
+                        <div class="MuiStack-root css-1v8my8o">
+                            <a class="css-t02jc9"
+                               href="litepaper/index.html">Litepaper</a><a target="_blank" class="css-t02jc9"
+                                                                           href="https://github.com/Quillhash/QuillAudit_Reports/blob/master/JumpToken Audit Report - QuillAudits.pdf">Audit</a>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-3.5 MuiGrid-grid-md-2 css-1dy088w">
+                        <div class="MuiTypography-root MuiTypography-body1 css-9p2eu7">PARTNERSHIPS</div>
+                        <div class="MuiStack-root css-1v8my8o">
+                            <a target="_blank" class="css-t02jc9"
+                               href="become-a-partner/index.html">Become a partner</a>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-3.5 MuiGrid-grid-md-2 css-1dy088w">
+                        <div class="MuiTypography-root MuiTypography-body1 css-9p2eu7">COMPANY</div>
+                        <div class="MuiStack-root css-1v8my8o">
+                            <a class="css-t02jc9"
+                               href="contact-us/index.html">Contact us</a><a class="css-t02jc9"
+                                                                             href="about-us/index.html">About us</a>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-3.5 MuiGrid-grid-md-2 css-1dy088w">
+                        <div class="MuiTypography-root MuiTypography-body1 css-9p2eu7">RESOURCES</div>
+                        <div class="MuiStack-root css-1v8my8o">
+                            <a target="_blank" class="css-t02jc9"
+                               href="https://support.jumptask.io/hc/en-gb">Help</a><a target="_blank"
+                                                                                      class="css-t02jc9"
+                                                                                      href="https://docs.jumptask.io/whitepaper/jumptask-whitepaper">Whitepaper</a><a class="css-t02jc9" href="blog/index.html">Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-tyk95s">
+
+                <hr class="MuiDivider-root MuiDivider-fullWidth css-1ooxuy4" />
+                <div class="MuiGrid-root MuiGrid-container css-1viu4cv">
+                    <div class="MuiBox-root css-0">
+
+                        <div class="MuiTypography-root MuiTypography-body2 css-8gn7is">
+                            © <!-- -->2024<!-- -->,
+                            JumpTask.<!-- --> <a class="css-t02jc9" href="privacy-policy/index.html">
+                                Terms &amp;
+                                Privacy policy.
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="MuiBox-root css-kl5uk3">
+                        <a target="_blank" class="css-t02jc9"
+                           href="https://x.com/JumpTask_app">
+                            <img alt="Menu Item" loading="lazy" width="1"
+                                 height="1" decoding="async" data-nimg="1"
+                                 style="color:transparent;width:100%;height:auto"
+                                 src="https://webassets-wordpress-prod.jumptask.io/uploads/2023/09/icon_x.svg" />
+                        </a><a target="_blank" class="css-t02jc9" href="https://discord.gg/bpzhzZdq8C">
+                            <img alt="Menu Item" loading="lazy" width="1" height="1" decoding="async" data-nimg="1"
+                                 style="color:transparent;width:100%;height:auto"
+                                 src="https://webassets-wordpress-prod.jumptask.io/uploads/2023/09/icon_discord.svg" />
+                        </a><a target="_blank" class="css-t02jc9" href="https://t.me/jumptask">
+                            <img alt="Menu Item"
+                                 loading="lazy" width="1" height="1" decoding="async" data-nimg="1"
+                                 style="color:transparent;width:100%;height:auto"
+                                 src="https://webassets-wordpress-prod.jumptask.io/uploads/2023/09/icon_telegram.svg" />
+                        </a><a target="_blank" class="css-t02jc9"
+                               href="https://www.facebook.com/JumpTaskOfficial/">
+                            <img alt="Menu Item" loading="lazy"
+                                 width="1" height="1" decoding="async" data-nimg="1"
+                                 style="color:transparent;width:100%;height:auto"
+                                 src="https://webassets-wordpress-prod.jumptask.io/uploads/2023/09/icon_facebook.svg" />
+                        </a><a target="_blank" class="css-t02jc9"
+                               href="https://www.instagram.com/jumptask_official">
+                            <img alt="Menu Item" loading="lazy"
+                                 width="1" height="1" decoding="async" data-nimg="1"
+                                 style="color:transparent;width:100%;height:auto"
+                                 src="https://webassets-wordpress-prod.jumptask.io/uploads/2023/09/icon_instagram.svg" />
+                        </a><a target="_blank" class="css-t02jc9" href="https://jumptask.medium.com/">
+                            <img alt="Menu Item" loading="lazy" width="1" height="1" decoding="async" data-nimg="1"
+                                 style="color:transparent;width:100%;height:auto"
+                                 src="https://webassets-wordpress-prod.jumptask.io/uploads/2023/09/icon_medium.svg" />
+                        </a><a target="_blank" class="css-t02jc9" href="">
+                            <img alt="Menu Item" loading="lazy" width="1" height="1" decoding="async" data-nimg="1"
+                                 style="color:transparent;width:100%;height:auto"
+                                 src="https://webassets-wordpress-prod.jumptask.io/uploads/2023/09/icon_youtube.svg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

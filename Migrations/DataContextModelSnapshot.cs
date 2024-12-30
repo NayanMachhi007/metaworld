@@ -22,6 +22,26 @@ namespace Meta_Ads_World.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Meta_Ads_World.Data.AreaMst", b =>
+                {
+                    b.Property<int>("areaid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("areaid"));
+
+                    b.Property<string>("areaname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("cityid")
+                        .HasColumnType("int");
+
+                    b.HasKey("areaid");
+
+                    b.ToTable("AreaMsts");
+                });
+
             modelBuilder.Entity("Meta_Ads_World.Data.BrandCategoryMst", b =>
                 {
                     b.Property<int>("bcategoryid")
@@ -50,15 +70,11 @@ namespace Meta_Ads_World.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<string>("bcity")
+                    b.Property<string>("areacode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("bcontactno")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("bcountry")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -74,16 +90,32 @@ namespace Meta_Ads_World.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("bstate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("bstatus")
                         .HasColumnType("bit");
 
                     b.HasKey("id");
 
                     b.ToTable("BrandRegistrationMst");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.CityMst", b =>
+                {
+                    b.Property<int>("cityid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("cityid"));
+
+                    b.Property<string>("cityname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("stateid")
+                        .HasColumnType("int");
+
+                    b.HasKey("cityid");
+
+                    b.ToTable("CityMsts");
                 });
 
             modelBuilder.Entity("Meta_Ads_World.Data.InstaPostBudgetMst", b =>
@@ -105,6 +137,9 @@ namespace Meta_Ads_World.Migrations
 
                     b.Property<int>("instasharebudget")
                         .HasColumnType("int");
+
+                    b.Property<bool>("status")
+                        .HasColumnType("bit");
 
                     b.HasKey("instapostbudgetid");
 
@@ -164,6 +199,28 @@ namespace Meta_Ads_World.Migrations
                     b.ToTable("InstaPostMsts");
                 });
 
+            modelBuilder.Entity("Meta_Ads_World.Data.StateMst", b =>
+                {
+                    b.Property<int>("stateid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("stateid"));
+
+                    b.Property<int?>("CityMstcityid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("statename")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("stateid");
+
+                    b.HasIndex("CityMstcityid");
+
+                    b.ToTable("StateMsts");
+                });
+
             modelBuilder.Entity("Meta_Ads_World.Data.UserMst", b =>
                 {
                     b.Property<int>("userid")
@@ -172,26 +229,26 @@ namespace Meta_Ads_World.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("userid"));
 
+                    b.Property<string>("areadcode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("contactno")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("profilepicture")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("status")
                         .HasColumnType("bit");
-
-                    b.Property<string>("ucity")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ucountry")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("uemail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ufname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ulname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -206,10 +263,6 @@ namespace Meta_Ads_World.Migrations
                     b.Property<int>("urefreallid")
                         .HasColumnType("int");
 
-                    b.Property<string>("ustate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("userid");
 
                     b.ToTable("UserMsts");
@@ -222,6 +275,9 @@ namespace Meta_Ads_World.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("youtubepostbudgetid"));
+
+                    b.Property<bool>("status")
+                        .HasColumnType("bit");
 
                     b.Property<int>("youtubecommentbudget")
                         .HasColumnType("int");
@@ -291,6 +347,18 @@ namespace Meta_Ads_World.Migrations
                     b.HasKey("youtubepostid");
 
                     b.ToTable("YouTubePostMst");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.StateMst", b =>
+                {
+                    b.HasOne("Meta_Ads_World.Data.CityMst", null)
+                        .WithMany("StateMst")
+                        .HasForeignKey("CityMstcityid");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.CityMst", b =>
+                {
+                    b.Navigation("StateMst");
                 });
 #pragma warning restore 612, 618
         }

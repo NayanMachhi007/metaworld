@@ -124,6 +124,7 @@ namespace Meta_Ads_World.Repository
                 instacommentbudget = instabudgetadd.instacommentbudget,
                 instasharebudget = instabudgetadd.instasharebudget,
                 instasavebudget = instabudgetadd.instasavebudget,
+                status = instabudgetadd.status
             };
             _datacontext.InstaPostBudgetMst.Add(instabudget);
             _datacontext.SaveChanges();
@@ -139,6 +140,7 @@ namespace Meta_Ads_World.Repository
                 youtubecommentbudget = youtubebudgetadd.youtubecommentbudget,
                 youtubesharebudget = youtubebudgetadd.youtubesharebudget,
                 youtubesavebudget = youtubebudgetadd.youtubesavebudget,
+                status = youtubebudgetadd.status
             };
             _datacontext.youTubePostBudgetMsts.Add(youtubebudget);
             _datacontext.SaveChanges();
@@ -149,19 +151,27 @@ namespace Meta_Ads_World.Repository
         {
             List<InstaPostBudgetModelList> insta = new List<InstaPostBudgetModelList>();
             var data = _datacontext.InstaPostBudgetMst.ToList();
-            foreach (var iteam in data)
+            if (data != null)
             {
-                InstaPostBudgetModelList instalist = new InstaPostBudgetModelList()
+                foreach (var iteam in data)
                 {
-                    instapostbudgetid = iteam.instapostbudgetid,
-                    instalikebudget = iteam.instalikebudget,
-                    instacommentbudget = iteam.instacommentbudget,
-                    instasharebudget = iteam.instasharebudget,
-                    instasavebudget = iteam.instasavebudget,
-                };
-                insta.Add(instalist);
+                    InstaPostBudgetModelList instalist = new InstaPostBudgetModelList()
+                    {
+                        instapostbudgetid = iteam.instapostbudgetid,
+                        instalikebudget = iteam.instalikebudget,
+                        instacommentbudget = iteam.instacommentbudget,
+                        instasharebudget = iteam.instasharebudget,
+                        instasavebudget = iteam.instasavebudget,
+                        status = iteam.status,
+                    };
+                    insta.Add(instalist);
+                }
+
+                return insta;
+
             }
-            return insta;
+
+            return null;
         }
 
         //YouTube Budget List
@@ -178,6 +188,7 @@ namespace Meta_Ads_World.Repository
                     youtubecommentbudget = iteam.youtubecommentbudget,
                     youtubesharebudget = iteam.youtubesharebudget,
                     youtubesavebudget = iteam.youtubesavebudget,
+                    status = iteam.status,
                 };
                 youtube.Add(youtubelist);
             }
@@ -195,6 +206,7 @@ namespace Meta_Ads_World.Repository
             Insta.instacommentbudget = data.instacommentbudget;
             Insta.instasharebudget = data.instasharebudget;
             Insta.instasavebudget = data.instasavebudget;
+            Insta.status = data.status;
             return Insta;
         }
 
@@ -208,6 +220,7 @@ namespace Meta_Ads_World.Repository
                 instacommentbudget = insta.instasharebudget,
                 instasharebudget = insta.instasharebudget,
                 instasavebudget = insta.instasavebudget,
+                status = insta.status,
             };
             _datacontext.InstaPostBudgetMst.Update(instaedit);
             _datacontext.SaveChanges();
@@ -224,6 +237,7 @@ namespace Meta_Ads_World.Repository
             youtube.youtubecommentbudget = data.youtubecommentbudget;
             youtube.youtubesharebudget = data.youtubesharebudget;
             youtube.youtubesavebudget = data.youtubesavebudget;
+            youtube.status = data.status;
             return youtube;
         }
 
@@ -237,6 +251,7 @@ namespace Meta_Ads_World.Repository
                 youtubecommentbudget = youtube.youtubecommentbudget,
                 youtubesharebudget = youtube.youtubesharebudget,
                 youtubesavebudget = youtube.youtubesavebudget,
+                status = youtube.status,
             };
             _datacontext.youTubePostBudgetMsts.Update(youtubeedit);
             _datacontext.SaveChanges();
