@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Meta_Ads_World.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241227154048_Updated Filed")]
-    partial class UpdatedFiled
+    [Migration("20250106114707_Initionalization")]
+    partial class Initionalization
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,6 +63,41 @@ namespace Meta_Ads_World.Migrations
                     b.HasKey("bcategoryid");
 
                     b.ToTable("BrandCategoryMst");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.BrandPaymentTransactionMst", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("contactno")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("paymentbranduserid")
+                        .HasColumnType("int");
+
+                    b.Property<int>("paymentinstaid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("paymentrecipt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("transcationid")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("paymentbranduserid");
+
+                    b.HasIndex("paymentinstaid");
+
+                    b.ToTable("BrandPaymentTransactionMsts");
                 });
 
             modelBuilder.Entity("Meta_Ads_World.Data.BrandRegistrationMst", b =>
@@ -157,11 +192,16 @@ namespace Meta_Ads_World.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("instapostid"));
 
+                    b.Property<int>("counter")
+                        .HasColumnType("int");
+
+                    b.Property<int>("instabranduserid")
+                        .HasColumnType("int");
+
                     b.Property<bool>("instagrampostsharestatus")
                         .HasColumnType("bit");
 
                     b.Property<string>("instapostcomment")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("instapostcommentstatus")
@@ -173,17 +213,22 @@ namespace Meta_Ads_World.Migrations
                     b.Property<bool>("instapostlikestatus")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("instapostsave")
-                        .HasColumnType("bit");
+                    b.Property<string>("instapostsave")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("instapostsavestatus")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("instapostshare")
-                        .HasColumnType("bit");
+                    b.Property<string>("instapostshare")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("instapoststartingdate")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("instapoststatus")
+                        .HasColumnType("bit");
 
                     b.Property<string>("instaposttotallike")
                         .IsRequired()
@@ -199,7 +244,29 @@ namespace Meta_Ads_World.Migrations
 
                     b.HasKey("instapostid");
 
+                    b.HasIndex("instabranduserid");
+
                     b.ToTable("InstaPostMsts");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.QrCodeMst", b =>
+                {
+                    b.Property<int>("qrid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("qrid"));
+
+                    b.Property<string>("qrpath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("qrid");
+
+                    b.ToTable("QrMst");
                 });
 
             modelBuilder.Entity("Meta_Ads_World.Data.StateMst", b =>
@@ -222,6 +289,46 @@ namespace Meta_Ads_World.Migrations
                     b.HasIndex("CityMstcityid");
 
                     b.ToTable("StateMsts");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.UserInstaPostHandlerMst", b =>
+                {
+                    b.Property<int>("userhandlerid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("userhandlerid"));
+
+                    b.Property<string>("instacomment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("instalike")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("instapostid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("instasave")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("instashare")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("userhandlertime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("userid")
+                        .HasColumnType("int");
+
+                    b.HasKey("userhandlerid");
+
+                    b.HasIndex("instapostid");
+
+                    b.HasIndex("userid");
+
+                    b.ToTable("UserInstaPostHandlerMsts");
                 });
 
             modelBuilder.Entity("Meta_Ads_World.Data.UserMst", b =>
@@ -320,14 +427,16 @@ namespace Meta_Ads_World.Migrations
                     b.Property<bool>("youtubepostlikestatus")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("youtubepostsave")
-                        .HasColumnType("bit");
+                    b.Property<string>("youtubepostsave")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("youtubepostsavestatus")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("youtubepostshare")
-                        .HasColumnType("bit");
+                    b.Property<string>("youtubepostshare")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("youtubepostsharestatus")
                         .HasColumnType("bit");
@@ -352,6 +461,36 @@ namespace Meta_Ads_World.Migrations
                     b.ToTable("YouTubePostMst");
                 });
 
+            modelBuilder.Entity("Meta_Ads_World.Data.BrandPaymentTransactionMst", b =>
+                {
+                    b.HasOne("Meta_Ads_World.Data.BrandRegistrationMst", "brandRegistrationMst")
+                        .WithMany()
+                        .HasForeignKey("paymentbranduserid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Meta_Ads_World.Data.InstaPostMst", "InstaPostMst")
+                        .WithMany()
+                        .HasForeignKey("paymentinstaid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("InstaPostMst");
+
+                    b.Navigation("brandRegistrationMst");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.InstaPostMst", b =>
+                {
+                    b.HasOne("Meta_Ads_World.Data.BrandRegistrationMst", "BrandRegistrationMst")
+                        .WithMany()
+                        .HasForeignKey("instabranduserid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BrandRegistrationMst");
+                });
+
             modelBuilder.Entity("Meta_Ads_World.Data.StateMst", b =>
                 {
                     b.HasOne("Meta_Ads_World.Data.CityMst", null)
@@ -359,9 +498,33 @@ namespace Meta_Ads_World.Migrations
                         .HasForeignKey("CityMstcityid");
                 });
 
+            modelBuilder.Entity("Meta_Ads_World.Data.UserInstaPostHandlerMst", b =>
+                {
+                    b.HasOne("Meta_Ads_World.Data.InstaPostMst", "InstaPostMst")
+                        .WithMany()
+                        .HasForeignKey("instapostid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Meta_Ads_World.Data.UserMst", "UserMst")
+                        .WithMany("userInstaPostHandlerMsts")
+                        .HasForeignKey("userid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("InstaPostMst");
+
+                    b.Navigation("UserMst");
+                });
+
             modelBuilder.Entity("Meta_Ads_World.Data.CityMst", b =>
                 {
                     b.Navigation("StateMst");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.UserMst", b =>
+                {
+                    b.Navigation("userInstaPostHandlerMsts");
                 });
 #pragma warning restore 612, 618
         }

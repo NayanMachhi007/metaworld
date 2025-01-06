@@ -9,16 +9,16 @@ namespace Meta_Ads_World.Controllers
     {
 
         private readonly DataContext _datacontext;
-        public readonly UserRepository _userRepository;
-        private readonly BrandRepository _brandrepository;
-        public readonly BrandSocialCategoryRepository _brandsocialcategoryrepository;
+        private readonly BrandRepository _brandRepository;
+        private readonly BrandSocialCategoryRepository _brandSocialCategoryRepository;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public BrandController(DataContext datacontext)
+        public BrandController(DataContext datacontext, IWebHostEnvironment webHostEnvironment)
         {
             _datacontext = datacontext;
-            _userRepository = new UserRepository(_datacontext);
-            _brandrepository = new BrandRepository(_datacontext);
-            _brandsocialcategoryrepository = new BrandSocialCategoryRepository(_datacontext);
+            _brandRepository = new BrandRepository(_datacontext);
+            _brandSocialCategoryRepository = new BrandSocialCategoryRepository(_datacontext, webHostEnvironment);
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
@@ -37,7 +37,7 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public IActionResult brandregistraionadd(BrandRegistrationModelList bradregisadd)
         {
-            _brandrepository.BrandRegistrationAdd(bradregisadd);
+            _brandRepository.BrandRegistrationAdd(bradregisadd);
             return RedirectToAction("brandregistraionadd");
         }
 
@@ -65,8 +65,9 @@ namespace Meta_Ads_World.Controllers
 
         //Brand Instagram Post Get Method
         [HttpGet]
-        public IActionResult brandinstapostadd()
+        public IActionResult brandinstapostadd(int id)
         {
+            id = 1;
             Boolean status = true;
             InstaPostModelList insta = new InstaPostModelList();
             var data = _datacontext.InstaPostBudgetMst.FirstOrDefault(x => x.status == status);
@@ -77,6 +78,7 @@ namespace Meta_Ads_World.Controllers
                 insta.instacommentbudget = data.instacommentbudget;
                 insta.instasharebudget = data.instasharebudget;
                 insta.instasavebudget = data.instasavebudget;
+                insta.instabranduserid = id;
                 return View(insta);
             }
 
@@ -90,17 +92,34 @@ namespace Meta_Ads_World.Controllers
         {
             if (ModelState.IsValid)
             {
-                _brandsocialcategoryrepository.instagrampostadd(instaadd);
-                return RedirectToAction("brandinstapostadd");
+                int id = 1;
+                InstaPostMst insta = new InstaPostMst()
+                {
+                    instaposttotallike = instaadd.instaposttotallike,
+                    instapostcomment = instaadd.instapostcomment,
+                    instapostshare = instaadd.instapostshare,
+                    instapostsave = instaadd.instapostsave,
+                    instapoststartingdate = instaadd.instapoststartingdate,
+                    instapostendingdate = instaadd.instapostendingdate,
+                    instapostlikestatus = instaadd.instapostlikestatus,
+                    instapostcommentstatus = instaadd.instapostcommentstatus,
+                    instagrampostsharestatus = instaadd.instagrampostsharestatus,
+                    instapostsavestatus = instaadd.instapostsavestatus,
+                    instaposturl = instaadd.instaposturl,
+                    posttotalbudget = instaadd.posttotalbudget,
+                    instabranduserid = id,
+                    instapoststatus = instaadd.instapoststatus,
+                    counter = instaadd.counter,
+                };
+                _datacontext.InstaPostMsts.Add(insta);
+                _datacontext.SaveChanges();
+
+                int data = insta.instapostid;
+               
+                return RedirectToAction("paymentinsta", new { id = data});
             }
-            int id = 1;
-            InstaPostModelList insta = new InstaPostModelList();
-            var data = _datacontext.InstaPostBudgetMst.Where(x => x.instapostbudgetid == id).FirstOrDefault();
-            insta.instalikebudget = data.instalikebudget;
-            insta.instacommentbudget = data.instacommentbudget;
-            insta.instasharebudget = data.instasharebudget;
-            insta.instasavebudget = data.instasavebudget;
-            return View(insta);
+
+            return View();
 
         }
 
@@ -126,7 +145,7 @@ namespace Meta_Ads_World.Controllers
         {
             if (ModelState.IsValid)
             {
-                _brandsocialcategoryrepository.youtubepostadd(youtubeadd);
+                _brandSocialCategoryRepository.youtubepostadd(youtubeadd);
                 return RedirectToAction("brandyoutubepostadd");
             }
             int id = 1;
@@ -141,6 +160,42 @@ namespace Meta_Ads_World.Controllers
         }
 
 
+        [HttpGet]
+        public IActionResult paymentinsta(int id)
+        {
+            BrandPaymentTransactionModelList datafind = new BrandPaymentTransactionModelList();
+            Boolean status = true;
+            var statusdata = _datacontext.QrMst.FirstOrDefault(x => x.status == status);
+            if (statusdata != null)
+            {
+                datafind.qrid = statusdata.qrid;
+                datafind.qrpath = statusdata.qrpath;
+                datafind.status = statusdata.status;
+                datafind.paymentinstaid = id;
+            }
+
+
+            return View(datafind);
+        }
+
+        [HttpPost]
+        public IActionResult paymentinsta(BrandPaymentTransactionModel add)
+        {
+            _brandSocialCategoryRepository.brandpaymentadddata(add);
+            return RedirectToAction("brandinstapostadd");
+        }
+
+        //Payment Add And transction Data
+        [HttpGet]
+        public IActionResult paymentdata(int getinstaid)
+        {
+            return View();
+            
+        }
+
+        
+
+
 
 
         //Json State
@@ -151,6 +206,26 @@ namespace Meta_Ads_World.Controllers
 
             return Json(data);
         }
+
+
+        [HttpGet]
+        public IActionResult UpdateData()
+        {  
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult UpdateData(BrandRegistrationModel model)
+        {
+
+            TempData["alertupdate"] = "Data updated successfully!";
+
+            return RedirectToAction("index");
+        }
+
+
+
 
 
     }

@@ -56,6 +56,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caW5zdGFwb3N0YnVkZ2V0ZWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Admin/instapostrequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caW5zdGFwb3N0cmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Admin/payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Admin/qrcodeadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccXJjb2RlYWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Admin/qrcodelist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccXJjb2RlbGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Admin/stateadd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cc3RhdGVhZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -94,6 +110,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Brand/paymentinsta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRccGF5bWVudGluc3RhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Brand/temp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcdGVtcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Brand/UpdateData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcVXBkYXRlRGF0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Module/ModuleBackup.cshtml]
@@ -152,6 +180,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclxpbnN0YWdyYW1wb3N0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Visitor/instapostdetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclxpbnN0YXBvc3RkZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Visitor/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclxsb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -162,6 +194,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Visitor/useraccountdetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclx1c2VyYWNjb3VudGRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Visitor/userdesk.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclx1c2VyZGVzay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Visitor/userdetailsedit.cshtml]
@@ -178,10 +214,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Visitor/usersettings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclx1c2Vyc2V0dGluZ3MuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Visitor/visitorlogin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclx2aXNpdG9ybG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Visitor/youtubepost.cshtml]

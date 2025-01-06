@@ -8,8 +8,8 @@ namespace Meta_Ads_World.Models
         public int instapostid { get; set; }
         public string instaposttotallike { get; set; }
         public string instapostcomment { get; set; }
-        public Boolean instapostshare { get; set; }
-        public Boolean instapostsave { get; set; }
+        public string instapostshare { get; set; }
+        public string instapostsave { get; set; }
         public DateTime instapoststartingdate { get; set; } = DateTime.Now;
         public DateTime instapostendingdate { get; set; } = DateTime.Now;
         public Boolean instapostlikestatus { get; set; }
@@ -18,10 +18,11 @@ namespace Meta_Ads_World.Models
         public Boolean instapostsavestatus { get; set; }
         public string instaposturl { get; set; }
 
-
         [Required(ErrorMessage = "Please Enter the details")]
         public string posttotalbudget { get; set; }
-
+        public Boolean instapoststatus { get; set; }
+        public int instabranduserid { get; set; }
+        public int counter { get; set; }
 
         //Insta Post Budget Model
 
@@ -34,11 +35,16 @@ namespace Meta_Ads_World.Models
         public Boolean status { get; set; }
 
 
+
     }
 
     public class InstaPostModelList : InstaPostModel
     {
         public List<InstaPostModelList>? InstaPostList { get; set; }
         public List<InstaPostBudgetMst>? instabudget { get; set; }
+
+        public List<BrandRegistrationMst>? BrandRegistration { get; set; }
+
+        public List<UserMst>? UserMst { get; set; }
     }
 }

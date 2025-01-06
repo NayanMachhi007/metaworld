@@ -669,8 +669,20 @@
       "PackagePath": "staticwebassets\\assest\\img\\products\\play-station.png"
     },
     {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instapost.png",
+      "PackagePath": "staticwebassets\\assest\\logo\\instapost.png"
+    },
+    {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\meta-ads-logo-remove.png",
       "PackagePath": "staticwebassets\\assest\\logo\\meta-ads-logo-remove.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\qr-background.png",
+      "PackagePath": "staticwebassets\\assest\\logo\\qr-background.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\qr-code.png",
+      "PackagePath": "staticwebassets\\assest\\logo\\qr-code.png"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\registration\\registration.gif",
@@ -819,6 +831,10 @@
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\root.css",
       "PackagePath": "staticwebassets\\css\\root.css"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\scanner-card.css",
+      "PackagePath": "staticwebassets\\css\\scanner-card.css"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\signpost.css",
@@ -1999,6 +2015,34 @@
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\StreamUpload.png",
+      "PackagePath": "staticwebassets\\meta-ads-world-upload-images\\qr-code-images\\StreamUpload.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\banner-new-updated.png",
+      "PackagePath": "staticwebassets\\meta-ads-world-upload-images\\qr-code-images\\banner-new-updated.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\khushiupi.png",
+      "PackagePath": "staticwebassets\\meta-ads-world-upload-images\\qr-code-images\\khushiupi.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\nayanupi.png",
+      "PackagePath": "staticwebassets\\meta-ads-world-upload-images\\qr-code-images\\nayanupi.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\images.webp",
+      "PackagePath": "staticwebassets\\meta-ads-world-upload-images\\transaction-recipt-images\\images.webp"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\nayanupi.png",
+      "PackagePath": "staticwebassets\\meta-ads-world-upload-images\\transaction-recipt-images\\nayanupi.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\payment-recepit.png",
+      "PackagePath": "staticwebassets\\meta-ads-world-upload-images\\transaction-recipt-images\\payment-recepit.png"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\vendor\\css\\pages\\app-calendar.css",

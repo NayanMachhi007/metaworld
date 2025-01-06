@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Meta_Ads_World.Models.InstaPostAdminModel>
+
+@{
+    Layout = "~/Views/Shared/_admin_layout.cshtml";
+}
+
+@section Style{
+    <style>
+        img{
+            width:100px;
+            height:100px;
+        }
+
+    </style>
+}
+
+<section class="table-main">
+    <div class="search">
+        <input type="search" placeholder="Search" />
+
+        <button class="btn-global">Submit</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-title">
+                    <h3 class="heading-subheading">Instagram Post Request</h3>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Brand User Id</th>
+                                <th>Insta Post</th>
+                                <th>Payment Sent Recepit</th>
+                                <th>Payment Transaction Number</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var iteam in Model)
+                            {
+                                <tr>
+                                    <td>@iteam.brandid</td>
+                                    <td>
+                                        <iframe width="100" height="100" src="https://www.instagram.com/p/@iteam.instaurl/embed/" frameborder="0"></iframe>
+
+                                    </td>
+                                    <td>
+                                        <img src="~/@iteam.paymentrecipt" width="100" height="100" />
+                                    </td>
+                                    <td>@iteam.paymentid</td>
+                                    <td>
+                                        @if (iteam.instastatus== false) {
+                                            <input type="checkbox" class="fa-solid fa-circle-check" checked="@iteam.instastatus" onchange="btnstatus(@iteam.instapostid,this.checked)">
+                                        }
+                                        else{
+                                            <input type="checkbox" class="fa-solid fa-circle-xmark" checked="@iteam.instastatus" onchange="btnstatus(@iteam.instapostid,this.checked)">
+                                        }
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        function btnstatus(id,statusdata) {
+            console.log("Nayan");
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("instastatus", "Admin")",
+                data: {
+                    id: id,
+                    status: statusdata,
+                },
+                success: function (data) {
+                    console.log(data, "Sucess");
+                },
+                error: function (data) {
+                    console.log("Error", data);
+                }
+
+            });
+        }
+    </script>
+}

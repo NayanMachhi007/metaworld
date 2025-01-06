@@ -1,19 +1,23 @@
 ﻿using Meta_Ads_World.Data;
 using Meta_Ads_World.Models;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Meta_Ads_World.Repository
 {
     public class BrandSocialCategoryRepository
     {
         private readonly DataContext _datacontext;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public BrandSocialCategoryRepository(DataContext datacontext)
+        public BrandSocialCategoryRepository(DataContext datacontext, IWebHostEnvironment webHostEnvironment)
         {
             _datacontext = datacontext;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public List<InstaPostModelList> InstaPostList()
         {
+            Boolean status = true;
             List<InstaPostModelList> list = new List<InstaPostModelList>();
             var data = _datacontext.InstaPostMsts.ToList();
             foreach (var item in data)
@@ -33,6 +37,40 @@ namespace Meta_Ads_World.Repository
                     instapostsavestatus = item.instapostsavestatus,
                     instaposturl = item.instaposturl,
                     posttotalbudget = item.posttotalbudget,
+                    instabranduserid = item.instabranduserid,
+                    instapoststatus = item.instapoststatus,
+                };
+                list.Add(insta);
+            }
+            return list;
+        }
+
+        public List<InstaPostModelList> AdminPaymentRequestInstaPostList()
+        {
+            Boolean status = true;
+            int id = 1;
+            var datauser = _datacontext.UserMsts.Where(x => x.userid == id).FirstOrDefault();
+            List<InstaPostModelList> list = new List<InstaPostModelList>();
+            var data = _datacontext.InstaPostMsts.Where(x => x.instapoststatus == status).ToList();
+            foreach (var item in data)
+            {
+                InstaPostModelList insta = new InstaPostModelList()
+                {
+                    instapostid = item.instapostid,
+                    instaposttotallike = item.instaposttotallike,
+                    instapostcomment = item.instapostcomment,
+                    instapostshare = item.instapostshare,
+                    instapostsave = item.instapostsave,
+                    instapoststartingdate = item.instapoststartingdate,
+                    instapostendingdate = item.instapostendingdate,
+                    instapostlikestatus = item.instapostlikestatus,
+                    instapostcommentstatus = item.instapostcommentstatus,
+                    instagrampostsharestatus = item.instagrampostsharestatus,
+                    instapostsavestatus = item.instapostsavestatus,
+                    instaposturl = item.instaposturl,
+                    posttotalbudget = item.posttotalbudget,
+                    instabranduserid = item.instabranduserid,
+                    instapoststatus = item.instapoststatus,
                 };
                 list.Add(insta);
             }
@@ -73,23 +111,7 @@ namespace Meta_Ads_World.Repository
 
         public void instagrampostadd(InstaPostModelList instaadd)
         {
-            InstaPostMst insta = new InstaPostMst()
-            {
-                instaposttotallike = instaadd.instaposttotallike,
-                instapostcomment = instaadd.instapostcomment,
-                instapostshare = instaadd.instapostshare,
-                instapostsave = instaadd.instapostsave,
-                instapoststartingdate = instaadd.instapoststartingdate,
-                instapostendingdate = instaadd.instapostendingdate,
-                instapostlikestatus = instaadd.instapostlikestatus,
-                instapostcommentstatus = instaadd.instapostcommentstatus,
-                instagrampostsharestatus = instaadd.instagrampostsharestatus,
-                instapostsavestatus = instaadd.instapostsavestatus,
-                instaposturl = instaadd.instaposturl,
-                posttotalbudget = instaadd.posttotalbudget,
-            };
-            _datacontext.InstaPostMsts.Add(insta);
-            _datacontext.SaveChanges();
+          
         }
 
         // Brand Social Youtube Post Add
@@ -255,6 +277,62 @@ namespace Meta_Ads_World.Repository
             };
             _datacontext.youTubePostBudgetMsts.Update(youtubeedit);
             _datacontext.SaveChanges();
+        }
+
+
+        //Instagram Post Budget Details Find
+        public InstaPostModelList Budgetfind(bool status)
+        {
+            status = true;
+            InstaPostModelList model = new InstaPostModelList();
+            var data = _datacontext.InstaPostBudgetMst.FirstOrDefault(x => x.status == status);
+            if (data != null)
+            {
+                model.instalikebudget = data.instalikebudget;
+                model.instacommentbudget = data.instacommentbudget;
+                model.instasharebudget = data.instasharebudget;
+                model.instasavebudget = data.instasavebudget;
+
+                return model;
+            }
+
+            return null;
+        }
+
+
+        //Brand Payment Transcation Add
+        public void brandpaymentadddata(BrandPaymentTransactionModel adddata)
+        {
+
+            int userid = 1;
+            var folder = "meta-ads-world-upload-images/transaction-recipt-images/" + adddata.uploadfile.FileName; // Use the file name you want to delete
+            var filereplace = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+
+            //// Check if the file already exists
+            //if (System.IO.File.Exists(filereplace))
+            //{
+            //    // Delete the existing file
+            //    System.IO.File.Delete(filereplace);
+            //}
+
+            // Save the new file
+            using (var stream = new FileStream(filereplace, FileMode.Create))
+            {
+                adddata.uploadfile.CopyTo(stream);
+            }
+
+            BrandPaymentTransactionMst add = new BrandPaymentTransactionMst()
+            {
+                paymentrecipt = folder,
+                transcationid = adddata.transcationid,
+                contactno = adddata.contactno,
+                paymentbranduserid = userid,
+                paymentinstaid = adddata.paymentinstaid,
+            };
+
+            _datacontext.BrandPaymentTransactionMsts.Add(add);
+            _datacontext.SaveChanges();
+
         }
 
     }

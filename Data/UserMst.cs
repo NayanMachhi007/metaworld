@@ -16,5 +16,7 @@ namespace Meta_Ads_World.Data
         public Boolean status { get; set; }
         public int urefreallid { get; set; }
         public string urefreallcode { get; set; }
+
+        public ICollection<UserInstaPostHandlerMst> userInstaPostHandlerMsts { get; set; }
     }
 }

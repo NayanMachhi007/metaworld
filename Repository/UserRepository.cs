@@ -1,6 +1,5 @@
 ﻿using Meta_Ads_World.Data;
 using Meta_Ads_World.Models;
-using System.Collections.Frozen;
 
 namespace Meta_Ads_World.Repository
 {
@@ -12,6 +11,8 @@ namespace Meta_Ads_World.Repository
         {
             _datacontext = datacontext;
         }
+
+
 
 
 
@@ -29,11 +30,11 @@ namespace Meta_Ads_World.Repository
                     uemail = iteam.uemail,
                     upassword = iteam.upassword,
                     areadcode = iteam.areadcode,
-                    contactno=iteam.contactno,
-                    profilepicture=iteam.profilepicture,
+                    contactno = iteam.contactno,
+                    profilepicture = iteam.profilepicture,
                     urefreallid = iteam.urefreallid,
                     urefreallcode = iteam.urefreallcode,
-                    status=iteam.status,
+                    status = iteam.status,
                 };
                 User.Add(userlist);
             }
@@ -45,20 +46,20 @@ namespace Meta_Ads_World.Repository
         {
             int id = 1;
             List<UserModelList> user = new List<UserModelList>();
-            var data = _datacontext.UserMsts.Where(x=>x.urefreallid ==id).ToList();
+            var data = _datacontext.UserMsts.Where(x => x.urefreallid == id).ToList();
             foreach (var iteam in data)
             {
                 UserModelList list = new UserModelList()
                 {
-                    userid=iteam.userid,
-                    ufname=iteam.ufname,
-                    uemail=iteam.uemail,
-                    urefreallcode=iteam.urefreallcode,
-                    profilepicture=iteam.profilepicture
+                    userid = iteam.userid,
+                    ufname = iteam.ufname,
+                    uemail = iteam.uemail,
+                    urefreallcode = iteam.urefreallcode,
+                    profilepicture = iteam.profilepicture
                 };
                 user.Add(list);
             }
-            return user;            
+            return user;
         }
 
         //User Registration Add
@@ -80,15 +81,15 @@ namespace Meta_Ads_World.Repository
             UserMst useraddregister = new UserMst()
             {
                 userid = useradd.userid,
-                ufname = useradd.ufname,               
+                ufname = useradd.ufname,
                 uemail = useradd.uemail,
                 upassword = useradd.upassword,
                 areadcode = useradd.areadcode,
-                contactno=useradd.contactno,
-                profilepicture=useradd.profilepicture,
+                contactno = useradd.contactno,
+                profilepicture = useradd.profilepicture,
                 urefreallid = useradd.urefreallid,
                 urefreallcode = randomber,
-                status=useradd.status,
+                status = useradd.status,
             };
             _datacontext.UserMsts.Add(useraddregister);
             _datacontext.SaveChanges();
@@ -98,12 +99,54 @@ namespace Meta_Ads_World.Repository
         public void UserRegistrationSettings(UserModelList useredit)
         {
             UserMst user = _datacontext.UserMsts.Find(useredit.userid);
-            if (user != null) {                               
+            if (user != null)
+            {
                 user.uemail = useredit.uemail;
                 user.upassword = useredit.upassword;
                 _datacontext.UserMsts.Update(user);
-                _datacontext.SaveChanges();            
+                _datacontext.SaveChanges();
             }
+        }
+
+        //Instagram Post User List
+        public List<UserInstaPostHandlerModelList> userinstapostlist()
+        {
+            var data = _datacontext.InstaPostMsts.Join(_datacontext.UserInstaPostHandlerMsts,
+                e => e.instapostid,
+                d => d.instapostid,
+                (e, d) => new
+                {
+                    instapostid = e.instapostid,
+                    instalike = e.instaposttotallike,
+                    instacomment = e.instapostcomment,
+                    instashare = e.instapostshare,
+                    instasave = e.instapostsave,
+                    instaposturl = e.instaposturl,
+                    instapoststatus = e.instapoststatus,
+                    userid = d.userid,
+                }
+                ).ToList();
+
+            var findata = data.Where(x => x.instapoststatus == false).ToList();
+
+            List<UserInstaPostHandlerModelList> list = new List<UserInstaPostHandlerModelList>();
+            foreach (var iteam in findata)
+            {
+                UserInstaPostHandlerModelList model = new UserInstaPostHandlerModelList()
+                {
+                    instapostid = iteam.instapostid,
+                    instalike = iteam.instalike,
+                    instacomment = iteam.instacomment,
+                    instashare = iteam.instashare,
+                    instasave = iteam.instasave,
+                    instaposturl = iteam.instaposturl,
+                    instapoststatus = iteam.instapoststatus,
+                    userid = iteam.userid,
+                };
+                list.Add(model);
+            }
+
+            return list;
         }
 
     }

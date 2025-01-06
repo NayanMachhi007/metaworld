@@ -8,8 +8,8 @@ namespace Meta_Ads_World.Data
         public int youtubepostid { get; set; }
         public string youtubeposttotallike { get; set; }
         public string youtubepostcomment { get; set; }
-        public Boolean youtubepostshare { get; set; }
-        public Boolean youtubepostsave { get; set; }
+        public string youtubepostshare { get; set; }
+        public string youtubepostsave { get; set; }
         public DateTime youtubepoststartingdate { get; set; } = DateTime.Now;
         public DateTime youtubepostendingdate { get; set; } = DateTime.Now;
         public Boolean youtubepostlikestatus { get; set; }

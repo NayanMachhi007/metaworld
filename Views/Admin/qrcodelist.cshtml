@@ -1,0 +1,74 @@
+﻿@model Meta_Ads_World.Models.QrCodeModelList
+
+@{
+    Layout = "~/Views/Shared/_admin_layout.cshtml";
+}
+
+<section class="table-main">
+    <div class="search">
+        <input type="search" placeholder="Search" />
+
+        <button class="btn-global">Submit</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-title">
+                    <h3 class="heading-subheading">QR Code List</h3>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Code Scanner</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var iteam in Model.qrlist)
+                            {
+                                    <tr>
+                                        <td>@iteam.qrid</td>
+                                        <td>
+                                            <img src="~/@iteam.qrpath" style="width:100px;" alt="@iteam.qrpath"/>
+                                        </td>
+                                        <td>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch" checked="@iteam.status" onchange="btnstatus(@iteam.qrid,this.checked)">
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+        <script>
+            function btnstatus(id,statusdata) {
+                $.ajax({
+                    type: "Post",
+                    url: "@Url.Action("QRGetStatus", "Admin")",
+                    data: {
+                        getid: id,
+                        getstatus: statusdata,                   
+                    },
+                    success: function (data) {
+                        console.log(data, "Sucess");
+                    },
+                    error: function (data) {
+                        console.log("Error", data);
+                    }
+
+                });
+            }
+        </script>
+}

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Meta_Ads_World.Migrations
 {
     /// <inheritdoc />
-    public partial class UpdatedFiled : Migration
+    public partial class Initionalization : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -89,27 +89,17 @@ namespace Meta_Ads_World.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "InstaPostMsts",
+                name: "QrMst",
                 columns: table => new
                 {
-                    instapostid = table.Column<int>(type: "int", nullable: false)
+                    qrid = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    instaposttotallike = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    instapostcomment = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    instapostshare = table.Column<bool>(type: "bit", nullable: false),
-                    instapostsave = table.Column<bool>(type: "bit", nullable: false),
-                    instapoststartingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    instapostendingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    instapostlikestatus = table.Column<bool>(type: "bit", nullable: false),
-                    instapostcommentstatus = table.Column<bool>(type: "bit", nullable: false),
-                    instagrampostsharestatus = table.Column<bool>(type: "bit", nullable: false),
-                    instapostsavestatus = table.Column<bool>(type: "bit", nullable: false),
-                    instaposturl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    posttotalbudget = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    qrpath = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    status = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_InstaPostMsts", x => x.instapostid);
+                    table.PrimaryKey("PK_QrMst", x => x.qrid);
                 });
 
             migrationBuilder.CreateTable(
@@ -158,8 +148,8 @@ namespace Meta_Ads_World.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     youtubeposttotallike = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     youtubepostcomment = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    youtubepostshare = table.Column<bool>(type: "bit", nullable: false),
-                    youtubepostsave = table.Column<bool>(type: "bit", nullable: false),
+                    youtubepostshare = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    youtubepostsave = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     youtubepoststartingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     youtubepostendingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     youtubepostlikestatus = table.Column<bool>(type: "bit", nullable: false),
@@ -172,6 +162,39 @@ namespace Meta_Ads_World.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_YouTubePostMst", x => x.youtubepostid);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "InstaPostMsts",
+                columns: table => new
+                {
+                    instapostid = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    instaposttotallike = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    instapostcomment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    instapostshare = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    instapostsave = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    instapoststartingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    instapostendingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    instapostlikestatus = table.Column<bool>(type: "bit", nullable: false),
+                    instapostcommentstatus = table.Column<bool>(type: "bit", nullable: false),
+                    instagrampostsharestatus = table.Column<bool>(type: "bit", nullable: false),
+                    instapostsavestatus = table.Column<bool>(type: "bit", nullable: false),
+                    instaposturl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    posttotalbudget = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    instapoststatus = table.Column<bool>(type: "bit", nullable: false),
+                    instabranduserid = table.Column<int>(type: "int", nullable: false),
+                    counter = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_InstaPostMsts", x => x.instapostid);
+                    table.ForeignKey(
+                        name: "FK_InstaPostMsts_BrandRegistrationMst_instabranduserid",
+                        column: x => x.instabranduserid,
+                        principalTable: "BrandRegistrationMst",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -193,10 +216,95 @@ namespace Meta_Ads_World.Migrations
                         principalColumn: "cityid");
                 });
 
+            migrationBuilder.CreateTable(
+                name: "BrandPaymentTransactionMsts",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    paymentrecipt = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    transcationid = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    contactno = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    paymentbranduserid = table.Column<int>(type: "int", nullable: false),
+                    paymentinstaid = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BrandPaymentTransactionMsts", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_BrandPaymentTransactionMsts_BrandRegistrationMst_paymentbranduserid",
+                        column: x => x.paymentbranduserid,
+                        principalTable: "BrandRegistrationMst",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BrandPaymentTransactionMsts_InstaPostMsts_paymentinstaid",
+                        column: x => x.paymentinstaid,
+                        principalTable: "InstaPostMsts",
+                        principalColumn: "instapostid",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserInstaPostHandlerMsts",
+                columns: table => new
+                {
+                    userhandlerid = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    userid = table.Column<int>(type: "int", nullable: false),
+                    instapostid = table.Column<int>(type: "int", nullable: false),
+                    instalike = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    instacomment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    instashare = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    instasave = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    userhandlertime = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserInstaPostHandlerMsts", x => x.userhandlerid);
+                    table.ForeignKey(
+                        name: "FK_UserInstaPostHandlerMsts_InstaPostMsts_instapostid",
+                        column: x => x.instapostid,
+                        principalTable: "InstaPostMsts",
+                        principalColumn: "instapostid",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserInstaPostHandlerMsts_UserMsts_userid",
+                        column: x => x.userid,
+                        principalTable: "UserMsts",
+                        principalColumn: "userid",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BrandPaymentTransactionMsts_paymentbranduserid",
+                table: "BrandPaymentTransactionMsts",
+                column: "paymentbranduserid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BrandPaymentTransactionMsts_paymentinstaid",
+                table: "BrandPaymentTransactionMsts",
+                column: "paymentinstaid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_InstaPostMsts_instabranduserid",
+                table: "InstaPostMsts",
+                column: "instabranduserid");
+
             migrationBuilder.CreateIndex(
                 name: "IX_StateMsts_CityMstcityid",
                 table: "StateMsts",
                 column: "CityMstcityid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserInstaPostHandlerMsts_instapostid",
+                table: "UserInstaPostHandlerMsts",
+                column: "instapostid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserInstaPostHandlerMsts_userid",
+                table: "UserInstaPostHandlerMsts",
+                column: "userid");
         }
 
         /// <inheritdoc />
@@ -209,19 +317,19 @@ namespace Meta_Ads_World.Migrations
                 name: "BrandCategoryMst");
 
             migrationBuilder.DropTable(
-                name: "BrandRegistrationMst");
+                name: "BrandPaymentTransactionMsts");
 
             migrationBuilder.DropTable(
                 name: "InstaPostBudgetMst");
 
             migrationBuilder.DropTable(
-                name: "InstaPostMsts");
+                name: "QrMst");
 
             migrationBuilder.DropTable(
                 name: "StateMsts");
 
             migrationBuilder.DropTable(
-                name: "UserMsts");
+                name: "UserInstaPostHandlerMsts");
 
             migrationBuilder.DropTable(
                 name: "youTubePostBudgetMsts");
@@ -231,6 +339,15 @@ namespace Meta_Ads_World.Migrations
 
             migrationBuilder.DropTable(
                 name: "CityMsts");
+
+            migrationBuilder.DropTable(
+                name: "InstaPostMsts");
+
+            migrationBuilder.DropTable(
+                name: "UserMsts");
+
+            migrationBuilder.DropTable(
+                name: "BrandRegistrationMst");
         }
     }
 }

@@ -10,6 +10,8 @@
   <ItemGroup>
     <Folder Include="wwwroot\assest\dummy\" />
     <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\meta-ads-world-upload-images\transaction-recipt-images\" />
+    <Folder Include="wwwroot\meta-ads-world-upload-images\qr-code-images\" />
   </ItemGroup>
 
   <ItemGroup>

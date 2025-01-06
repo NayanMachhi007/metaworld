@@ -1,0 +1,36 @@
+﻿@model Meta_Ads_World.Models.BrandRegistrationModel
+
+@{
+    Layout = "_Layout";
+}
+
+@section Style {
+    <style>
+
+    </style>
+}
+
+<form asp-action="UpdateData" method="post">
+    <input type="text" asp-for="bname" />
+    <button type="submit" class="btn btn-primary">Update Data</button>
+</form>
+
+@if (TempData["alertupdate"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show px-5" role="alert">
+        <strong>@TempData["alertupdate"]</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    TempData["alertupdate"] = null;
+}
+
+
+@section Scripts {
+    <script>
+                window.setTimeout(function () {
+        $("alert").fadeTo(500, 0). slideUp(500, function () {
+        $(this).remove();
+        });
+        }, 4000),
+    </script>
+}

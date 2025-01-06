@@ -1,0 +1,59 @@
+﻿.card-scanner {
+    padding: 4rem 0;
+}
+
+    .card-scanner .scanner-bg {
+        padding: 1rem 0;
+        background-color: #1F91EE;
+        background-image: url('/assest/logo/qr-background.png');
+        background-size: contain;
+        background-position: top right;
+        background-repeat: no-repeat;
+        height: 75vh;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 86%, 78% 67%, 25% 67%, 0 85%, 0 0);
+    }
+
+        .card-scanner .scanner-bg .code-scanner {
+            position: relative;
+        }
+
+            .card-scanner .scanner-bg .code-scanner .code-image {
+                position: absolute;
+                width: 26rem;
+                height: 21rem;
+                left: 11rem;
+                top: 9rem;
+                background: white;
+                border-radius: 25px 25px 0 0;
+                padding:2rem;
+            }
+
+
+    .card-scanner .scan-heading {
+        position: absolute;
+        bottom: 24%;
+        left: 35%;
+        color: #8d8d8e;
+    }
+
+        .card-scanner .scan-heading h4 {
+            font-size: 1.8rem;
+            text-align: center;
+            padding:1rem 0;
+        }
+
+        .card-scanner .scan-heading h5 {
+            font-size:3rem;
+            font-weight: bold;
+            text-align: center;
+            color: #1F91EE;
+        }
+
+    .card-scanner .scanner-form {
+        padding: 8rem 2rem;
+    }
+
+        .card-scanner .scanner-form label {
+            padding: 0.5rem 0;
+            font-size:1.2rem;
+        }

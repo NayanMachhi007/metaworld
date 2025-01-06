@@ -2,26 +2,26 @@
 using Meta_Ads_World.Models;
 using Meta_Ads_World.Repository;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Meta_Ads_World.Controllers
 {
     public class AdminController : Controller
     {
-        private readonly DataContext _datacontext;
-        private readonly UserRepository _userrepository;
+        private readonly DataContext _dataContext;
+        private readonly UserRepository _userRepository;
         private readonly BrandSocialCategoryRepository _brandSocialCategoryRepository;
-        private readonly AdminRepository _adminRepository;
+        private readonly AdminRepository _adminrepository;
+        private readonly IWebHostEnvironment _environment;
 
-
-        public AdminController(DataContext datacontext)
+        public AdminController(DataContext dataContext, IWebHostEnvironment webHostEnvironment)
         {
-            _datacontext = datacontext;
-            _userrepository = new UserRepository(_datacontext);
-            _brandSocialCategoryRepository = new BrandSocialCategoryRepository(_datacontext);
-            _adminRepository = new AdminRepository(_datacontext);
-        }
+            _dataContext = dataContext;
+            _userRepository = new UserRepository(_dataContext);
+            _brandSocialCategoryRepository = new BrandSocialCategoryRepository(_dataContext, webHostEnvironment);
+            _adminrepository = new AdminRepository(_dataContext, webHostEnvironment);
+            _environment = webHostEnvironment;
 
+        }
 
         public IActionResult index()
         {
@@ -32,7 +32,7 @@ namespace Meta_Ads_World.Controllers
         public IActionResult userstatuslist()
         {
             UserModelList user = new UserModelList();
-            user.UserList = _userrepository.UserList();
+            user.UserList = _userRepository.UserList();
             return View(user);
         }
 
@@ -122,14 +122,14 @@ namespace Meta_Ads_World.Controllers
         public IActionResult stateadd()
         {
             StateModelList state = new StateModelList();
-            state.statelist = _adminRepository.StateList();
+            state.statelist = _adminrepository.StateList();
             return View(state);
         }
 
         [HttpPost]
         public IActionResult stateadd(StateModelList stateadd)
         {
-            _adminRepository.StateAdd(stateadd);
+            _adminrepository.StateAdd(stateadd);
             return RedirectToAction("stateadd");
         }
 
@@ -138,8 +138,8 @@ namespace Meta_Ads_World.Controllers
         public IActionResult cityadd()
         {
             CityModelList city = new CityModelList();
-            city.StateMstList = _datacontext.StateMsts.ToList();
-            city.CityList = _adminRepository.citylist();
+            city.StateMstList = _dataContext.StateMsts.ToList();
+            city.CityList = _adminrepository.citylist();
             return View(city);
 
         }
@@ -147,7 +147,7 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public IActionResult cityadd(CityModelList cityadd)
         {
-            _adminRepository.CityAdd(cityadd);
+            _adminrepository.CityAdd(cityadd);
             return RedirectToAction("cityadd");
         }
 
@@ -155,8 +155,8 @@ namespace Meta_Ads_World.Controllers
         public IActionResult areaadd()
         {
             AreaModelList area = new AreaModelList();
-            area.citylist = _datacontext.CityMsts.ToList();
-            area.arealist = _adminRepository.arealist();
+            area.citylist = _dataContext.CityMsts.ToList();
+            area.arealist = _adminrepository.arealist();
             return View(area);
 
         }
@@ -164,20 +164,113 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public IActionResult areaadd(AreaModelList area)
         {
-            _adminRepository.areaadd(area);
+            _adminrepository.areaadd(area);
             return RedirectToAction("areaadd");
+        }
+
+        //Payment QR Add Method
+        [HttpGet]
+        public IActionResult qrcodeadd()
+        {
+            return View();
+        }
+
+        // Payment QR Add Method
+        [HttpPost]
+        public IActionResult qrcodeadd(QrCodeModel qrdata)
+        {
+            _adminrepository.qradd(qrdata);
+            return RedirectToAction("qrcodeadd");
+        }
+
+        [HttpGet]
+        public IActionResult qrcodelist()
+        {
+            QrCodeModelList list = new QrCodeModelList();
+            list.qrlist = _adminrepository.qrcodelist();
+            return View(list);
+        }
+
+        //Payment Method
+        [HttpGet]
+        public IActionResult payment()
+        {
+            QrCodeModel datafind = new QrCodeModel();
+            Boolean status = true;
+            var data = _dataContext.QrMst.Where(x => x.status == status).FirstOrDefault();
+            if (data != null)
+            {
+                datafind.qrid = data.qrid;
+                datafind.qrpath = data.qrpath;
+                datafind.status = data.status;
+            }
+            return View(datafind);
+        }
+
+        //Json UsrGetStatus
+        public JsonResult QRGetStatus(int getid, Boolean getstatus)
+        {
+            var data = _dataContext.QrMst.Where(x => x.qrid == getid).FirstOrDefault();
+            if (data != null)
+            {
+                data.status = getstatus;
+                _dataContext.QrMst.Update(data);
+                _dataContext.SaveChanges();
+            }
+            return Json(data);
+        }
+
+        //Instagram Post Admin Request Reject of Accept
+        [HttpGet]
+        public IActionResult instapostrequest()
+        {
+
+            var data = (from brand in _dataContext.BrandRegistrationMst
+                        join insta in _dataContext.InstaPostMsts on brand.id equals insta.instabranduserid
+                        join payment in _dataContext.BrandPaymentTransactionMsts on insta.instapostid equals payment.paymentinstaid
+
+                        select new
+                        {
+                            brandid = brand.id,
+                            instapostid = insta.instapostid,
+                            instaurl = insta.instaposturl,
+                            instastatus = insta.instapoststatus,
+                            paymentid = payment.transcationid,
+                            paymentrecipt = payment.paymentrecipt
+                        }).ToList();
+
+
+
+
+
+            var itemdatalist = new List<InstaPostAdminModel>();
+            foreach (var dataiteam in data)
+            {
+                InstaPostAdminModel list = new InstaPostAdminModel()
+                {
+                    brandid = dataiteam.brandid,
+                    instapostid = dataiteam.instapostid,
+                    instaurl = dataiteam.instaurl,
+                    instastatus = dataiteam.instastatus,
+                    paymentid = dataiteam.paymentid,
+                    paymentrecipt = dataiteam.paymentrecipt
+                };
+                itemdatalist.Add(list);
+            }
+
+            return View(itemdatalist);
         }
 
 
         //Json UsrGetStatus
         public JsonResult UserGetStatus(int getid, Boolean getstatus)
         {
-            var data = _datacontext.UserMsts.Where(x => x.userid == getid).FirstOrDefault();
+            var data = _dataContext.UserMsts.Where(x => x.userid == getid).FirstOrDefault();
             if (data != null)
             {
                 data.status = getstatus;
-                _datacontext.UserMsts.Update(data);
-                _datacontext.SaveChanges();
+                _dataContext.UserMsts.Update(data);
+                _dataContext.SaveChanges();
             }
             return Json(data);
         }
@@ -186,12 +279,12 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public JsonResult instalikestatus(int id, Boolean status)
         {
-            var data = _datacontext.InstaPostMsts.Where(x => x.instapostid == id).FirstOrDefault();
+            var data = _dataContext.InstaPostMsts.Where(x => x.instapostid == id).FirstOrDefault();
             if (data != null)
             {
                 data.instapostlikestatus = status;
-                _datacontext.InstaPostMsts.Update(data);
-                _datacontext.SaveChanges();
+                _dataContext.InstaPostMsts.Update(data);
+                _dataContext.SaveChanges();
             }
             return Json(data);
         }
@@ -201,12 +294,12 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public JsonResult instasharestatus(int id, Boolean status)
         {
-            var data = _datacontext.InstaPostMsts.Where(x => x.instapostid == id).FirstOrDefault();
+            var data = _dataContext.InstaPostMsts.Where(x => x.instapostid == id).FirstOrDefault();
             if (data != null)
             {
                 data.instagrampostsharestatus = status;
-                _datacontext.InstaPostMsts.Update(data);
-                _datacontext.SaveChanges();
+                _dataContext.InstaPostMsts.Update(data);
+                _dataContext.SaveChanges();
             }
             return Json(data);
         }
@@ -215,12 +308,12 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public JsonResult instasavestatus(int id, Boolean status)
         {
-            var data = _datacontext.InstaPostMsts.Where(x => x.instapostid == id).FirstOrDefault();
+            var data = _dataContext.InstaPostMsts.Where(x => x.instapostid == id).FirstOrDefault();
             if (data != null)
             {
                 data.instapostsavestatus = status;
-                _datacontext.InstaPostMsts.Update(data);
-                _datacontext.SaveChanges();
+                _dataContext.InstaPostMsts.Update(data);
+                _dataContext.SaveChanges();
             }
             return Json(data);
         }
@@ -229,12 +322,12 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public JsonResult youtubelikestatus(int id, Boolean status)
         {
-            var data = _datacontext.YouTubePostMst.Where(x => x.youtubepostid == id).FirstOrDefault();
+            var data = _dataContext.YouTubePostMst.Where(x => x.youtubepostid == id).FirstOrDefault();
             if (data != null)
             {
                 data.youtubepostlikestatus = status;
-                _datacontext.YouTubePostMst.Update(data);
-                _datacontext.SaveChanges();
+                _dataContext.YouTubePostMst.Update(data);
+                _dataContext.SaveChanges();
             }
             return Json(data);
         }
@@ -244,12 +337,12 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public JsonResult youtubesharestatus(int id, Boolean status)
         {
-            var data = _datacontext.YouTubePostMst.Where(x => x.youtubepostid == id).FirstOrDefault();
+            var data = _dataContext.YouTubePostMst.Where(x => x.youtubepostid == id).FirstOrDefault();
             if (data != null)
             {
                 data.youtubepostsharestatus = status;
-                _datacontext.YouTubePostMst.Update(data);
-                _datacontext.SaveChanges();
+                _dataContext.YouTubePostMst.Update(data);
+                _dataContext.SaveChanges();
             }
             return Json(data);
         }
@@ -258,12 +351,12 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public JsonResult youtubesavestatus(int id, Boolean status)
         {
-            var data = _datacontext.YouTubePostMst.Where(x => x.youtubepostid == id).FirstOrDefault();
+            var data = _dataContext.YouTubePostMst.Where(x => x.youtubepostid == id).FirstOrDefault();
             if (data != null)
             {
                 data.youtubepostsavestatus = status;
-                _datacontext.YouTubePostMst.Update(data);
-                _datacontext.SaveChanges();
+                _dataContext.YouTubePostMst.Update(data);
+                _dataContext.SaveChanges();
             }
             return Json(data);
         }
@@ -271,12 +364,12 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public JsonResult InstaBudgetStatus(int id, Boolean status)
         {
-            var data = _datacontext.InstaPostBudgetMst.Where(x => x.instapostbudgetid == id).FirstOrDefault();
+            var data = _dataContext.InstaPostBudgetMst.Where(x => x.instapostbudgetid == id).FirstOrDefault();
             if (data != null)
             {
                 data.status = status;
-                _datacontext.InstaPostBudgetMst.Update(data);
-                _datacontext.SaveChanges();
+                _dataContext.InstaPostBudgetMst.Update(data);
+                _dataContext.SaveChanges();
 
                 return Json(data);
             }
@@ -288,17 +381,46 @@ namespace Meta_Ads_World.Controllers
         [HttpPost]
         public JsonResult YoutubeBudgetStatus(int id, Boolean status)
         {
-            var data = _datacontext.youTubePostBudgetMsts.Where(x => x.youtubepostbudgetid == id).FirstOrDefault();
+            var data = _dataContext.youTubePostBudgetMsts.Where(x => x.youtubepostbudgetid == id).FirstOrDefault();
             if (data != null)
             {
                 data.status = status;
-                _datacontext.youTubePostBudgetMsts.Update(data);
-                _datacontext.SaveChanges();
+                _dataContext.youTubePostBudgetMsts.Update(data);
+                _dataContext.SaveChanges();
 
                 return Json(data);
             }
 
             return Json(null);
         }
+
+
+        //Brand Insta Status
+        [HttpPost]
+        public JsonResult instastatus(int id, Boolean status)
+        {
+            var data = _dataContext.InstaPostMsts.Where(x => x.instapostid == id).FirstOrDefault();
+
+            if (data != null)
+            {
+                if (status == true)
+                {
+                    data.instapoststatus = status;
+                    _dataContext.InstaPostMsts.Update(data);
+                    _dataContext.SaveChanges();
+                }
+                else
+                {
+                    data.instapoststatus = status;
+                    _dataContext.InstaPostMsts.Update(data);
+                    _dataContext.SaveChanges();
+                }
+
+            }
+            return Json(data);
+        }
+    
+
     }
 }
+

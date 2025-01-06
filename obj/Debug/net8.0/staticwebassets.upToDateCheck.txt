@@ -164,7 +164,10 @@ wwwroot\assest\img\products\headphones.png
 wwwroot\assest\img\products\iphone.png
 wwwroot\assest\img\products\nike-air-jordan.png
 wwwroot\assest\img\products\play-station.png
+wwwroot\assest\logo\instapost.png
 wwwroot\assest\logo\meta-ads-logo-remove.png
+wwwroot\assest\logo\qr-background.png
+wwwroot\assest\logo\qr-code.png
 wwwroot\assest\registration\registration.gif
 wwwroot\assest\registration\social-hello.gif
 wwwroot\assest\registration\social-hello-remvoe-bg.gif
@@ -202,6 +205,7 @@ wwwroot\css\loginlayout.css
 wwwroot\css\navigation.css
 wwwroot\css\registration.css
 wwwroot\css\root.css
+wwwroot\css\scanner-card.css
 wwwroot\css\signpost.css
 wwwroot\css\tab-feature-content.css
 wwwroot\css\table.css
@@ -497,6 +501,13 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\meta-ads-world-upload-images\qr-code-images\banner-new-updated.png
+wwwroot\meta-ads-world-upload-images\qr-code-images\khushiupi.png
+wwwroot\meta-ads-world-upload-images\qr-code-images\nayanupi.png
+wwwroot\meta-ads-world-upload-images\qr-code-images\StreamUpload.png
+wwwroot\meta-ads-world-upload-images\transaction-recipt-images\images.webp
+wwwroot\meta-ads-world-upload-images\transaction-recipt-images\nayanupi.png
+wwwroot\meta-ads-world-upload-images\transaction-recipt-images\payment-recepit.png
 wwwroot\vendor\css\pages\app-calendar.css
 wwwroot\vendor\css\pages\app-chat.css
 wwwroot\vendor\css\pages\app-email.css

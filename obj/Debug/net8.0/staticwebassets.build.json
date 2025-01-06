@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BT4e8E/4eCJ5yfaOT42EsIpPD6b49+i4FUU31XswA8s=",
+  "Hash": "7TQRl0xPW/mSS//2KdQXoeAb9ehy5bY5WLH3rmu1CZA=",
   "Source": "Meta-Ads-World",
   "BasePath": "_content/Meta-Ads-World",
   "Mode": "Default",
@@ -3545,6 +3545,27 @@
       "OriginalItemSpec": "wwwroot\\assest\\img\\products\\play-station.png"
     },
     {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instapost.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "assest/logo/instapost#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cdmrx1292q",
+      "Integrity": "AJF74TQzmD/hhbolBjXV8qM/G6KpoTmikSIkzstSurU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assest\\logo\\instapost.png"
+    },
+    {
       "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\meta-ads-logo-remove.png",
       "SourceId": "Meta-Ads-World",
       "SourceType": "Discovered",
@@ -3564,6 +3585,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assest\\logo\\meta-ads-logo-remove.png"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\qr-background.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "assest/logo/qr-background#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oqrw5o0isp",
+      "Integrity": "kKbI3pmBz8PfIAOOsgxnxqJ7+Zr6HELAHTy/U5SuJIY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assest\\logo\\qr-background.png"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\qr-code.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "assest/logo/qr-code#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vxhbygmcxk",
+      "Integrity": "bc7OEHnjjq+dJkbQNrmSViGhyFzNLG6z1TP+ARGxE30=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assest\\logo\\qr-code.png"
     },
     {
       "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\registration\\registration.gif",
@@ -4231,8 +4294,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "to21a2fbiz",
-      "Integrity": "I/qMsc5l1HCV4EGDeVaSUW9rZPYfSexyFBTtEQdWdkg=",
+      "Fingerprint": "w6jscm0sqh",
+      "Integrity": "2AvxrIfewfK789m4GvdTn04Uxd9YW/R18oQe5OJHP2s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\import.css"
@@ -4341,6 +4404,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\root.css"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\scanner-card.css",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "css/scanner-card#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rd5w9xx8jc",
+      "Integrity": "P8DCKc649hdI9hrZi6fDhNShfUmUwQKg1kg4eQDpphM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\scanner-card.css"
     },
     {
       "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\signpost.css",
@@ -10536,6 +10620,153 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\banner-new-updated.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "meta-ads-world-upload-images/qr-code-images/banner-new-updated#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rlmkelueex",
+      "Integrity": "ka4tvaJL5SHpG6XUnSwC29d4tUjM+pIk+FkCamgPzNc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\meta-ads-world-upload-images\\qr-code-images\\banner-new-updated.png"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\khushiupi.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "meta-ads-world-upload-images/qr-code-images/khushiupi#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0q12a5nti5",
+      "Integrity": "OKPk8/d+EGdXDBX/m9kv7sJhjGbw6N9CD9pcOU76e2I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\meta-ads-world-upload-images\\qr-code-images\\khushiupi.png"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\nayanupi.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "meta-ads-world-upload-images/qr-code-images/nayanupi#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x18zdi4vze",
+      "Integrity": "ezf5Zy/H5nCGnEGP6eidEqDF5dICxQD66AYHtClqyJs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\meta-ads-world-upload-images\\qr-code-images\\nayanupi.png"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\StreamUpload.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "meta-ads-world-upload-images/qr-code-images/StreamUpload#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8moa5dit5y",
+      "Integrity": "IHSbKl2WdUIal4aA1yuQXYrmYHmOXRQGWoX7kZ/g8QY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\meta-ads-world-upload-images\\qr-code-images\\StreamUpload.png"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\images.webp",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "meta-ads-world-upload-images/transaction-recipt-images/images#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mql4hcln8y",
+      "Integrity": "8kdVktxrHCHlMwLaVmlRfD0QZ19m0ayoeckf90NLnA8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\images.webp"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\nayanupi.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "meta-ads-world-upload-images/transaction-recipt-images/nayanupi#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x18zdi4vze",
+      "Integrity": "ezf5Zy/H5nCGnEGP6eidEqDF5dICxQD66AYHtClqyJs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\nayanupi.png"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\payment-recepit.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "meta-ads-world-upload-images/transaction-recipt-images/payment-recepit#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7iihlul3xc",
+      "Integrity": "EQuy3rx5An/T2R4TSuh2tinxqOpURmwod4rmYi02zQA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\payment-recepit.png"
     },
     {
       "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\vendor\\css\\pages\\app-calendar.css",
@@ -39587,6 +39818,88 @@
       ]
     },
     {
+      "Route": "assest/logo/instapost.cdmrx1292q.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instapost.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22116"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AJF74TQzmD/hhbolBjXV8qM/G6KpoTmikSIkzstSurU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 02:59:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cdmrx1292q"
+        },
+        {
+          "Name": "label",
+          "Value": "assest/logo/instapost.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AJF74TQzmD/hhbolBjXV8qM/G6KpoTmikSIkzstSurU="
+        }
+      ]
+    },
+    {
+      "Route": "assest/logo/instapost.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instapost.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22116"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AJF74TQzmD/hhbolBjXV8qM/G6KpoTmikSIkzstSurU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Jan 2025 02:59:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AJF74TQzmD/hhbolBjXV8qM/G6KpoTmikSIkzstSurU="
+        }
+      ]
+    },
+    {
       "Route": "assest/logo/meta-ads-logo-remove.png",
       "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\meta-ads-logo-remove.png",
       "Selectors": [],
@@ -39665,6 +39978,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-CbHfhR4BXeM9xYoIgkUkDYPuNxk8G3509x3x8Gdxr68="
+        }
+      ]
+    },
+    {
+      "Route": "assest/logo/qr-background.oqrw5o0isp.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\qr-background.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "189667"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kKbI3pmBz8PfIAOOsgxnxqJ7+Zr6HELAHTy/U5SuJIY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 05:23:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oqrw5o0isp"
+        },
+        {
+          "Name": "label",
+          "Value": "assest/logo/qr-background.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kKbI3pmBz8PfIAOOsgxnxqJ7+Zr6HELAHTy/U5SuJIY="
+        }
+      ]
+    },
+    {
+      "Route": "assest/logo/qr-background.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\qr-background.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "189667"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kKbI3pmBz8PfIAOOsgxnxqJ7+Zr6HELAHTy/U5SuJIY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 05:23:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kKbI3pmBz8PfIAOOsgxnxqJ7+Zr6HELAHTy/U5SuJIY="
+        }
+      ]
+    },
+    {
+      "Route": "assest/logo/qr-code.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\qr-code.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bc7OEHnjjq+dJkbQNrmSViGhyFzNLG6z1TP+ARGxE30=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 06:05:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bc7OEHnjjq+dJkbQNrmSViGhyFzNLG6z1TP+ARGxE30="
+        }
+      ]
+    },
+    {
+      "Route": "assest/logo/qr-code.vxhbygmcxk.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\qr-code.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bc7OEHnjjq+dJkbQNrmSViGhyFzNLG6z1TP+ARGxE30=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 06:05:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vxhbygmcxk"
+        },
+        {
+          "Name": "label",
+          "Value": "assest/logo/qr-code.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bc7OEHnjjq+dJkbQNrmSViGhyFzNLG6z1TP+ARGxE30="
         }
       ]
     },
@@ -42221,7 +42698,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "814"
+          "Value": "843"
         },
         {
           "Name": "Content-Type",
@@ -42229,11 +42706,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"I/qMsc5l1HCV4EGDeVaSUW9rZPYfSexyFBTtEQdWdkg=\""
+          "Value": "\"2AvxrIfewfK789m4GvdTn04Uxd9YW/R18oQe5OJHP2s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Oct 2024 09:19:17 GMT"
+          "Value": "Tue, 31 Dec 2024 06:33:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -42243,12 +42720,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-I/qMsc5l1HCV4EGDeVaSUW9rZPYfSexyFBTtEQdWdkg="
+          "Value": "sha256-2AvxrIfewfK789m4GvdTn04Uxd9YW/R18oQe5OJHP2s="
         }
       ]
     },
     {
-      "Route": "css/import.to21a2fbiz.css",
+      "Route": "css/import.w6jscm0sqh.css",
       "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\import.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -42258,7 +42735,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "814"
+          "Value": "843"
         },
         {
           "Name": "Content-Type",
@@ -42266,11 +42743,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"I/qMsc5l1HCV4EGDeVaSUW9rZPYfSexyFBTtEQdWdkg=\""
+          "Value": "\"2AvxrIfewfK789m4GvdTn04Uxd9YW/R18oQe5OJHP2s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Oct 2024 09:19:17 GMT"
+          "Value": "Tue, 31 Dec 2024 06:33:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -42280,7 +42757,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "to21a2fbiz"
+          "Value": "w6jscm0sqh"
         },
         {
           "Name": "label",
@@ -42288,7 +42765,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-I/qMsc5l1HCV4EGDeVaSUW9rZPYfSexyFBTtEQdWdkg="
+          "Value": "sha256-2AvxrIfewfK789m4GvdTn04Uxd9YW/R18oQe5OJHP2s="
         }
       ]
     },
@@ -42699,6 +43176,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-j+U0dgfdUKvIQjgbpdQjIi3Ioocb63s7zZx8n8I9sVU="
+        }
+      ]
+    },
+    {
+      "Route": "css/scanner-card.css",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\scanner-card.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1562"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P8DCKc649hdI9hrZi6fDhNShfUmUwQKg1kg4eQDpphM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 07:16:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-P8DCKc649hdI9hrZi6fDhNShfUmUwQKg1kg4eQDpphM="
+        }
+      ]
+    },
+    {
+      "Route": "css/scanner-card.rd5w9xx8jc.css",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\css\\scanner-card.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1562"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P8DCKc649hdI9hrZi6fDhNShfUmUwQKg1kg4eQDpphM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 07:16:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rd5w9xx8jc"
+        },
+        {
+          "Name": "label",
+          "Value": "css/scanner-card.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-P8DCKc649hdI9hrZi6fDhNShfUmUwQKg1kg4eQDpphM="
         }
       ]
     },
@@ -66915,7 +67474,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 26 Nov 2024 06:47:53 GMT"
+          "Value": "Mon, 06 Jan 2025 09:52:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -66960,7 +67519,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 26 Nov 2024 06:47:53 GMT"
+          "Value": "Mon, 06 Jan 2025 09:52:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -67005,7 +67564,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 26 Nov 2024 06:47:53 GMT"
+          "Value": "Mon, 06 Jan 2025 09:52:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -67042,7 +67601,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 26 Nov 2024 06:47:53 GMT"
+          "Value": "Mon, 06 Jan 2025 09:52:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -67053,6 +67612,580 @@
         {
           "Name": "integrity",
           "Value": "sha256-vzfVdstStEMAtwGd1E1azyUd8BZDt5hipkB9ae+IHtU="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/qr-code-images/banner-new-updated.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\banner-new-updated.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ka4tvaJL5SHpG6XUnSwC29d4tUjM+pIk+FkCamgPzNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 13:25:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ka4tvaJL5SHpG6XUnSwC29d4tUjM+pIk+FkCamgPzNc="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/qr-code-images/banner-new-updated.rlmkelueex.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\banner-new-updated.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ka4tvaJL5SHpG6XUnSwC29d4tUjM+pIk+FkCamgPzNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 13:25:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rlmkelueex"
+        },
+        {
+          "Name": "label",
+          "Value": "meta-ads-world-upload-images/qr-code-images/banner-new-updated.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ka4tvaJL5SHpG6XUnSwC29d4tUjM+pIk+FkCamgPzNc="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/qr-code-images/khushiupi.0q12a5nti5.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\khushiupi.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42201"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OKPk8/d+EGdXDBX/m9kv7sJhjGbw6N9CD9pcOU76e2I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 08:31:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0q12a5nti5"
+        },
+        {
+          "Name": "label",
+          "Value": "meta-ads-world-upload-images/qr-code-images/khushiupi.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OKPk8/d+EGdXDBX/m9kv7sJhjGbw6N9CD9pcOU76e2I="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/qr-code-images/khushiupi.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\khushiupi.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42201"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OKPk8/d+EGdXDBX/m9kv7sJhjGbw6N9CD9pcOU76e2I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 08:31:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OKPk8/d+EGdXDBX/m9kv7sJhjGbw6N9CD9pcOU76e2I="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/qr-code-images/nayanupi.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\nayanupi.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42579"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ezf5Zy/H5nCGnEGP6eidEqDF5dICxQD66AYHtClqyJs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 12:02:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ezf5Zy/H5nCGnEGP6eidEqDF5dICxQD66AYHtClqyJs="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/qr-code-images/nayanupi.x18zdi4vze.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\nayanupi.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42579"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ezf5Zy/H5nCGnEGP6eidEqDF5dICxQD66AYHtClqyJs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 12:02:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x18zdi4vze"
+        },
+        {
+          "Name": "label",
+          "Value": "meta-ads-world-upload-images/qr-code-images/nayanupi.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ezf5Zy/H5nCGnEGP6eidEqDF5dICxQD66AYHtClqyJs="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/qr-code-images/StreamUpload.8moa5dit5y.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\StreamUpload.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33438"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IHSbKl2WdUIal4aA1yuQXYrmYHmOXRQGWoX7kZ/g8QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 13:31:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8moa5dit5y"
+        },
+        {
+          "Name": "label",
+          "Value": "meta-ads-world-upload-images/qr-code-images/StreamUpload.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IHSbKl2WdUIal4aA1yuQXYrmYHmOXRQGWoX7kZ/g8QY="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/qr-code-images/StreamUpload.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\StreamUpload.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33438"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IHSbKl2WdUIal4aA1yuQXYrmYHmOXRQGWoX7kZ/g8QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 13:31:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IHSbKl2WdUIal4aA1yuQXYrmYHmOXRQGWoX7kZ/g8QY="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/transaction-recipt-images/images.mql4hcln8y.webp",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\images.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10376"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8kdVktxrHCHlMwLaVmlRfD0QZ19m0ayoeckf90NLnA8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 13:39:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mql4hcln8y"
+        },
+        {
+          "Name": "label",
+          "Value": "meta-ads-world-upload-images/transaction-recipt-images/images.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8kdVktxrHCHlMwLaVmlRfD0QZ19m0ayoeckf90NLnA8="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/transaction-recipt-images/images.webp",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\images.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10376"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8kdVktxrHCHlMwLaVmlRfD0QZ19m0ayoeckf90NLnA8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 13:39:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8kdVktxrHCHlMwLaVmlRfD0QZ19m0ayoeckf90NLnA8="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/transaction-recipt-images/nayanupi.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\nayanupi.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42579"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ezf5Zy/H5nCGnEGP6eidEqDF5dICxQD66AYHtClqyJs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 13:38:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ezf5Zy/H5nCGnEGP6eidEqDF5dICxQD66AYHtClqyJs="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/transaction-recipt-images/nayanupi.x18zdi4vze.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\nayanupi.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42579"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ezf5Zy/H5nCGnEGP6eidEqDF5dICxQD66AYHtClqyJs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 13:38:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x18zdi4vze"
+        },
+        {
+          "Name": "label",
+          "Value": "meta-ads-world-upload-images/transaction-recipt-images/nayanupi.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ezf5Zy/H5nCGnEGP6eidEqDF5dICxQD66AYHtClqyJs="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/transaction-recipt-images/payment-recepit.7iihlul3xc.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\payment-recepit.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5483"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EQuy3rx5An/T2R4TSuh2tinxqOpURmwod4rmYi02zQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 12:03:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7iihlul3xc"
+        },
+        {
+          "Name": "label",
+          "Value": "meta-ads-world-upload-images/transaction-recipt-images/payment-recepit.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EQuy3rx5An/T2R4TSuh2tinxqOpURmwod4rmYi02zQA="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/transaction-recipt-images/payment-recepit.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\transaction-recipt-images\\payment-recepit.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5483"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EQuy3rx5An/T2R4TSuh2tinxqOpURmwod4rmYi02zQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 12:03:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EQuy3rx5An/T2R4TSuh2tinxqOpURmwod4rmYi02zQA="
         }
       ]
     },

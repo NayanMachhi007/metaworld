@@ -6,7 +6,6 @@
 
 }
 
-
 <section class="brand-main">
     <div class="container">
         <div class="row">
@@ -19,15 +18,15 @@
 
                         <div class="col-6">
                             <form asp-action="brandinstapostadd">
-
                                 <div class="brand-title-wrapper">
                                     <div class="brand-title-label">
                                         <p>Brand Post Upload</p>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" id="inputGroupFile02" asp-for="instaposturl">
-                                        <label class="input-group-text" for="inputGroupFile02">Please Enter Instagram Post Link</label>
+                                        <input type="text" class="form-control" id="instaurluploaddata" onchange="datatransfer()">
+                                        <label class="input-group-text">Please Enter Instagram Post Link</label>
+                                        <input type="text" asp-for="instaposturl" class="d-none" />
                                     </div>
                                 </div>
 
@@ -93,17 +92,17 @@
 
 
                                 <div class="brand-title-wrapper">
-                                    <span>Total Budget :</span> <span id="total"></span> <span>Rs.</span>
+                                    <span>Per Post Budget :</span> <span id="total"></span> <span>Rs.</span>
 
                                     <div class="brand-title-label">
-                                        <p>Brand Total Post Budget?</p>
+                                        <p>How Many Like, Comment,Share And Save You Want?</p>
                                     </div>
                                     <div>
                                         <input type="text" asp-for="posttotalbudget" onchange="totbudget()">
                                         <span asp-validation-for="posttotalbudget" style="color:red"></span>
 
                                         <div class="py-2">
-                                          <span>Your Budget:</span>  <span id="showbudget" style="color:blue"> </span>
+                                            <span>Your Budget:</span>  <span id="showbudget" style="color:blue"> </span>
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +111,11 @@
                                 <div class="brand-title-wrapper">
                                     <input class="form-check-input" value="0" type="hidden" role="switch" asp-for="instaposttotallike">
                                     <input class="form-check-input" value="bydefaultcomment" type="hidden" role="switch" asp-for="instapostcomment">
+                                    <input class="form-check-input" value="0" type="hidden" role="switch" asp-for="instapostsave">
+                                    <input class="form-check-input" value="0" type="hidden" role="switch" asp-for="instapostshare">
+                                    <input class="form-check-input" value="0" type="hidden" role="switch" asp-for="counter">
 
+                                    <input class="form-check-input" type="hidden" asp-for="instapoststatus" value="false">
                                 </div>
 
                                 <div class="brand-btn">
@@ -141,132 +144,68 @@
 </section>
 
 
+
+
+
+
+
 @section Scripts {
-        <script>
-            let like = parseInt(document.getElementById("instalike").innerText);
-            let comment = parseInt(document.getElementById("instacomment").innerText);
-            let share = parseInt(document.getElementById("instashare").innerText);
-            let save = parseInt(document.getElementById("instasave").innerText);
-            let instalike = document.getElementById("instapostlikestatus");
-            let likecheck = document.getElementById("instapostlikestatus");
-            let commentcheck = document.getElementById("instapostcommentstatus");
-            let sharecheck = document.getElementById("instagrampostsharestatus");
-            let savecheck = document.getElementById("instapostsavestatus");
-            let totalbudget = document.getElementById("total");
-            let showbudget = document.getElementById("showbudget");
-            let totallikecomment = like + comment;
-            let totallikecomemntshare = like + comment + share;
-            let totallikecomemntsharesave = like + comment + share + save;
-
-            if (likecheck.checked == true) {
-                totalbudget.innerText = like;
-            }
-
-        </script>
-
-
-        <script>
-            let liketotal = parseInt(document.getElementById("instalike").innerText);
-
-
-            function commentfun(data,valdata) {
-
-                if (data.checked) {
-                    liketotal = liketotal + valdata;
-                }else{
-                    liketotal = liketotal - valdata;
-                }
-                totalbudget.innerText = liketotal;
-            }
-
-
-            function totbudget(){
-                let qun = parseInt(document.getElementById("posttotalbudget").value);
-
-                let totaltemp = qun * liketotal;
-                showbudget.innerText += totaltemp + " Rs";
-
-            }
-            // function sharefun() {
-            //     let totallikecommentshare = like + comment + share;
-            //     let likescommentshare = like + share;
-
-            //     if (likecheck.checked == true && commentcheck.checked == true && sharecheck.checked == true) {
-            //         totalbudget.innerText = totallikecommentshare;
-
-            //     }
-
-            //     else if (likecheck.checked == true && commentcheck.checked == true && sharecheck.checked == false) {
-            //         totalbudget.innerText = totallikecommentshare - share;
-
-            //     }
-
-            //     else if (likecheck.checked == true && commentcheck.checked == false && sharecheck.checked == true) {
-            //         totalbudget.innerText = totallikecomemntshare - comment;
-            //     }
-
-            // }
-
-            // function savefun() {
-            //     let totallikecommentsharesave = like + comment + share + save;
-            //     if (likecheck.checked == true && commentcheck.checked == true && sharecheck.checked == true && savecheck.checked == true) {
-            //         totalbudget.innerText = totallikecommentsharesave;
-            //     }
-
-            //     else if (likecheck.checked == true && commentcheck.checked == false && sharecheck.checked == true && savecheck.checked == true) {
-            //         totalbudget.innerText = totallikecommentsharesave - comment;
-            //     }
-            // }
-
-
-        </script>
-
-    @*
     <script>
-        function budgetlikefind() {
-            let likebudget = document.getElementById("instapostlikestatus");
-            let commentbudget = document.getElementById("instapostcommentstatus");
+        function datatransfer(){
+            const dataurl = document.getElementById("instaurluploaddata").value;
+            const url = dataurl;
 
-            let totalbudget = document.getElementById("posttotalbudget").value;
-            let like = parseInt(document.getElementById("instalike").innerText);
-            let comment = parseInt(document.getElementById("instacomment").innerText);
-            let share = parseInt(document.getElementById("instashare").innerText);
-            let save = parseInt(document.getElementById("instasave").innerText);
-            let totallike = totalbudget / like;
-            let totalcomment = totalbudget / comment;
-            let totalshare = totalbudget / share;
-            let totalsave = totalbudget / save;
+             // Split the URL to extract the code
+          const parts = url.split("/"); // Split by "/"
+          const extractedCode = parts[4]; // The 5th part is the unique code
+          const resultDiv = document.getElementById("instaposturl");
+          resultDiv.value = extractedCode;
 
-            if (likebudget.checked && commentbudget.checked == true) {
-                console.log(totallike, "Like");
+        }
+    </script>
+    <script>
+        let like = parseInt(document.getElementById("instalike").innerText);
+        let likecheck = document.getElementById("instapostlikestatus");
+        let totalbudget = document.getElementById("total");
+
+        if (likecheck.checked == true) {
+            totalbudget.innerText = like;
+        }
+
+    </script>
+
+
+    <script>
+
+        let liketotal = parseInt(document.getElementById("instalike").innerText);
+
+
+        function commentfun(data,valdata) {
+
+            if (data.checked) {
+                liketotal = liketotal + valdata;
+            }else{
+                liketotal = liketotal - valdata;
             }
-            console.log(like);
-        }
-    </script> *@
+            totalbudget.innerText = liketotal;
 
-    @*     <script>
-        function likebudget() {
-
-            let likedata = parseInt( document.getElementById("instalikedata").value);
-            let likebudget = parseInt( document.getElementById("instalike").innerText);
-            let total = likedata / likebudget;
-            console.log(likedata);
-            console.log(likebudget);
-            console.log(total,"Total Like Budget");
-
-            document.getElementById("likebudgettotal").innerText = total + " Like";
+            totbudget();
 
         }
-    </script> *@
 
-        <script>
-            //     function commentbudget() {
-            //         let commentdata = parseInt(document.getElementById("instacommentdata").value);
-            //         let commentbudget = parseInt(document.getElementById("instacomment").innerText);
-            //         let total = commentdata / commentbudget;
-            //         console.log(total, "Total Like Budget");
 
-            //         document.getElementById("likecommenttotal").innerText = total + " Comment";
-            //     }
-            // </script>
+        function totbudget()
+        {
+            // let data = commentfun();
+            // console.log(data);
+            let qun = parseInt(document.getElementById("posttotalbudget").value);
+
+            let totaltemp = qun * liketotal;
+            showbudget.innerText = totaltemp + " Rs";
+        }
+
+
+    </script>
+
+
 }

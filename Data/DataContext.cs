@@ -17,9 +17,10 @@ namespace Meta_Ads_World.Data
         public DbSet<YouTubePostMst> YouTubePostMst { get; set; }
         public DbSet<YouTubePostBudgetMst> youTubePostBudgetMsts { get; set; }
         public DbSet<StateMst> StateMsts { get; set; }
-
         public DbSet<CityMst> CityMsts { get; set; }
-
         public DbSet<AreaMst> AreaMsts { get; set; }
+        public DbSet<QrCodeMst> QrMst { get; set; }
+        public DbSet<BrandPaymentTransactionMst> BrandPaymentTransactionMsts { get; set; }
+        public DbSet<UserInstaPostHandlerMst> UserInstaPostHandlerMsts { get; set; }
     }
 }
