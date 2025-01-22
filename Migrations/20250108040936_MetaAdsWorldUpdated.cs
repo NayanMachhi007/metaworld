@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Meta_Ads_World.Migrations
 {
     /// <inheritdoc />
-    public partial class Initionalization : Migration
+    public partial class MetaAdsWorldUpdated : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -141,30 +141,6 @@ namespace Meta_Ads_World.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "YouTubePostMst",
-                columns: table => new
-                {
-                    youtubepostid = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    youtubeposttotallike = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    youtubepostcomment = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    youtubepostshare = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    youtubepostsave = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    youtubepoststartingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    youtubepostendingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    youtubepostlikestatus = table.Column<bool>(type: "bit", nullable: false),
-                    youtubepostcommentstatus = table.Column<bool>(type: "bit", nullable: false),
-                    youtubepostsharestatus = table.Column<bool>(type: "bit", nullable: false),
-                    youtubepostsavestatus = table.Column<bool>(type: "bit", nullable: false),
-                    youtubeposturl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    youtubeposttotalbudget = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_YouTubePostMst", x => x.youtubepostid);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "InstaPostMsts",
                 columns: table => new
                 {
@@ -192,6 +168,39 @@ namespace Meta_Ads_World.Migrations
                     table.ForeignKey(
                         name: "FK_InstaPostMsts_BrandRegistrationMst_instabranduserid",
                         column: x => x.instabranduserid,
+                        principalTable: "BrandRegistrationMst",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "YouTubePostMst",
+                columns: table => new
+                {
+                    youtubepostid = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    youtubeposttotallike = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    youtubepostcomment = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    youtubepostshare = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    youtubepostsave = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    youtubepoststartingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    youtubepostendingdate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    youtubepostlikestatus = table.Column<bool>(type: "bit", nullable: false),
+                    youtubepostcommentstatus = table.Column<bool>(type: "bit", nullable: false),
+                    youtubepostsharestatus = table.Column<bool>(type: "bit", nullable: false),
+                    youtubepostsavestatus = table.Column<bool>(type: "bit", nullable: false),
+                    youtubeposturl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    youtubepoststatus = table.Column<bool>(type: "bit", nullable: false),
+                    youtubeposttotalbudget = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    youtubebranduserid = table.Column<int>(type: "int", nullable: false),
+                    counter = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_YouTubePostMst", x => x.youtubepostid);
+                    table.ForeignKey(
+                        name: "FK_YouTubePostMst_BrandRegistrationMst_youtubebranduserid",
+                        column: x => x.youtubebranduserid,
                         principalTable: "BrandRegistrationMst",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
@@ -276,6 +285,66 @@ namespace Meta_Ads_World.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "brandYouTubePaymentTransactionMsts",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    paymentrecipt = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    transcationid = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    contactno = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    paymentbranduserid = table.Column<int>(type: "int", nullable: false),
+                    paymentyoutubeid = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_brandYouTubePaymentTransactionMsts", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_brandYouTubePaymentTransactionMsts_BrandRegistrationMst_paymentbranduserid",
+                        column: x => x.paymentbranduserid,
+                        principalTable: "BrandRegistrationMst",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_brandYouTubePaymentTransactionMsts_YouTubePostMst_paymentyoutubeid",
+                        column: x => x.paymentyoutubeid,
+                        principalTable: "YouTubePostMst",
+                        principalColumn: "youtubepostid",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "userYoutubePostHandlerMsts",
+                columns: table => new
+                {
+                    userhandlerid = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    userid = table.Column<int>(type: "int", nullable: false),
+                    youtubeid = table.Column<int>(type: "int", nullable: false),
+                    youtubelike = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    youtubecomment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    youtubeshare = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    youtubesave = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    userhandlertime = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_userYoutubePostHandlerMsts", x => x.userhandlerid);
+                    table.ForeignKey(
+                        name: "FK_userYoutubePostHandlerMsts_UserMsts_userid",
+                        column: x => x.userid,
+                        principalTable: "UserMsts",
+                        principalColumn: "userid",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_userYoutubePostHandlerMsts_YouTubePostMst_youtubeid",
+                        column: x => x.youtubeid,
+                        principalTable: "YouTubePostMst",
+                        principalColumn: "youtubepostid",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_BrandPaymentTransactionMsts_paymentbranduserid",
                 table: "BrandPaymentTransactionMsts",
@@ -285,6 +354,16 @@ namespace Meta_Ads_World.Migrations
                 name: "IX_BrandPaymentTransactionMsts_paymentinstaid",
                 table: "BrandPaymentTransactionMsts",
                 column: "paymentinstaid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_brandYouTubePaymentTransactionMsts_paymentbranduserid",
+                table: "brandYouTubePaymentTransactionMsts",
+                column: "paymentbranduserid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_brandYouTubePaymentTransactionMsts_paymentyoutubeid",
+                table: "brandYouTubePaymentTransactionMsts",
+                column: "paymentyoutubeid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_InstaPostMsts_instabranduserid",
@@ -305,6 +384,21 @@ namespace Meta_Ads_World.Migrations
                 name: "IX_UserInstaPostHandlerMsts_userid",
                 table: "UserInstaPostHandlerMsts",
                 column: "userid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_userYoutubePostHandlerMsts_userid",
+                table: "userYoutubePostHandlerMsts",
+                column: "userid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_userYoutubePostHandlerMsts_youtubeid",
+                table: "userYoutubePostHandlerMsts",
+                column: "youtubeid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_YouTubePostMst_youtubebranduserid",
+                table: "YouTubePostMst",
+                column: "youtubebranduserid");
         }
 
         /// <inheritdoc />
@@ -320,6 +414,9 @@ namespace Meta_Ads_World.Migrations
                 name: "BrandPaymentTransactionMsts");
 
             migrationBuilder.DropTable(
+                name: "brandYouTubePaymentTransactionMsts");
+
+            migrationBuilder.DropTable(
                 name: "InstaPostBudgetMst");
 
             migrationBuilder.DropTable(
@@ -332,10 +429,10 @@ namespace Meta_Ads_World.Migrations
                 name: "UserInstaPostHandlerMsts");
 
             migrationBuilder.DropTable(
-                name: "youTubePostBudgetMsts");
+                name: "userYoutubePostHandlerMsts");
 
             migrationBuilder.DropTable(
-                name: "YouTubePostMst");
+                name: "youTubePostBudgetMsts");
 
             migrationBuilder.DropTable(
                 name: "CityMsts");
@@ -345,6 +442,9 @@ namespace Meta_Ads_World.Migrations
 
             migrationBuilder.DropTable(
                 name: "UserMsts");
+
+            migrationBuilder.DropTable(
+                name: "YouTubePostMst");
 
             migrationBuilder.DropTable(
                 name: "BrandRegistrationMst");

@@ -115,8 +115,8 @@ namespace Meta_Ads_World.Controllers
                 _datacontext.SaveChanges();
 
                 int data = insta.instapostid;
-               
-                return RedirectToAction("paymentinsta", new { id = data});
+
+                return RedirectToAction("paymentinsta", new { id = data });
             }
 
             return View();
@@ -127,7 +127,6 @@ namespace Meta_Ads_World.Controllers
         [HttpGet]
         public IActionResult brandyoutubepostadd()
         {
-
             Boolean status = true;
             YoutTubePostModelList youtube = new YoutTubePostModelList();
             var data = _datacontext.youTubePostBudgetMsts.Where(x => x.status == status).FirstOrDefault();
@@ -145,18 +144,32 @@ namespace Meta_Ads_World.Controllers
         {
             if (ModelState.IsValid)
             {
-                _brandSocialCategoryRepository.youtubepostadd(youtubeadd);
-                return RedirectToAction("brandyoutubepostadd");
-            }
-            int id = 1;
-            YoutTubePostModelList youtube = new YoutTubePostModelList();
-            var data = _datacontext.youTubePostBudgetMsts.Where(x => x.youtubepostbudgetid == id).FirstOrDefault();
-            youtube.youtubelikebudget = data.youtubelikebudget;
-            youtube.youtubecommentbudget = data.youtubecommentbudget;
-            youtube.youtubesharebudget = data.youtubesharebudget;
-            youtube.youtubesavebudget = data.youtubesavebudget;
-            return View(youtube);
+                int id = 1;
+                YouTubePostMst youtube = new YouTubePostMst()
+                {
+                    youtubeposttotallike = youtubeadd.youtubeposttotallike,
+                    youtubepostcomment = youtubeadd.youtubepostcomment,
+                    youtubepostshare = youtubeadd.youtubepostshare,
+                    youtubepostsave = youtubeadd.youtubepostsave,
+                    youtubepoststartingdate = youtubeadd.youtubepoststartingdate,
+                    youtubepostendingdate = youtubeadd.youtubepostendingdate,
+                    youtubepostlikestatus = youtubeadd.youtubepostlikestatus,
+                    youtubepostcommentstatus = youtubeadd.youtubepostcommentstatus,
+                    youtubepostsharestatus = youtubeadd.youtubepostsharestatus,
+                    youtubepostsavestatus = youtubeadd.youtubepostsavestatus,
+                    youtubeposturl = youtubeadd.youtubeposturl,
+                    youtubeposttotalbudget = youtubeadd.youtubeposttotalbudget,
+                    youtubebranduserid = id,
+                    youtubepoststatus = youtubeadd.youtubepoststatus,
+                    counter = youtubeadd.counter,
 
+                };
+                _datacontext.YouTubePostMst.Add(youtube);
+                _datacontext.SaveChanges();
+                int data = youtube.youtubepostid;
+                return RedirectToAction("paymentyoutube", new { id = data });
+            }
+            return View();
         }
 
 
@@ -173,8 +186,6 @@ namespace Meta_Ads_World.Controllers
                 datafind.status = statusdata.status;
                 datafind.paymentinstaid = id;
             }
-
-
             return View(datafind);
         }
 
@@ -185,17 +196,31 @@ namespace Meta_Ads_World.Controllers
             return RedirectToAction("brandinstapostadd");
         }
 
+
         //Payment Add And transction Data
         [HttpGet]
-        public IActionResult paymentdata(int getinstaid)
+        public IActionResult paymentyoutube(int id)
         {
-            return View();
-            
+            BrandYoutubePaymentTransactionModel datafind = new BrandYoutubePaymentTransactionModel();
+            Boolean status = true;
+            var statusdata = _datacontext.QrMst.FirstOrDefault(x => x.status == status);
+            if (statusdata != null)
+            {
+                datafind.qrid = statusdata.qrid;
+                datafind.qrpath = statusdata.qrpath;
+                datafind.status = statusdata.status;
+                datafind.paymentyoutubeid = id;
+            }
+            return View(datafind);
         }
 
-        
 
-
+        [HttpPost]
+        public IActionResult paymentyoutube(BrandYoutubePaymentTransactionModel add)
+        {
+            _brandSocialCategoryRepository.brandyoutuberecordpaymentadddata(add);
+            return RedirectToAction("brandyoutubepostadd");
+        }
 
 
         //Json State
@@ -210,7 +235,7 @@ namespace Meta_Ads_World.Controllers
 
         [HttpGet]
         public IActionResult UpdateData()
-        {  
+        {
 
             return View();
         }
@@ -223,10 +248,5 @@ namespace Meta_Ads_World.Controllers
 
             return RedirectToAction("index");
         }
-
-
-
-
-
     }
 }

@@ -1,0 +1,197 @@
+﻿@model Meta_Ads_World.Models.UserYoutubePostHandlerModel;
+@{
+    Layout = "~/views/shared/visitorlogin_layout.cshtml";
+}
+
+@section Style {
+        <style>
+            .Header {
+                display: none !important;
+            }
+
+            .insta-section {
+                padding: 2rem 2rem;
+            }
+
+            .instamain {
+                padding: 1rem 2rem;
+                border: 1px solid black;
+            }
+
+                .instamain .labelpad {
+                    padding: 1rem 1rem;
+                }
+
+            .instasubmain {
+                padding: 1rem 1rem;
+                border: 1px solid black;
+            }
+
+            .insta-image {
+                background: url('/wwwroot/assest/banner-swiper/swiper-banner-one-compressed.jpg');
+                width: 100%;
+                height: 100%;
+            }
+
+            .instapostdetails {
+                padding: 2rem;
+            }
+        </style>
+}
+
+<section class="insta-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="insta-image">
+                    <div class="instasubmain">
+                        <iframe src="https://www.youtube.com/embed/@Model.youtubeposturl" width="350" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 offset-1">
+
+                <form asp-action="youtubepostdetails">
+
+                    <div class=" mb-3">
+                        <input type="hidden" class="form-control" asp-for="userid">
+                        <input type="hidden" class="form-control" asp-for="youtubeid">
+
+                    </div>
+
+                    <div class="instamain">
+                        <div class="d-flex form-check  justify-content-between py-2 fs-4 mx-2">
+                            <div class="form-check form-switch mb-3 labelpad">
+                                <label for="floatingTextareaDisabled">If You Liked The Youtube Post Like Then You Please Check </label>
+                            </div>
+                            <div class=" form-check form-switch mb-3 ">
+                                <input class="form-check-input fs-2 mt-3" type="checkbox" asp-for="youtubelike">
+                            </div>
+                        </div>
+
+                        @if (Model.youtubecommentstatus == true)
+                        {
+                                <div class=" form-check form-switch mb-3  py-2 fs-4">
+                                    <label for="floatingTextareaDisabled">If You Comment The Youtube Post Comment Then You Please Write Comment Here </label>
+                                </div>
+                                <div class=" form-check form-switch mb-3 mx-4">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled" asp-for="youtubecomment"></textarea>
+                                </div>
+                        }
+                        else
+                        {
+                                <div class="d-none form-check form-switch mb-3  py-2 fs-4">
+                                    <label for="floatingTextareaDisabled">If You Comment The Youtube Post Comment Then You Please Write Comment Here </label>
+                                </div>
+                                <div class="d-none form-check form-switch mb-3 mx-4">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled" asp-for="youtubecomment"></textarea>
+                                </div>
+                        }
+
+
+                        @if (Model.youtubesharestatus == true)
+                        {
+                                <div class="d-flex justify-content-between  py-2 fs-4">
+                                    <div class=" form-check form-switch mb-3">
+                                        <label for="floatingTextareaDisabled">If You Liked The Youtube Post Share Then You Please Check </label>
+                                    </div>
+                                    <div class=" form-check form-switch mb-3">
+                                        <input class="form-check-input fs-2" type="checkbox" role="switch" id="flexSwitchCheckDefault" asp-for="youtubeshare">
+                                    </div>
+                                </div>
+                        }
+                        else
+                        {
+                                <div class="d-none d-flex justify-content-between  py-2 fs-4">
+                                    <div class=" form-check form-switch mb-3">
+                                        <label for="floatingTextareaDisabled">If You Liked The Instagram Post Share Then You Please Check </label>
+                                    </div>
+                                    <div class=" form-check form-switch mb-3">
+                                        <input class="form-check-input fs-2" type="checkbox" role="switch" id="flexSwitchCheckDefault" asp-for="youtubeshare">
+                                    </div>
+                                </div>
+                        }
+
+
+                        @if (Model.youtubesavestatus == true)
+                        {
+                                <div class="d-flex justify-content-between  py-2 fs-4">
+
+                                    <div class=" form-check form-switch mb-3">
+                                        <label for="floatingTextareaDisabled">If You Liked The Youtube Post Save Then You Please Check </label>
+                                    </div>
+                                    <div class=" form-check form-switch mb-3">
+                                        <input class="form-check-input fs-2" type="checkbox" role="switch" id="flexSwitchCheckDefault" asp-for="youtubesave">
+                                    </div>
+                                </div>
+                        }
+                        else
+                        {
+                                <div class="d-none d-flex justify-content-between  py-2 fs-4">
+
+                                    <div class=" form-check form-switch mb-3">
+                                        <label for="floatingTextareaDisabled">If You Liked The Youtube Post Save Then You Please Check </label>
+                                    </div>
+                                    <div class=" form-check form-switch mb-3">
+                                        <input class="form-check-input fs-2" type="checkbox" role="switch" id="flexSwitchCheckDefault" asp-for="youtubesave">
+                                    </div>
+                                </div>
+                        }
+                        <button type="submit" class="btn btn-primary mx-5" onclick="youtubefun(@Model.youtubeid,@Model.counter,@Model.posttotalbudget)">Submit</button>
+
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+@section Scripts {
+        <script>
+                      document.getElementById("extractButton").addEventListener("click", function() {
+              // Example URL
+              const url = "https://www.instagram.com/p/DAbag0JM1Aj/?hl=en&img_index=1";
+
+              // Regular Expression to extract the part after "/p/"
+              const match = url.match(/\/p\/([^/]+)/);
+              const extractedCode = match ? match[1] : "Not found";
+
+              // Display the result
+              const resultDiv = document.getElementById("result");
+              resultDiv.textContent = `Extracted Code: ${extractedCode}`;
+            });
+        </script>
+
+        <script>
+            function youtubefun(getid,counter,postbudgetdata) {
+                console.log("Hello");
+                    $.ajax({
+                        type: "Post",
+                    url: "@Url.Action("youtubecounter", "Visitor")",
+                        data: {
+                            id: getid,
+                            counterid:counter,
+                            postbudget:postbudgetdata,
+
+                        },
+                        success: function (data) {
+                            console.log("Successfull",data);
+                        },
+                        error: function (data) {
+                            console.logt("Error", data);
+                        }
+
+                    });
+                }
+        </script>
+
+
+}
+
+

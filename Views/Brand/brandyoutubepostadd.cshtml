@@ -26,7 +26,8 @@
                                     </div>
 
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" id="inputGroupFile02" asp-for="youtubeposturl">
+                                        <input type="text" class="form-control" id="youtubeurlid" onchange="datatransferyoutube()">
+                                        <input type="text" asp-for="youtubeposturl" class="d-none" />
                                         <label class="input-group-text" for="inputGroupFile02">Please Enter Youtube Id </label>
                                     </div>
                                 </div>
@@ -102,7 +103,7 @@
                                         <input type="text" asp-for="youtubeposttotalbudget" onchange="totbudgetfunction()">
                                         <span asp-validation-for="youtubeposttotalbudget" style="color:blue"></span>
 
-                                        
+
                                         <div class="py-2">
                                             <span>Your Budget:</span>  <span id="showbudget" style="color:blue"> </span>
                                         </div>
@@ -112,7 +113,14 @@
 
 
                                 <div class="brand-title-wrapper">
+                                    
                                     <input class="form-check-input" value="0" type="hidden" role="switch" asp-for="youtubeposttotallike">
+                                    <input class="form-check-input" value="0" type="hidden" role="switch" asp-for="youtubepostsave">
+                                    <input class="form-check-input" value="0" type="hidden" role="switch" asp-for="youtubepostshare">
+                                    <input class="form-check-input" value="false" type="hidden" role="switch" asp-for="youtubepoststatus">
+                                    <input class="form-check-input" value="0" type="hidden" role="switch" asp-for="counter">
+
+
                                     <input class="form-check-input" value="bydefaultcomment" type="hidden" role="switch" asp-for="youtubepostcomment">
 
                                 </div>
@@ -144,20 +152,20 @@
 
 
 @section Scripts {
-        <script>
-            let like = parseInt(document.getElementById("instalike").innerText);              
-            let likecheck = document.getElementById("youtubepostlikestatus");       
-            let totalbudget = document.getElementById("total");
-            let showbudget = document.getElementById("showbudget");
+    <script>
+        let like = parseInt(document.getElementById("instalike").innerText);
+        let likecheck = document.getElementById("youtubepostlikestatus");
+        let totalbudget = document.getElementById("total");
+        let showbudget = document.getElementById("showbudget");
 
-            if (likecheck.checked == true) {
-                totalbudget.innerText = like;
-            }
+        if (likecheck.checked == true) {
+            totalbudget.innerText = like;
+        }
 
-        </script>
+    </script>
 
 
-        <script>
+    <script>
             let liketotal = parseInt(document.getElementById("instalike").innerText);
 
 
@@ -181,5 +189,26 @@
                 showbudget.innerText = totaltemp + " Rs";
 
             }
-      </script>
+    </script>
+
+
+    <script>
+
+        function datatransferyoutube(){
+             let output = document.getElementById("youtubeurlid");
+             let result = document.getElementById("youtubeposturl");
+   
+             let url = output.value;
+
+         // defining the regular expression
+         let regex = /(youtu.*be.*)\/(watch\?v=|embed\/|v|shorts|)(.*?((?=[&#?])|$))/gm;
+         var allMathces = regex.exec(url);
+
+         // Matching the values
+         var videoId = allMathces[3];
+        result.value = videoId;
+        }
+
+
+    </script>
 }

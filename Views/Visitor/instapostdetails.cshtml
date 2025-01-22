@@ -65,7 +65,7 @@
                                 <label for="floatingTextareaDisabled">If You Liked The Instagram Post Like Then You Please Check </label>
                             </div>
                             <div class=" form-check form-switch mb-3 ">
-                                <input class="form-check-input fs-2 mt-3" type="checkbox" asp-for="instalike" onchange="instalikefunc(@Model.instapostid,this.checked)">
+                                <input class="form-check-input fs-2 mt-3" type="checkbox" asp-for="instalike">
                             </div>
                         </div>
 
@@ -137,7 +137,7 @@
                                 </div>
                             </div>
                         }
-                        <button type="submit" class="btn btn-primary mx-5" onclick="instalfun(@Model.instapostid,@Model.counter)">Submit</button>
+                        <button type="submit" class="btn btn-primary mx-5" onclick="instalfun(@Model.instapostid,@Model.counter,@Model.posttotalbudget)">Submit</button>
 
                     </div>
 
@@ -169,7 +169,7 @@
     </script>
 
     <script>
-        function instalfun(getid,counter) {
+        function instalfun(getid,counter,postbudgetdata) {
             console.log("Hello");
                 $.ajax({
                     type: "Post",
@@ -177,6 +177,7 @@
                     data: {
                         id: getid,
                         counterid:counter,
+                        postbudget:postbudgetdata,
                        
                     },
                     success: function (data) {

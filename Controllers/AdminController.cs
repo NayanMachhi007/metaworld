@@ -48,7 +48,7 @@ namespace Meta_Ads_World.Controllers
         public IActionResult brandsocialyoutubecategorylist()
         {
             YoutTubePostModelList youtube = new YoutTubePostModelList();
-            youtube.YouTubeList = _brandSocialCategoryRepository.YoutubePostModelList();
+            youtube.YouTubeList = _brandSocialCategoryRepository.AdminPaymentRequestYoutubePostModelList();
             return View(youtube);
         }
 
@@ -168,6 +168,7 @@ namespace Meta_Ads_World.Controllers
             return RedirectToAction("areaadd");
         }
 
+
         //Payment QR Add Method
         [HttpGet]
         public IActionResult qrcodeadd()
@@ -180,12 +181,14 @@ namespace Meta_Ads_World.Controllers
         public IActionResult qrcodeadd(QrCodeModel qrdata)
         {
             _adminrepository.qradd(qrdata);
-            return RedirectToAction("qrcodeadd");
+            return RedirectToAction("qrcodelist");
         }
 
         [HttpGet]
         public IActionResult qrcodelist()
         {
+            TempData["ShowingMessage"] = "Area Updated";
+
             QrCodeModelList list = new QrCodeModelList();
             list.qrlist = _adminrepository.qrcodelist();
             return View(list);
@@ -252,6 +255,43 @@ namespace Meta_Ads_World.Controllers
                     instapostid = dataiteam.instapostid,
                     instaurl = dataiteam.instaurl,
                     instastatus = dataiteam.instastatus,
+                    paymentid = dataiteam.paymentid,
+                    paymentrecipt = dataiteam.paymentrecipt
+                };
+                itemdatalist.Add(list);
+            }
+
+            return View(itemdatalist);
+        }
+
+        //Youtube Post Admin Request Reject of Accept
+        [HttpGet]
+        public IActionResult youtubepostrequest()
+        {
+
+            var data = (from brand in _dataContext.BrandRegistrationMst
+                        join youtube in _dataContext.YouTubePostMst on brand.id equals youtube.youtubebranduserid
+                        join payment in _dataContext.brandYouTubePaymentTransactionMsts on youtube.youtubepostid equals payment.paymentyoutubeid
+
+                        select new
+                        {
+                            brandid = brand.id,
+                            youtubepostid = youtube.youtubepostid,
+                            youtubeurl = youtube.youtubeposturl,
+                            youtubestatus = youtube.youtubepoststatus,
+                            paymentid = payment.transcationid,
+                            paymentrecipt = payment.paymentrecipt
+                        }).ToList();
+
+            var itemdatalist = new List<YoutubeAdminModel>();
+            foreach (var dataiteam in data)
+            {
+                YoutubeAdminModel list = new YoutubeAdminModel()
+                {
+                    brandid = dataiteam.brandid,
+                    youtubepostid = dataiteam.youtubepostid,
+                    youtubeurl = dataiteam.youtubeurl,
+                    youtubestatus = dataiteam.youtubestatus,
                     paymentid = dataiteam.paymentid,
                     paymentrecipt = dataiteam.paymentrecipt
                 };
@@ -419,7 +459,32 @@ namespace Meta_Ads_World.Controllers
             }
             return Json(data);
         }
-    
+
+
+        //Brand Insta Status
+        [HttpPost]
+        public JsonResult youtubestatus(int id, Boolean status)
+        {
+            var data = _dataContext.YouTubePostMst.Where(x => x.youtubepostid == id).FirstOrDefault();
+
+            if (data != null)
+            {
+                if (status == true)
+                {
+                    data.youtubepoststatus = status;
+                    _dataContext.YouTubePostMst.Update(data);
+                    _dataContext.SaveChanges();
+                }
+                else
+                {
+                    data.youtubepoststatus = status;
+                    _dataContext.YouTubePostMst.Update(data);
+                    _dataContext.SaveChanges();
+                }
+
+            }
+            return Json(data);
+        }
 
     }
 }

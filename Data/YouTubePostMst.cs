@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Meta_Ads_World.Data
 {
@@ -17,6 +18,13 @@ namespace Meta_Ads_World.Data
         public Boolean youtubepostsharestatus { get; set; }
         public Boolean youtubepostsavestatus { get; set; }
         public string youtubeposturl { get; set; }
+        public Boolean youtubepoststatus { get; set; }
+
         public string youtubeposttotalbudget { get; set; }
+
+        [ForeignKey("BrandRegistrationMst")]
+        public int youtubebranduserid { get; set; }
+        public BrandRegistrationMst BrandRegistrationMst { get; set; }
+        public int counter { get; set; }
     }
 }

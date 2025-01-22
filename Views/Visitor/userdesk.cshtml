@@ -6,10 +6,13 @@
 @section Style {
     <style>
         .Header {
-            display: none!important;
+            display: none !important;
         }
     </style>
 }
+
+
+
 
 <section class="brandsocialinsta">
     <div class="container">
@@ -36,7 +39,7 @@
                                             <div class="insta-image insta-commentposition">
                                                 <div class="insta-image">
                                                     <a asp-action="instapostdetails" asp-route-id="@iteam.instapostid">
-                                                        <img src="/assest/logo/instapost.png" alt="instapost" width="400" height="400" />
+                                                        <img src="/assest/logo/instagrampost-post.png" alt="instapost" width="400" height="400" />
                                                     </a>
                                                     @* <iframe src="https://www.instagram.com/p/@iteam.instaposturl/embed" width="350" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe> *@
                                                 </div>
@@ -50,7 +53,74 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                    @*         <div class="insta-wrapper-main d-flex justify-content-between">
+                                            @*         <div class="insta-wrapper-main d-flex justify-content-between">
+                                                <div class="insta-subsection d-flex">
+                                                    <div class="instasocial like">
+                                                        <input type="checkbox" class="instalike fa-regular fa-heart" onclick="likeclick(this,@iteam.instapostid,@iteam.instaposttotallike,@iteam.instapostcomment,@iteam.instapostshare,@iteam.instapostsave)" />
+                                                    </div>
+                                                    <div class="instasocial insta-comment">
+                                                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="insta-save fa-regular fa-message" onclick="instacommentfun(this,@iteam.instapostid)"></button>
+                                                    </div>
+                                                    <div class="instasocial insta-share">
+                                                        <span class="insta-share fa-regular fa-share-from-square"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="insta-save">
+                                                    <span class="insta-save fa-regular fa-bookmark"></span>
+                                                </div>
+                                            </div>
+                                            <div class="instaliketext">
+                                                <p id="instalike">@iteam.instaposttotallike Like</p>
+                                            </div>
+
+                                            <div class="instapostdetails">
+                                                <a asp-action="instapostdetails" asp-route-id="@iteam.instapostid">
+                                                    Details
+                                                </a>
+                                            </div> *@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+                        @foreach (var iteam in Model.youTube)
+                        {
+                            <div class="col-4">
+                                <div class="insta-main-section">
+
+                                    <div class="instawrapper">
+                                        <div class="insta-title d-flex">
+                                            <div class="insta-profile">
+                                                <p class="fa-solid fa-user"></p>
+                                            </div>
+
+                                            <div class="user-title">
+                                                <p>User_Name</p>
+                                            </div>
+                                        </div>
+                                        <div class="insta-main">
+                                            <div class="insta-image insta-commentposition">
+                                                <div class="insta-image">
+                                                    <a asp-action="youtubepostdetails" asp-route-id="@iteam.youtubepostid">
+
+                                                        <img src="/assest/logo/youtubepost.png" alt="youtube" width="400" height="400" />
+                                                    </a>
+                                                    @* <iframe src="https://www.instagram.com/p/@iteam.youtubeurl/embed" width="350" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe> *@
+                                                </div>
+                                                <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-body">
+                                                                <textarea id="instacommenttext"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @*         <div class="insta-wrapper-main d-flex justify-content-between">
                                                 <div class="insta-subsection d-flex">
                                                     <div class="instasocial like">
                                                         <input type="checkbox" class="instalike fa-regular fa-heart" onclick="likeclick(this,@iteam.instapostid,@iteam.instaposttotallike,@iteam.instapostcomment,@iteam.instapostshare,@iteam.instapostsave)" />
@@ -89,7 +159,6 @@
     </div>
 </section>
 
-
 @section Scripts {
     <script>
         function likeclick(data,getid
@@ -98,10 +167,10 @@
                 type: "Post",
                 url: "@Url.Action("userhandlerlikeadd", "Visitor")",
                 data: {
-       
+
                     id: getid,
                     like: getlike,
-                    comment:getcomment,                    
+                    comment:getcomment,
                     share:getshare,
                     save:getsave,
                     userid:getuser,
@@ -135,4 +204,8 @@
              });
         }
     </script> *@
+
+
+
+
 }

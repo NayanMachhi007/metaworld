@@ -88,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ceW91dHViZXBvc3RidWRnZXRlZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Admin/youtubepostrequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ceW91dHViZXBvc3RyZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Admin/_admin_layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX2FkbWluX2xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -114,6 +118,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Brand/paymentinsta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRccGF5bWVudGluc3RhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Brand/paymentyoutube.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRccGF5bWVudHlvdXR1YmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Brand/temp.cshtml]
@@ -218,6 +226,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Visitor/youtubepost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclx5b3V0dWJlcG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/Visitor/youtubepostdetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvclx5b3V0dWJlcG9zdGRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nayan/Desktop/Nayan-Projects-Updated/Meta-Ads-World/Views/_ViewImports.cshtml]

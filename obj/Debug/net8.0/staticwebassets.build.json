@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7TQRl0xPW/mSS//2KdQXoeAb9ehy5bY5WLH3rmu1CZA=",
+  "Hash": "juRRuppIlBlhZyUwySJUmyzvbZhtAqAHbCfgzPPnXkA=",
   "Source": "Meta-Ads-World",
   "BasePath": "_content/Meta-Ads-World",
   "Mode": "Default",
@@ -3545,6 +3545,27 @@
       "OriginalItemSpec": "wwwroot\\assest\\img\\products\\play-station.png"
     },
     {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instagrampost-post.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "assest/logo/instagrampost-post#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y65435s9kq",
+      "Integrity": "SgqnPJvr538KHpmnNcakftLFaI6Ki3jB8XVTEQed0/Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assest\\logo\\instagrampost-post.png"
+    },
+    {
       "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instapost.png",
       "SourceId": "Meta-Ads-World",
       "SourceType": "Discovered",
@@ -3627,6 +3648,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assest\\logo\\qr-code.png"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\youtubepost.png",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "assest/logo/youtubepost#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mgfk8kct5j",
+      "Integrity": "RmOjOA6Ss6xKjNCulo4wvGbI+9GqzwaYd7kojVrzOY8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assest\\logo\\youtubepost.png"
     },
     {
       "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\registration\\registration.gif",
@@ -10620,6 +10662,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\6368592.jpg",
+      "SourceId": "Meta-Ads-World",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\",
+      "BasePath": "_content/Meta-Ads-World",
+      "RelativePath": "meta-ads-world-upload-images/qr-code-images/6368592#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rxrea32a00",
+      "Integrity": "EaW4gw/SSgmZA1Jyy4KH1jcdYH5L3+z5P8+ayg4jpFA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\meta-ads-world-upload-images\\qr-code-images\\6368592.jpg"
     },
     {
       "Identity": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\banner-new-updated.png",
@@ -39818,6 +39881,88 @@
       ]
     },
     {
+      "Route": "assest/logo/instagrampost-post.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instagrampost-post.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SgqnPJvr538KHpmnNcakftLFaI6Ki3jB8XVTEQed0/Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 06:49:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SgqnPJvr538KHpmnNcakftLFaI6Ki3jB8XVTEQed0/Y="
+        }
+      ]
+    },
+    {
+      "Route": "assest/logo/instagrampost-post.y65435s9kq.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instagrampost-post.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SgqnPJvr538KHpmnNcakftLFaI6Ki3jB8XVTEQed0/Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 06:49:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y65435s9kq"
+        },
+        {
+          "Name": "label",
+          "Value": "assest/logo/instagrampost-post.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SgqnPJvr538KHpmnNcakftLFaI6Ki3jB8XVTEQed0/Y="
+        }
+      ]
+    },
+    {
       "Route": "assest/logo/instapost.cdmrx1292q.png",
       "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instapost.png",
       "Selectors": [],
@@ -40142,6 +40287,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-bc7OEHnjjq+dJkbQNrmSViGhyFzNLG6z1TP+ARGxE30="
+        }
+      ]
+    },
+    {
+      "Route": "assest/logo/youtubepost.mgfk8kct5j.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\youtubepost.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16535"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RmOjOA6Ss6xKjNCulo4wvGbI+9GqzwaYd7kojVrzOY8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 06:41:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mgfk8kct5j"
+        },
+        {
+          "Name": "label",
+          "Value": "assest/logo/youtubepost.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RmOjOA6Ss6xKjNCulo4wvGbI+9GqzwaYd7kojVrzOY8="
+        }
+      ]
+    },
+    {
+      "Route": "assest/logo/youtubepost.png",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\youtubepost.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16535"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RmOjOA6Ss6xKjNCulo4wvGbI+9GqzwaYd7kojVrzOY8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 06:41:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RmOjOA6Ss6xKjNCulo4wvGbI+9GqzwaYd7kojVrzOY8="
         }
       ]
     },
@@ -67474,7 +67701,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 06 Jan 2025 09:52:44 GMT"
+          "Value": "Wed, 08 Jan 2025 04:02:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -67519,7 +67746,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 06 Jan 2025 09:52:44 GMT"
+          "Value": "Wed, 08 Jan 2025 04:02:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -67564,7 +67791,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 06 Jan 2025 09:52:44 GMT"
+          "Value": "Wed, 08 Jan 2025 04:02:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -67601,7 +67828,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 06 Jan 2025 09:52:44 GMT"
+          "Value": "Wed, 08 Jan 2025 04:02:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -67612,6 +67839,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-vzfVdstStEMAtwGd1E1azyUd8BZDt5hipkB9ae+IHtU="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/qr-code-images/6368592.jpg",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\6368592.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "204555"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EaW4gw/SSgmZA1Jyy4KH1jcdYH5L3+z5P8+ayg4jpFA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 03:59:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EaW4gw/SSgmZA1Jyy4KH1jcdYH5L3+z5P8+ayg4jpFA="
+        }
+      ]
+    },
+    {
+      "Route": "meta-ads-world-upload-images/qr-code-images/6368592.rxrea32a00.jpg",
+      "AssetFile": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\6368592.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "204555"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EaW4gw/SSgmZA1Jyy4KH1jcdYH5L3+z5P8+ayg4jpFA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Jan 2025 03:59:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rxrea32a00"
+        },
+        {
+          "Name": "label",
+          "Value": "meta-ads-world-upload-images/qr-code-images/6368592.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EaW4gw/SSgmZA1Jyy4KH1jcdYH5L3+z5P8+ayg4jpFA="
         }
       ]
     },
@@ -67802,7 +68111,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 06 Jan 2025 12:02:17 GMT"
+          "Value": "Wed, 08 Jan 2025 04:48:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -67839,7 +68148,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 06 Jan 2025 12:02:17 GMT"
+          "Value": "Wed, 08 Jan 2025 04:48:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -68130,7 +68439,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 06 Jan 2025 12:03:09 GMT"
+          "Value": "Wed, 08 Jan 2025 05:17:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -68175,7 +68484,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 06 Jan 2025 12:03:09 GMT"
+          "Value": "Wed, 08 Jan 2025 05:17:14 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -22,5 +22,7 @@ namespace Meta_Ads_World.Data
         public DbSet<QrCodeMst> QrMst { get; set; }
         public DbSet<BrandPaymentTransactionMst> BrandPaymentTransactionMsts { get; set; }
         public DbSet<UserInstaPostHandlerMst> UserInstaPostHandlerMsts { get; set; }
+        public DbSet<BrandYouTubePaymentTransactionMst> brandYouTubePaymentTransactionMsts { get; set; }
+        public DbSet<UserYoutubePostHandlerMst> userYoutubePostHandlerMsts { get; set; }
     }
 }

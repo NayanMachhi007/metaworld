@@ -4,6 +4,14 @@
     Layout = "~/Views/Shared/_admin_layout.cshtml";
 }
 
+
+@if (TempData["ShowingMessage"] != null)
+{
+    <div id="alertmessage" class="alert alert-primary" role="alert">
+        @TempData["ShowingMessage"]
+    </div>
+}
+
 <section class="table-main">
     <div class="search">
         <input type="search" placeholder="Search" />

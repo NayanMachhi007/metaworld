@@ -20,6 +20,7 @@ namespace Meta_Ads_World.Models
         public Boolean instasharestatus { get; set; }
         public Boolean instasavestatus { get; set; }
         public int counter { get; set; }
+        public string posttotalbudget { get; set; }
     }
 
     public class InstagramPostUserHandlerDataModelList : InstagramPostUserHandlerDataModel

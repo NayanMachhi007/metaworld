@@ -669,6 +669,10 @@
       "PackagePath": "staticwebassets\\assest\\img\\products\\play-station.png"
     },
     {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instagrampost-post.png",
+      "PackagePath": "staticwebassets\\assest\\logo\\instagrampost-post.png"
+    },
+    {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\instapost.png",
       "PackagePath": "staticwebassets\\assest\\logo\\instapost.png"
     },
@@ -683,6 +687,10 @@
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\qr-code.png",
       "PackagePath": "staticwebassets\\assest\\logo\\qr-code.png"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\logo\\youtubepost.png",
+      "PackagePath": "staticwebassets\\assest\\logo\\youtubepost.png"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\assest\\registration\\registration.gif",
@@ -2015,6 +2023,10 @@
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\6368592.jpg",
+      "PackagePath": "staticwebassets\\meta-ads-world-upload-images\\qr-code-images\\6368592.jpg"
     },
     {
       "Id": "C:\\Users\\nayan\\Desktop\\Nayan-Projects-Updated\\Meta-Ads-World\\wwwroot\\meta-ads-world-upload-images\\qr-code-images\\StreamUpload.png",

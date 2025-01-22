@@ -164,10 +164,12 @@ wwwroot\assest\img\products\headphones.png
 wwwroot\assest\img\products\iphone.png
 wwwroot\assest\img\products\nike-air-jordan.png
 wwwroot\assest\img\products\play-station.png
+wwwroot\assest\logo\instagrampost-post.png
 wwwroot\assest\logo\instapost.png
 wwwroot\assest\logo\meta-ads-logo-remove.png
 wwwroot\assest\logo\qr-background.png
 wwwroot\assest\logo\qr-code.png
+wwwroot\assest\logo\youtubepost.png
 wwwroot\assest\registration\registration.gif
 wwwroot\assest\registration\social-hello.gif
 wwwroot\assest\registration\social-hello-remvoe-bg.gif
@@ -501,6 +503,7 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\meta-ads-world-upload-images\qr-code-images\6368592.jpg
 wwwroot\meta-ads-world-upload-images\qr-code-images\banner-new-updated.png
 wwwroot\meta-ads-world-upload-images\qr-code-images\khushiupi.png
 wwwroot\meta-ads-world-upload-images\qr-code-images\nayanupi.png

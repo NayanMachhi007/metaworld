@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Meta_Ads_World.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250106114707_Initionalization")]
-    partial class Initionalization
+    [Migration("20250108040936_MetaAdsWorldUpdated")]
+    partial class MetaAdsWorldUpdated
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -134,6 +134,41 @@ namespace Meta_Ads_World.Migrations
                     b.HasKey("id");
 
                     b.ToTable("BrandRegistrationMst");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.BrandYouTubePaymentTransactionMst", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("contactno")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("paymentbranduserid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("paymentrecipt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("paymentyoutubeid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("transcationid")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("paymentbranduserid");
+
+                    b.HasIndex("paymentyoutubeid");
+
+                    b.ToTable("brandYouTubePaymentTransactionMsts");
                 });
 
             modelBuilder.Entity("Meta_Ads_World.Data.CityMst", b =>
@@ -378,6 +413,46 @@ namespace Meta_Ads_World.Migrations
                     b.ToTable("UserMsts");
                 });
 
+            modelBuilder.Entity("Meta_Ads_World.Data.UserYoutubePostHandlerMst", b =>
+                {
+                    b.Property<int>("userhandlerid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("userhandlerid"));
+
+                    b.Property<DateTime>("userhandlertime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("userid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("youtubecomment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("youtubeid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("youtubelike")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("youtubesave")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("youtubeshare")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("userhandlerid");
+
+                    b.HasIndex("userid");
+
+                    b.HasIndex("youtubeid");
+
+                    b.ToTable("userYoutubePostHandlerMsts");
+                });
+
             modelBuilder.Entity("Meta_Ads_World.Data.YouTubePostBudgetMst", b =>
                 {
                     b.Property<int>("youtubepostbudgetid")
@@ -414,6 +489,12 @@ namespace Meta_Ads_World.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("youtubepostid"));
 
+                    b.Property<int>("counter")
+                        .HasColumnType("int");
+
+                    b.Property<int>("youtubebranduserid")
+                        .HasColumnType("int");
+
                     b.Property<string>("youtubepostcomment")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -444,6 +525,9 @@ namespace Meta_Ads_World.Migrations
                     b.Property<DateTime>("youtubepoststartingdate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("youtubepoststatus")
+                        .HasColumnType("bit");
+
                     b.Property<string>("youtubeposttotalbudget")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -457,6 +541,8 @@ namespace Meta_Ads_World.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("youtubepostid");
+
+                    b.HasIndex("youtubebranduserid");
 
                     b.ToTable("YouTubePostMst");
                 });
@@ -476,6 +562,25 @@ namespace Meta_Ads_World.Migrations
                         .IsRequired();
 
                     b.Navigation("InstaPostMst");
+
+                    b.Navigation("brandRegistrationMst");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.BrandYouTubePaymentTransactionMst", b =>
+                {
+                    b.HasOne("Meta_Ads_World.Data.BrandRegistrationMst", "brandRegistrationMst")
+                        .WithMany()
+                        .HasForeignKey("paymentbranduserid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Meta_Ads_World.Data.YouTubePostMst", "YouTubePost")
+                        .WithMany()
+                        .HasForeignKey("paymentyoutubeid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("YouTubePost");
 
                     b.Navigation("brandRegistrationMst");
                 });
@@ -515,6 +620,36 @@ namespace Meta_Ads_World.Migrations
                     b.Navigation("InstaPostMst");
 
                     b.Navigation("UserMst");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.UserYoutubePostHandlerMst", b =>
+                {
+                    b.HasOne("Meta_Ads_World.Data.UserMst", "UserMst")
+                        .WithMany()
+                        .HasForeignKey("userid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Meta_Ads_World.Data.YouTubePostMst", "youTubePostMst")
+                        .WithMany()
+                        .HasForeignKey("youtubeid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserMst");
+
+                    b.Navigation("youTubePostMst");
+                });
+
+            modelBuilder.Entity("Meta_Ads_World.Data.YouTubePostMst", b =>
+                {
+                    b.HasOne("Meta_Ads_World.Data.BrandRegistrationMst", "BrandRegistrationMst")
+                        .WithMany()
+                        .HasForeignKey("youtubebranduserid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BrandRegistrationMst");
                 });
 
             modelBuilder.Entity("Meta_Ads_World.Data.CityMst", b =>

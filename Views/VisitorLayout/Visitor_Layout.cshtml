@@ -31,10 +31,10 @@
                 <div class="col-10">
                     <div class="navlink">
                         <ul class="d-flex justify-content-end align-items-center">
-                            <li>                                
+                            <li>
                                 <a class="navbtn" asp-action="userregistrationadd" asp-controller="visitor"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
                             </li>
-                            <li>                                
+                            <li>
                                 <a class=" navbtn" asp-action="userlogin" asp-controller="visitor"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
                             </li>
                         </ul>
@@ -172,5 +172,12 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    @section Scripts {
+        <script>
+            window.setTimeout(function (){
+                  $('alertmessage').alert('close');
+            },3000);
+        </script>
+    }
 </body>
 </html>

@@ -48,10 +48,9 @@ namespace Meta_Ads_World.Repository
         public List<InstaPostModelList> AdminPaymentRequestInstaPostList()
         {
             Boolean status = true;
-            int id = 1;
-            var datauser = _datacontext.UserMsts.Where(x => x.userid == id).FirstOrDefault();
             List<InstaPostModelList> list = new List<InstaPostModelList>();
             var data = _datacontext.InstaPostMsts.Where(x => x.instapoststatus == status).ToList();
+            //var youtubedata = _datacontext.YouTubePostMst.Where(x => x.youtubepoststatus == status).ToList();
             foreach (var item in data)
             {
                 InstaPostModelList insta = new InstaPostModelList()
@@ -74,16 +73,42 @@ namespace Meta_Ads_World.Repository
                 };
                 list.Add(insta);
             }
+
+
+            //foreach (var iteam in youtubedata)
+            //{
+            //    InstaPostModelList datalist = new InstaPostModelList()
+            //    {
+            //        youtubepostid = iteam.youtubepostid,
+            //        youtubeposttotallike = iteam.youtubeposttotallike,
+            //        youtubepostcomment = iteam.youtubepostcomment,
+            //        youtubepostshare = iteam.youtubepostshare,
+            //        youtubepostsave = iteam.youtubepostsave,
+            //        youtubepoststartingdate = iteam.youtubepoststartingdate,
+            //        youtubepostendingdate = iteam.youtubepostendingdate,
+            //        youtubepostlikestatus = iteam.youtubepostlikestatus,
+            //        youtubepostcommentstatus = iteam.youtubepostcommentstatus,
+            //        youtubepostsharestatus = iteam.youtubepostsharestatus,
+            //        youtubepostsavestatus = iteam.youtubepostsavestatus,
+            //        youtubeposturl = iteam.youtubeposturl,
+            //        youtubeposttotalbudget = iteam.youtubeposttotalbudget,
+            //        youtubebranduserid = iteam.youtubebranduserid,
+            //        youtubepoststatus = iteam.youtubepoststatus,
+            //    };
+            //    list.Add(datalist);
+            //}
+
             return list;
         }
 
 
 
         //YouTubePost List
-        public List<YoutTubePostModelList> YoutubePostModelList()
+        public List<YoutTubePostModelList> AdminPaymentRequestYoutubePostModelList()
         {
+            Boolean status = true;
             List<YoutTubePostModelList> list = new List<YoutTubePostModelList>();
-            var data = _datacontext.YouTubePostMst.ToList();
+            var data = _datacontext.YouTubePostMst.Where(x => x.youtubepoststatus == status).ToList();
             foreach (var item in data)
             {
                 YoutTubePostModelList youtube = new YoutTubePostModelList()
@@ -101,6 +126,9 @@ namespace Meta_Ads_World.Repository
                     youtubepostsavestatus = item.youtubepostsavestatus,
                     youtubeposturl = item.youtubeposturl,
                     youtubeposttotalbudget = item.youtubeposttotalbudget,
+                    youtubebranduserid = item.youtubebranduserid,
+                    counter = item.counter,
+                    youtubepoststatus = item.youtubepoststatus,
                 };
                 list.Add(youtube);
             }
@@ -111,29 +139,13 @@ namespace Meta_Ads_World.Repository
 
         public void instagrampostadd(InstaPostModelList instaadd)
         {
-          
+
         }
 
         // Brand Social Youtube Post Add
         public void youtubepostadd(YoutTubePostModelList youtubeadd)
         {
-            YouTubePostMst youtube = new YouTubePostMst()
-            {
-                youtubeposttotallike = youtubeadd.youtubeposttotallike,
-                youtubepostcomment = youtubeadd.youtubepostcomment,
-                youtubepostshare = youtubeadd.youtubepostshare,
-                youtubepostsave = youtubeadd.youtubepostsave,
-                youtubepoststartingdate = youtubeadd.youtubepoststartingdate,
-                youtubepostendingdate = youtubeadd.youtubepostendingdate,
-                youtubepostlikestatus = youtubeadd.youtubepostlikestatus,
-                youtubepostcommentstatus = youtubeadd.youtubepostcommentstatus,
-                youtubepostsharestatus = youtubeadd.youtubepostsharestatus,
-                youtubepostsavestatus = youtubeadd.youtubepostsavestatus,
-                youtubeposturl = youtubeadd.youtubeposturl,
-                youtubeposttotalbudget = youtubeadd.youtubeposttotalbudget,
-            };
-            _datacontext.YouTubePostMst.Add(youtube);
-            _datacontext.SaveChanges();
+
         }
 
         //Instagram Post Budget Add
@@ -331,6 +343,41 @@ namespace Meta_Ads_World.Repository
             };
 
             _datacontext.BrandPaymentTransactionMsts.Add(add);
+            _datacontext.SaveChanges();
+
+        }
+
+
+        public void brandyoutuberecordpaymentadddata(BrandYoutubePaymentTransactionModel adddata)
+        {
+
+            int userid = 1;
+            var folder = "meta-ads-world-upload-images/transaction-recipt-images/" + adddata.uploadfile.FileName; // Use the file name you want to delete
+            var filereplace = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+
+            //// Check if the file already exists
+            //if (System.IO.File.Exists(filereplace))
+            //{
+            //    // Delete the existing file
+            //    System.IO.File.Delete(filereplace);
+            //}
+
+            // Save the new file
+            using (var stream = new FileStream(filereplace, FileMode.Create))
+            {
+                adddata.uploadfile.CopyTo(stream);
+            }
+
+            BrandYouTubePaymentTransactionMst add = new BrandYouTubePaymentTransactionMst()
+            {
+                paymentrecipt = folder,
+                transcationid = adddata.transcationid,
+                contactno = adddata.contactno,
+                paymentbranduserid = userid,
+                paymentyoutubeid = adddata.paymentyoutubeid,
+            };
+
+            _datacontext.brandYouTubePaymentTransactionMsts.Add(add);
             _datacontext.SaveChanges();
 
         }

@@ -1,5 +1,6 @@
 ﻿using Meta_Ads_World.Data;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Meta_Ads_World.Models
 {
@@ -35,6 +36,24 @@ namespace Meta_Ads_World.Models
         public Boolean status { get; set; }
 
 
+        //Youtube Data
+
+        //public int youtubepostid { get; set; }
+        //public string? youtubeposttotallike { get; set; }
+        //public string? youtubepostcomment { get; set; }
+        //public string? youtubepostshare { get; set; }
+        //public string? youtubepostsave { get; set; }
+        //public DateTime youtubepoststartingdate { get; set; } = DateTime.Now;
+        //public DateTime youtubepostendingdate { get; set; } = DateTime.Now;
+        //public Boolean youtubepostlikestatus { get; set; }
+        //public Boolean youtubepostcommentstatus { get; set; }
+        //public Boolean youtubepostsharestatus { get; set; }
+        //public Boolean youtubepostsavestatus { get; set; }
+        //public string? youtubeposturl { get; set; }
+        //public Boolean? youtubepoststatus { get; set; }
+        //public string? youtubeposttotalbudget { get; set; }       
+        //public int youtubebranduserid { get; set; }
+        //public int youtubecounter { get; set; }
 
     }
 
@@ -42,7 +61,7 @@ namespace Meta_Ads_World.Models
     {
         public List<InstaPostModelList>? InstaPostList { get; set; }
         public List<InstaPostBudgetMst>? instabudget { get; set; }
-
+        public List<YouTubePostMst>? youTube { get; set; }
         public List<BrandRegistrationMst>? BrandRegistration { get; set; }
 
         public List<UserMst>? UserMst { get; set; }

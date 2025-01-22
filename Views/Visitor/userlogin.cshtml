@@ -4,6 +4,12 @@
     Layout = "~/views/visitorlayout/visitor_layout.cshtml";
 }
 
+@if (TempData["ShowingMessage"] != null)
+{
+    <div id="alertmessage" class="alert alert-primary" role="alert">
+        @TempData["ShowingMessage"]
+    </div>
+}
 
 <section class="webregister">
     <div class="container">
@@ -64,8 +70,8 @@
                                                         <button class="btn-global" type="submit">Submit</button>
                                                     </div>
                                                 </div>
-                                            </div>                                           
-                                        </div>                                       
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -78,3 +84,10 @@
     </div>
 </section>
 
+@section Scripts {
+    <script>
+        window.setTimeout(function (){
+              $('alertmessage').alert('close');
+        },3000);
+    </script>
+}
